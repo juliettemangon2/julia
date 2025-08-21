@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Julia Majchrzak</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #e1ecff;
+        --text: #80074f;
+        --highlight: #6fc1de;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        background: #fff;
+        color: #000;
+        font-family: "Instrument Sans", sans-serif;
+        line-height: 1.6;
+        font-size: 1.05rem;
+        overflow-x: hidden;
+      }
+
+      .topnav {
+        position: fixed;
+        top: 1.5rem;
+        left: 1.5rem;
+        display: flex;
+        gap: 1rem;
+        z-index: 1500;
+      }
+      main {
+        max-width: 900px;
+        margin: 6rem auto 3rem;
+        padding: 0 1.25rem;
+        animation: slideIn 0.6s ease forwards;
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      @keyframes slideIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      h2 {
+        font-size: 10rem;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /* aligns to right */
+        line-height: 0.9; /* reduces vertical space between lines */
+        margin: 0;
+        padding-left: 67rem;
+        padding-top: 20rem;
+      }
+
+      h2 span {
+        display: block;
+      }
+
+      a {
+        color: #000;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      a:hover {
+        color: #f0f;
+      }
+      p {
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+      }
+
+      @media (max-width: 768px) {
+        .contact-columns {
+          grid-template-columns: 1fr;
+        }
+        .photos img {
+          flex: 1 1 100%;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <main>
+      <section class="name-section">
+        <h2>
+          <span class="first">julia</span>
+          <span class="last">majchrzak</span>
+        </h2>
+      </section>
+    </main>
+
+    <script>
+    </script>
+  </body>
+</html>
