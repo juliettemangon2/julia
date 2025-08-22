@@ -17,9 +17,9 @@
       rel="stylesheet"
     />
     <link
-  href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap"
-  rel="stylesheet"
-/>
+      href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap"
+      rel="stylesheet"
+    />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
@@ -29,11 +29,25 @@
     <!-- Shared stylesheet -->
     <link rel="stylesheet" href="style.css" />
     <style>
-      
       p {
         margin-bottom: 1.5rem;
-        font-size: 10.6rem;
+        font-size: 8rem;
         font-weight: 400;
+      }
+      .flowers-img {
+        float: left; /* keeps it aligned to the left */
+        margin: rem 2rem 1rem 0; /* adds spacing around the image */
+        width: 600px; /* scale as needed */
+        height: auto;
+      }
+      .flowers-img {
+        position: absolute;
+        top: 28rem; /* adjust depending on where you want it */
+        width: 400px;
+        height: auto;
+        margin-left: 0;
+        opacity: 1;
+        left: -80px;
       }
     </style>
   </head>
@@ -62,12 +76,15 @@
         </nav>
       </section>
       <hr class="two" />
-
+<section>
+        <p style="text-align: center; margin-top: 2rem"> Hello, welcome to my portfolio</p>
+      </section>
       <!-- Page-specific content -->
       <section>
-        <p style="text-align: center; margin-top: 2rem"> Hello my name is Julia Majchrzak!</p>
+        <img src="flowers.png" alt="Flowers" class="flowers-img" />
+        <p style="text-align: center; margin-top: 2rem">
+        </p>
       </section>
-
     </main>
   </body>
 </html>
