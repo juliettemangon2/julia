@@ -1,0 +1,146 @@
+:root {
+  --bg: #e4e4df;
+  --grayblue: hsl(221, 100%, 96%);
+  --lightgreen: #effbd6;
+  --lightblue: rgb(225, 231, 239);
+  --lightyellow: #e4e5a1;
+  --pink: #ffe6f0;
+  --red: #ca0000;
+  --cream: #f4f8ff;
+  --camel: #ffb96e;
+  --blue: #4573c9;
+  --accent: #d6b44c;
+  --lightyellow2:  #f9ffd4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--cream);
+  color: var(--red);
+  font-family: "Oswald", serif;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  overflow-x: hidden;
+}
+
+main {
+  margin: 0 auto 3rem;
+  padding: 0;
+  
+}
+
+h2 {
+  color: var(--red);
+  font-size: 4rem;
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.2;
+  background-color: var(--lightblue);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0 1rem;
+}
+
+.nav-buttons a {
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--red);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+}
+
+.nav-buttons a::before,
+.nav-buttons a::after {
+  content: " [ ";
+  opacity: 0;
+}
+
+.nav-buttons a::after {
+  content: " ] ";
+}
+
+/* Active page link styling */
+.nav-buttons a.active::before,
+.nav-buttons a.active::after,
+.nav-buttons a:hover::before,
+.nav-buttons a:hover::after {
+  opacity: 1;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+hr {
+  border: none;
+  border-top: 5px solid var(--lightyellow);
+  width: 100%;
+}
+
+.one {
+  border: none;
+  border-top: 15px solid var(--lightgreen);
+  width: 100%;
+}
+
+.two {
+  border: none;
+  border-top: 15px solid var(--grayblue);
+  width: 100%;
+}
+.three {
+  border: none;
+  border-top: 15px solid var(--cream);
+  width: 100%;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.top-strip {
+  width: 100%;
+  height: 40px;
+  background-color: var(--lightblue);
+}
+
+@media (max-width: 768px) {
+  .contact-columns {
+    grid-template-columns: 1fr;
+  }
+  .photos img {
+    flex: 1 1 100%;
+  }
+}
