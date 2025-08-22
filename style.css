@@ -1,10 +1,10 @@
 :root {
   --bg: #e4e4df;
   --grayblue: hsl(221, 100%, 96%);
-  --lightgreen: #effbd6;
+  --lightgreen: #75903b;
   --lightblue: rgb(225, 231, 239);
   --lightyellow: #e4e5a1;
-  --pink: #ffe6f0;
+  --pink: #ffd3e1;
   --red: #ca0000;
   --cream: #f4f8ff;
   --camel: #ffb96e;
@@ -25,9 +25,9 @@ body {
 }
 
 body {
-  background: var(--cream);
-  color: var(--red);
-  font-family: "Oswald", serif;
+  background: var(--pink);
+  color: var(--lightgreen);
+  font-family: "Gilda Display", serif;
   line-height: 1.6;
   font-size: 1.05rem;
   overflow-x: hidden;
@@ -40,12 +40,12 @@ main {
 }
 
 h2 {
-  color: var(--red);
+  color: var(--lightgreen);
   font-size: 4rem;
   font-weight: 900;
   text-align: center;
   line-height: 1.2;
-  background-color: var(--lightblue);
+  background-color: var(--pink);
   text-transform: uppercase;
   letter-spacing: 0.2rem;
 }
@@ -53,15 +53,15 @@ h2 {
 .nav-buttons {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   margin: 1rem 0 1rem;
 }
 
 .nav-buttons a {
   font-family: inherit;
   font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--red);
+  font-weight: 00;
+  color: var(--lightgreen);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
@@ -100,13 +100,13 @@ hr {
 
 .one {
   border: none;
-  border-top: 15px solid var(--lightgreen);
+  border-top: 5px solid var(--lightgreen);
   width: 100%;
 }
 
 .two {
   border: none;
-  border-top: 15px solid var(--grayblue);
+  border-top: 2px solid var(--lightgreen);
   width: 100%;
 }
 .three {
@@ -132,8 +132,8 @@ p {
 
 .top-strip {
   width: 100%;
-  height: 40px;
-  background-color: var(--lightblue);
+  height: 15px;
+  background-color: var(--pink);
 }
 
 @media (max-width: 768px) {
