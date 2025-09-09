@@ -1,0 +1,56 @@
+[
+  {
+    "src": "collage/IMG_6881.jpeg",
+    "alt": "Collage piece",
+    "folder": "collage"
+  },
+
+  { "src": "glass/sculpture/IMG_0632.jpeg", "alt": "Glass sculpture 0632", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture/IMG_0635.jpeg", "alt": "Glass sculpture 0635", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture/IMG_1251.jpeg", "alt": "Glass sculpture 1251", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture/IMG_1265.jpeg", "alt": "Glass sculpture 1265", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture/IMG_1282.jpeg", "alt": "Glass sculpture 1282", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture/IMG_1287.jpeg", "alt": "Glass sculpture 1287", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture/IMG_1293.jpeg", "alt": "Glass sculpture 1293", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture/IMG_1853.jpeg", "alt": "Glass sculpture 1853", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture/IMG_5236.jpeg", "alt": "Glass sculpture 5236", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture/IMG_5959.jpeg", "alt": "Glass sculpture 5959", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture/IMG_5996.jpeg", "alt": "Glass sculpture 5996", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture/IMG_6893.jpeg", "alt": "Glass sculpture 6893", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture/IMG_6894.jpeg", "alt": "Glass sculpture 6894", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture/IMG_6915.jpeg", "alt": "Glass sculpture 6915", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture/IMG_6921.jpeg", "alt": "Glass sculpture 6921", "folder": "glass-sculpture" },
+
+  { "src": "glass/vessels/IMG_0629.jpeg", "alt": "Glass vessel 0629", "folder": "glass-vessels" },
+  { "src": "glass/vessels/IMG_1256.jpeg", "alt": "Glass vessel 1256", "folder": "glass-vessels" },
+  { "src": "glass/vessels/IMG_7035.jpeg", "alt": "Glass vessel 7035", "folder": "glass-vessels" },
+  { "src": "glass/vessels/IMG_8216.jpeg", "alt": "Glass vessel 8216", "folder": "glass-vessels" },
+  { "src": "glass/vessels/vessel 1.png", "alt": "Glass vessel 1", "folder": "glass-vessels" },
+  { "src": "glass/vessels/vessel2.png", "alt": "Glass vessel 2", "folder": "glass-vessels" },
+  { "src": "glass/vessels/vessel3.png", "alt": "Glass vessel 3", "folder": "glass-vessels" },
+
+  { "src": "jewelry/IMG_0551.jpeg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
+  { "src": "jewelry/jewelry1.JPG", "alt": "Jewelry piece 1", "folder": "jewelry" },
+
+  { "src": "paint/IMG_0356.jpg", "alt": "Painting 0356", "folder": "paint" },
+  { "src": "paint/IMG_0537.jpg", "alt": "Painting 0537", "folder": "paint" },
+  { "src": "paint/IMG_0619.jpeg", "alt": "Painting 0619", "folder": "paint" },
+  { "src": "paint/IMG_0664.jpeg", "alt": "Painting 0664", "folder": "paint" },
+  { "src": "paint/IMG_3199.jpg", "alt": "Painting 3199", "folder": "paint" },
+
+  { "src": "clothing/embroidery/IMG_7318.jpeg", "alt": "Embroidery 7318", "folder": "clothing-embroidery" },
+  { "src": "clothing/embroidery/IMG_7852.jpeg", "alt": "Embroidery 7852", "folder": "clothing-embroidery" },
+
+  { "src": "clothing/gameday/IMG_0438.jpeg", "alt": "Gameday 0438", "folder": "clothing-gameday" },
+  { "src": "clothing/gameday/IMG_0445.jpeg", "alt": "Gameday 0445", "folder": "clothing-gameday" },
+
+  { "src": "clothing/reclaimed/IMG_0477.jpeg", "alt": "Reclaimed 0477", "folder": "clothing-reclaimed" },
+  { "src": "clothing/reclaimed/IMG_1939.jpeg", "alt": "Reclaimed 1939", "folder": "clothing-reclaimed" },
+  { "src": "clothing/reclaimed/IMG_1945.jpeg", "alt": "Reclaimed 1945", "folder": "clothing-reclaimed" },
+  { "src": "clothing/reclaimed/IMG_1949.jpeg", "alt": "Reclaimed 1949", "folder": "clothing-reclaimed" },
+  { "src": "clothing/reclaimed/IMG_1957.jpeg", "alt": "Reclaimed 1957", "folder": "clothing-reclaimed" },
+  { "src": "clothing/reclaimed/IMG_1969.jpeg", "alt": "Reclaimed 1969", "folder": "clothing-reclaimed" },
+  { "src": "clothing/reclaimed/IMG_1998.jpeg", "alt": "Reclaimed 1998", "folder": "clothing-reclaimed" },
+  { "src": "clothing/reclaimed/IMG_2016.jpeg", "alt": "Reclaimed 2016", "folder": "clothing-reclaimed" },
+  { "src": "clothing/reclaimed/IMG_2027.jpeg", "alt": "Reclaimed 2027", "folder": "clothing-reclaimed" }
+]

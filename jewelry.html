@@ -1,92 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Julia Majchrzak</title>
 
-    <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josephin-Slab:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Julia Majchrzak</title>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josephin-Slab:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet" />
 
-    <!-- Shared stylesheet -->
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      p {
-        margin-bottom: 1.5rem;
-        font-size: 10.6rem;
-        font-weight: 400;
-      }
-      .flowers-imgs {
-        float: left; /* keeps it aligned to the left */
-        margin: rem 2rem 1rem 0; /* adds spacing around the image */
-        width: 600px; /* scale as needed */
-        height: auto;
-      }
-      .flowers-imgs {
-        position: absolute;
-        top: 23rem; /* adjust depending on where you want it */
-        width: 500px;
-        height: auto;
-        margin-left: 0;
-        opacity: 1;
-        left: px;
-        right: 900px;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Thin blue bar at top -->
-    <div class="top-strip"></div>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet" />
 
-    <main>
-      <section class="name-section">
-        <h2><strong>JULIA MAJCHRZAK</strong></h2>
+  <!-- Shared stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    p {
+      margin-bottom: 1.5rem;
+      font-size: 10.6rem;
+      font-weight: 400;
+    }
 
-        <!-- Decorative lines -->
-        <hr class="two" />
+    .flowers-imgs {
+      float: left;
+      /* keeps it aligned to the left */
+      margin: rem 2rem 1rem 0;
+      /* adds spacing around the image */
+      width: 600px;
+      /* scale as needed */
+      height: auto;
+    }
 
-        <!-- Navigation -->
-        <nav class="nav-buttons">
-           <a href="index.html" >About</a>
-          <a href="resume.html" >Resume</a>
-          <a href="glass.html">Glass</a>
-          <a href="clothing.html">Clothing</a>
-          <a href="collage.html">Collage</a>
-          <a href="branding.html">Branding</a>
-          <a href="jewelry.html" class="active">Jewelry</a>
-          <a href="paint.html">Paint</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-         <hr class="two" />
-      </section>
-       <section>
-        <p style="text-align: center; margin-top: 2rem"> Jewelry!</p>
-      </section>
-      <section>
-        <img src="flower5.png" alt="Flowers" class="flowers-imgs" />
-        <p style="text-align: center; margin-top: 2rem">
-        </p>
-      </section>
-    </main>
+    .flowers-imgs {
+      position: absolute;
+      top: 23rem;
+      /* adjust depending on where you want it */
+      width: 500px;
+      height: auto;
+      margin-left: 0;
+      opacity: 1;
+      left: px;
+      right: 900px;
+    }
+  </style>
+</head>
 
-    <script></script>
-  </body>
+<body>
+  <!-- Thin blue bar at top -->
+  <div class="top-strip"></div>
+
+  <main>
+    <section class="name-section">
+      <h2><strong>JULIA MAJCHRZAK</strong></h2>
+
+      <!-- Decorative lines -->
+      <hr class="two" />
+
+      <!-- Navigation -->
+      <nav class="nav-buttons">
+        <a href="index.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="glass.html">Glass</a>
+        <a href="clothing.html">Clothing</a>
+        <a href="collage.html">Collage</a>
+        <a href="branding.html">Branding</a>
+        <a href="jewelry.html" class="active">Jewelry</a>
+        <a href="paint.html">Paint</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <hr class="two" />
+    </section>
+    <section style="padding: 1rem 0 3rem; padding-left: 10 rem;">
+      <div id="gallery" data-folder="jewelry"></div>
+    </section>
+    <section>
+      <img src="flower5.png" alt="Flowers" class="flowers-imgs" />
+      <p style="text-align: center; margin-top: 2rem">
+      </p>
+    </section>
+  </main>
+  <script src="gallery.js" defer></script>
+
+
+</body>
+
 </html>

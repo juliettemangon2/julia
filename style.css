@@ -132,6 +132,12 @@ p {
   height: 15px;
   background-color: var(--pink);
 }
+#gallery {
+  margin: 0 auto;      /* centers container */
+  max-width: 2000px;   /* cap width so it doesn’t stretch */
+  padding: 2rem;       /* spacing around */
+}
+
 
 @media (max-width: 768px) {
   .contact-columns {
