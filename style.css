@@ -1,16 +1,14 @@
 :root {
-  --bg: #e4e4df;
-  --grayblue: hsl(221, 100%, 96%);
-  --lightgreen: #839d4a;
+  --flame: #e15827;
+  --coffee: #4b302d;;
+  --lightbrown: #ccb39A;
+  --olive: #898826;
   --lightblue: rgb(225, 231, 239);
-  --lightyellow: #e4e5a1;
-  --pink: #ffd3e1;
-  --red: #ca0000;
-  --cream: #f4f8ff;
-  --camel: #ffb96e;
-  --blue: #4573c9;
-  --accent: #d6b44c;
+  --blue: #03253f;
+  --copper: #b16940;;
+  --lightgray: #f1eae3;
   --lightyellow2:  #f9ffd4;
+  --goldenbrown: #8E712C;
 }
 
 * {
@@ -25,8 +23,8 @@ body {
 }
 
 body {
-  background: var(--pink);
-  color: var(--lightgreen);
+  background: var(--lightgray);
+  color: var(--olive);
   font-family: "Gilda Display", serif;
   line-height: 1.6;
   font-size: 1.05rem;
@@ -40,14 +38,24 @@ main {
 }
 
 h2 {
-  color: var(--lightgreen);
+  color: var(--coffee);
   font-size: 4rem;
   font-weight: 900;
   text-align: center;
   line-height: 1.2;
-  background-color: var(--pink);
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+}
+h3{
+  color: var(--blue);
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: left;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
 }
 
 .nav-buttons {
@@ -61,7 +69,7 @@ h2 {
   font-family: inherit;
   font-size: 1.2rem;
   font-weight: 00;
-  color: var(--lightgreen);
+  color: var(--blue);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
@@ -73,12 +81,12 @@ h2 {
 
 .nav-buttons a:hover {
   background: var(--lightblue);
-  color: var(--lightgreen);
+  color: var(--olive);
 }
 
 .nav-buttons a.active {
   background: var(--lightblue);
-  color: var(--lightgreen);
+  color: var(--olive);
 }
 
 @keyframes slideIn {
@@ -96,13 +104,13 @@ hr {
 
 .one {
   border: none;
-  border-top: 5px solid var(--lightgreen);
+  border-top: 5px solid var(--olive);
   width: 100%;
 }
 
 .two {
   border: none;
-  border-top: 2px solid var(--lightgreen);
+  border-top: 2px solid var(--olive);
   width: 100%;
   
 }
