@@ -1,3 +1,2 @@
 # Julia's website
-
-https://juliettemangon2.github.io/julia/
+https://juliamajchrzak.com/
