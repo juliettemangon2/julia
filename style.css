@@ -81,12 +81,12 @@ h3{
 
 .nav-buttons a:hover {
   background: var(--lightblue);
-  color: var(--olive);
+  color: var(--copper);
 }
 
 .nav-buttons a.active {
   background: var(--lightblue);
-  color: var(--olive);
+  color: var(--flame);
 }
 
 @keyframes slideIn {
@@ -110,9 +110,8 @@ hr {
 
 .two {
   border: none;
-  border-top: 2px solid var(--olive);
+  border-top: 10px dotted var(--flame);
   width: 100%;
-  
 }
 .three {
   border: none;
@@ -123,11 +122,13 @@ hr {
 a {
   color: #000;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.2, transform 0.2s;
+
 }
 
 a:hover {
   text-decoration: none;
+  color: var(--blue);
 }
 
 p {

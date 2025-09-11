@@ -22,6 +22,9 @@
   <!-- Page-specific layout and components (does NOT modify the top nav) -->
   <style>
     /* Content wrapper under the unchanged top nav */
+    p {
+      color: var(--blue);
+    }
     .page {
       max-width: 1200px;
       margin: 0 auto;
@@ -49,7 +52,7 @@
     }
 
     details.resume-card[open] {
-      border-color: var(--goldenbrown);
+      border-color: var(--flame);
       box-shadow: 0 0 0 6px rgba(137, 136, 38, 0.08) inset;
     }
 
@@ -79,7 +82,7 @@
 
     .card-body {
       padding: 0.75rem 1.1rem 1.1rem 1.1rem;
-      border-top: 2px dashed var(--lightbrown);
+      border-top: 4px dashed var(--lightbrown);
     }
 
     /* Lists and descriptions inside cards */
@@ -103,7 +106,7 @@
       margin: 0.5rem 0 0.5rem 0;
       padding-left: 1rem;
       font-size: 1.05rem;
-      color: var(--olive);
+      color: var(--blue);
     }
 
     .description li {
@@ -113,12 +116,12 @@
 
     .desc-title {
       font-weight: 700;
-      color: var(--coffee);
+      color: var(--olive);
     }
 
     /* Work Experience special list style preserved but harmonized */
     #we-list.section-list>li {
-      border: 1px solid var(--olive);
+      border: 1px solid var(--flame);
       padding: 0.75rem 0.85rem;
       margin: 0.65rem 0;
       width: 100%;
@@ -192,7 +195,7 @@
     <!-- Card 2: Minor -->
     <details class="resume-card">
       <summary class="card-summary">
-        <span><strong>Minor in Design</strong></span>
+        <span><strong>Minor in Design</strong>, Tulane University (2022-2026)</span>
         <span class="pill">+</span>
       </summary>
       <div class="card-body">
