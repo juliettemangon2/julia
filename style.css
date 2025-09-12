@@ -3,11 +3,10 @@
   --coffee: #4b302d;;
   --lightbrown: #ccb39A;
   --olive: #898826;
-  --lightblue: rgb(225, 231, 239);
-  --blue: #03253f;
+  --blue: #174a71;
   --copper: #b16940;;
-  --lightgray: #f1eae3;
-  --lightyellow2:  #f9ffd4;
+  --lightgray: #e7f2f6;
+  --lightyellow2:  #fffdd2;
   --goldenbrown: #8E712C;
 }
 
@@ -25,7 +24,7 @@ body {
 body {
   background: var(--lightgray);
   color: var(--olive);
-  font-family: "Gilda Display", serif;
+  font-family: "Be Vietnam Pro", sans-serif;
   line-height: 1.6;
   font-size: 1.05rem;
   overflow-x: hidden;
@@ -40,7 +39,8 @@ main {
 h2 {
   color: var(--coffee);
   font-size: 4rem;
-  font-weight: 900;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 400;
   text-align: center;
   line-height: 1.2;
   text-transform: uppercase;
@@ -49,13 +49,13 @@ h2 {
 h3{
   color: var(--blue);
   font-size: 2.5rem;
-  font-weight: 900;
+  font-weight: 600;
   text-align: left;
   line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   margin-bottom: 1rem;
-  margin-left: 2rem;
+  margin-left: 5rem;
 }
 
 .nav-buttons {
@@ -80,12 +80,12 @@ h3{
 }
 
 .nav-buttons a:hover {
-  background: var(--lightblue);
+  background: var(--lightyellow2);
   color: var(--copper);
 }
 
 .nav-buttons a.active {
-  background: var(--lightblue);
+  background: var(--lightyellow2);
   color: var(--flame);
 }
 
@@ -119,17 +119,8 @@ hr {
   width: 100%;
 }
 
-a {
-  color: #000;
-  text-decoration: none;
-  transition: color 0.2, transform 0.2s;
 
-}
 
-a:hover {
-  text-decoration: none;
-  color: var(--blue);
-}
 
 p {
   margin-bottom: 0.5rem;
