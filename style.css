@@ -5,8 +5,8 @@
   --olive: #898826;
   --blue: #174a71;
   --copper: #b16940;;
-  --lightgray: #e7f2f6;
-  --lightyellow2:  #fffdd2;
+  --lightgray: #daeaf0;
+  --lightyellow2:  #fffef3;
   --goldenbrown: #8E712C;
 }
 
@@ -23,7 +23,7 @@ body {
 
 body {
   background: var(--lightgray);
-  color: var(--olive);
+  color: var(--coffee);
   font-family: "Be Vietnam Pro", sans-serif;
   line-height: 1.6;
   font-size: 1.05rem;
@@ -104,8 +104,9 @@ hr {
 
 .one {
   border: none;
-  border-top: 5px solid var(--olive);
-  width: 100%;
+  border-top: 10px dotted var(--lightyellow2);
+  margin-left: 5rem;
+  width: 500px;
 }
 
 .two {
@@ -115,9 +116,116 @@ hr {
 }
 .three {
   border: none;
-  border-top: 15px solid var(--cream);
+  border-top: 10px dotted var(--lightyellow2);
   width: 100%;
+  margin-top: 0.5rem;
 }
+
+/* Contact page enhancements */
+.contact-intro {
+  margin: 3rem auto 1rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.contact-bigline {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  color: var(--blue);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.contact-subline {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--coffee);
+  opacity: 0.9;
+}
+
+
+
+
+
+/* Grid of contact cards */
+.contact-grid {
+  --card-gap: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  gap: var(--card-gap);
+  max-width: 900px;
+  margin: 2rem auto 4rem;
+  padding: 0 1rem;
+}
+
+@media (max-width: 700px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Contact card styling */
+.contact-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1rem 1rem 0.9rem;
+  text-decoration: none;
+  border: 2px solid var(--lightyellow2);
+  background: var(--lightyellow2);
+  border-radius: 10px;
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+  color: inherit;
+  outline: none;
+}
+
+.contact-card:hover,
+.contact-card:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 0 var(--copper);
+  border-color: var(--copper);
+}
+
+.contact-icon {
+  display: grid;
+  place-items: center;
+  color: var(--flame);
+}
+
+.contact-label {
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+  color: var(--blue);
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+.contact-value {
+  grid-column: 2 / span 1;
+  font-size: 1.15rem;
+  color: var(--coffee);
+  margin-top: -2px;
+}
+
+/* Make the value wrap nicely on small screens */
+@media (max-width: 700px) {
+  .contact-card {
+    grid-template-columns: 36px 1fr auto;
+  }
+  .contact-value {
+    font-size: 1.05rem;
+  }
+}
+
+
+
+/* Page-level paragraph defaults on contact page */
+.contact-intro p {
+  margin-bottom: 0.5rem;
+}
+
 
 
 

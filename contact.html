@@ -6,39 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Julia Majchrzak</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Josephin-Slab:wght@700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet" />
-
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
-    rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Shared stylesheet -->
   <link rel="stylesheet" href="style.css" />
-  <style>
-    p {
-      margin-bottom: 1.5rem;
-      font-size: 4rem;
-      font-weight: 400;
-      color: var(--blue);
-    }
-
-
-    a {
-      color: var(--flame);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    a:hover {
-      color: var(--olive);
-      background-color: var(--lightyellow2);
-    }
-  </style>
 </head>
 
 <body>
@@ -48,11 +27,8 @@
   <main>
     <section class="name-section">
       <h2><strong>JULIA MAJCHRZAK</strong></h2>
-
-      <!-- Decorative lines -->
       <hr class="two" />
-
-      <!-- Navigation -->
+      <!-- Navigation (unchanged) -->
       <nav class="nav-buttons">
         <a href="index.html">About</a>
         <a href="resume.html">Resume</a>
@@ -65,21 +41,79 @@
         <a href="contact.html" class="active">Contact</a>
       </nav>
       <hr class="two" />
+      <hr class="three" />
     </section>
-    <section>
 
-      <p style="text-align: center; margin-top: 6rem; "> email: <a
-          href="mailto:juliaemaj@gmail.com">juliaemaj@gmail.com</a></p>
-          
-      <p style="text-align: center; "> instagram: <a
-          href="https://www.instagram.com/jm.makestuff/">@jm.makestuff</a></p>
-      <p style="text-align: center; "> linkedin: <a
-          href="https://www.linkedin.com/in/juliamajchrzak/">juliamajchrzak</a> </p>
-      <p style="text-align: center; "> phone: <a href="tel:+16179014111">617-901-4111</a
+    <!-- Contact Intro -->
+    <section class="contact-intro">
+      <p class="contact-bigline">Let's Connect!</p>
+    </section>
+
+    <!-- Contact Grid -->
+    <section class="contact-grid" aria-label="Contact methods">
+      <!-- Email -->
+      <a class="contact-card" href="mailto:juliaemaj@gmail.com" aria-label="Email Julia">
+        <span class="contact-icon" aria-hidden="true">
+          <!-- Envelope icon -->
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+            <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/>
+          </svg>
+        </span>
+        <span class="contact-label">email</span>
+        <span class="contact-value">juliaemaj@gmail.com</span>
+      </a>
+
+      <!-- Instagram -->
+      <a class="contact-card" href="https://www.instagram.com/jm.makestuff/" target="_blank" rel="noopener" aria-label="Open Instagram">
+        <span class="contact-icon" aria-hidden="true">
+          <!-- Camera icon -->
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm5-2a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/>
+          </svg>
+        </span>
+        <span class="contact-label">instagram</span>
+        <span class="contact-value">@jm.makestuff</span>
+      </a>
+
+      <!-- LinkedIn -->
+      <a class="contact-card" href="https://www.linkedin.com/in/juliamajchrzak/" target="_blank" rel="noopener" aria-label="Open LinkedIn">
+        <span class="contact-icon" aria-hidden="true">
+          <!-- Briefcase icon -->
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+            <path d="M9 3h6a2 2 0 0 1 2 2v2h2.5A2.5 2.5 0 0 1 22 9.5v8A2.5 2.5 0 0 1 19.5 20h-15A2.5 2.5 0 0 1 2 17.5v-8A2.5 2.5 0 0 1 4.5 7H7V5a2 2 0 0 1 2-2Zm0 4h6V5H9v2Zm-4.5 3A.5.5 0 0 0 4 10.5v7a.5.5 0 0 0 .5.5h15a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5h-15Z"/>
+          </svg>
+        </span>
+        <span class="contact-label">linkedin</span>
+        <span class="contact-value">juliamajchrzak</span>
+      </a>
+
+      <!-- Phone -->
+      <a class="contact-card" href="tel:+16179014111" aria-label="Call phone number">
+        <span class="contact-icon" aria-hidden="true">
+          <!-- Phone icon -->
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+            <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10 21 3 14 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1l-2.22 2.2Z"/>
+          </svg>
+        </span>
+        <span class="contact-label">phone</span>
+        <span class="contact-value">+1 (617) 901-4111</span>
+      </a>
     </section>
   </main>
 
-  <script></script>
+  <script>
+    // Copy-to-clipboard for email/phone
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        const text = btn.getAttribute('data-copy');
+        navigator.clipboard.writeText(text).then(() => {
+          const original = btn.textContent;
+          btn.textContent = 'Copied';
+          setTimeout(() => (btn.textContent = original), 900);
+        });
+      });
+    });
+  </script>
 </body>
-
 </html>

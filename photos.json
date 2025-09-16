@@ -48,13 +48,15 @@
   { "src": "clothing/gameday/IMG_0438.jpeg", "alt": "Gameday 0438", "folder": "clothing-gameday" },
   { "src": "clothing/gameday/IMG_0445.jpeg", "alt": "Gameday 0445", "folder": "clothing-gameday" },
 
-  { "src": "clothing/reclaimed/IMG_0477.jpeg", "alt": "Reclaimed 0477", "folder": "clothing-reclaimed" },
+  
   { "src": "clothing/reclaimed/IMG_1939.jpeg", "alt": "Reclaimed 1939", "folder": "clothing-reclaimed" },
   { "src": "clothing/reclaimed/IMG_1945.jpeg", "alt": "Reclaimed 1945", "folder": "clothing-reclaimed" },
   { "src": "clothing/reclaimed/IMG_1949.jpeg", "alt": "Reclaimed 1949", "folder": "clothing-reclaimed" },
   { "src": "clothing/reclaimed/IMG_1957.jpeg", "alt": "Reclaimed 1957", "folder": "clothing-reclaimed" },
   { "src": "clothing/reclaimed/IMG_1969.jpeg", "alt": "Reclaimed 1969", "folder": "clothing-reclaimed" },
   { "src": "clothing/reclaimed/IMG_1998.jpeg", "alt": "Reclaimed 1998", "folder": "clothing-reclaimed" },
+  { "src": "clothing/reclaimed/IMG_0477.jpeg", "alt": "Reclaimed 0477", "folder": "clothing-reclaimed" },
   { "src": "clothing/reclaimed/IMG_2016.jpeg", "alt": "Reclaimed 2016", "folder": "clothing-reclaimed" },
   { "src": "clothing/reclaimed/IMG_2027.jpeg", "alt": "Reclaimed 2027", "folder": "clothing-reclaimed" }
+  
 ]
