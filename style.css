@@ -154,7 +154,7 @@ hr {
   grid-template-columns: repeat(2, minmax(240px, 1fr));
   gap: var(--card-gap);
   max-width: 900px;
-  margin: 2rem auto 4rem;
+  margin: 8rem auto 4rem;
   padding: 0 1rem;
 }
 
@@ -204,7 +204,7 @@ hr {
 
 .contact-value {
   grid-column: 2 / span 1;
-  font-size: 1.15rem;
+  font-size: 1.4rem;
   color: var(--coffee);
   margin-top: -2px;
 }
