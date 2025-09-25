@@ -1,33 +1,78 @@
 [
-  {
-    "src": "collage/IMG_6881.jpeg",
-    "alt": "Collage piece",
-    "folder": "collage"
-  },
+  {"src": "collage/IMG_6881.jpeg", "alt": "Collage piece", "folder": "collage"},
 
-  { "src": "glass/sculpture/IMG_0632.jpeg", "alt": "Glass sculpture 0632", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture/IMG_0635.jpeg", "alt": "Glass sculpture 0635", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture/IMG_1251.jpeg", "alt": "Glass sculpture 1251", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture/IMG_1265.jpeg", "alt": "Glass sculpture 1265", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture/IMG_1282.jpeg", "alt": "Glass sculpture 1282", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture/IMG_1287.jpeg", "alt": "Glass sculpture 1287", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture/IMG_1293.jpeg", "alt": "Glass sculpture 1293", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture/IMG_1853.jpeg", "alt": "Glass sculpture 1853", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture/IMG_5236.jpeg", "alt": "Glass sculpture 5236", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture/IMG_5959.jpeg", "alt": "Glass sculpture 5959", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture/IMG_5996.jpeg", "alt": "Glass sculpture 5996", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture/IMG_6893.jpeg", "alt": "Glass sculpture 6893", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture/IMG_6894.jpeg", "alt": "Glass sculpture 6894", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture/IMG_6915.jpeg", "alt": "Glass sculpture 6915", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture/IMG_6921.jpeg", "alt": "Glass sculpture 6921", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S8-fireplace/fireplace.jpeg", "alt": "Fireplace", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S8-fireplace/fireplace.MOV", "alt": "Fireplace video", "folder": "glass-sculpture" },
+
+   { "src": "glass/sculpture copy/S6-cactus/cactus.jpeg", "alt": "Cactus process 1", "folder": "glass-sculpture" },
+
+  { "src": "glass/sculpture copy/S6-cactus/cactus process 5.jpg", "alt": "Cactus process 5", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S6-cactus/cactus process2.jpg", "alt": "Cactus process 2", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S6-cactus/cactus process3.jpg", "alt": "Cactus process 3", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S6-cactus/cactus process4.jpg", "alt": "Cactus process 4", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S6-cactus/cactus process1.jpg", "alt": "Cactus process 6", "folder": "glass-sculpture" },
+
+
+  { "src": "glass/sculpture copy/S1-Lagniappe/lagniappe process1.jpg", "alt": "Lagniappe process 1", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S1-Lagniappe/lagniappe process2.jpg", "alt": "Lagniappe process 2", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S1-Lagniappe/lagniappe1.5.mov", "alt": "Lagniappe video 1.5", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S1-Lagniappe/Lagniappe2.5.MOV", "alt": "Lagniappe video 2.5", "folder": "glass-sculpture" },
+
+  { "src": "glass/sculpture copy/S10-silenced/silenced.jpg", "alt": "Silenced", "folder": "glass-sculpture" },
+
+  { "src": "glass/sculpture copy/S2-Closure/closure1.jpeg", "alt": "Closure 1", "folder": "glass-sculpture" },
+
+  { "src": "glass/sculpture copy/S2-Closure/closure-2.mov", "alt": "Closure video", "folder": "glass-sculpture" },
+
+  { "src": "glass/sculpture copy/S12 - wood slump/wood1.jpeg", "alt": "Wood slump", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S12 - wood slump/wood2.jpeg", "alt": "Wood slump", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S13-flowers/flowers.jpeg", "alt": "Flowers", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S14-hanging on by a thread/hanging on by a thread.jpeg", "alt": "Hanging on by a thread", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S15- wood mold cast/woodmold.jpeg", "alt": "Wood mold cast", "folder": "glass-sculpture" },
+  
+  
+  { "src": "glass/sculpture copy/S3-Trapped/trapped1.jpeg", "alt": "Trapped 1", "folder": "glass-sculpture" },
+  
+    { "src": "glass/sculpture copy/S5-burn at both ends/burnt1.jpeg", "alt": "Burnt at both ends", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S5-burn at both ends/burnt at both ends process.jpg", "alt": "Burnt at both ends process", "folder": "glass-sculpture" },
+    { "src": "glass/sculpture copy/S11-rake/rake.jpeg", "alt": "Rake", "folder": "glass-sculpture" },
+
+   
+{ "src": "glass/sculpture copy/S4-Out to Dry/dry1.jpeg", "alt": "Out to dry 1", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S4-Out to Dry/out to dry hotshop vid.MOV", "alt": "Out to dry hotshop video", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S4-Out to Dry/out to dry process1.jpg", "alt": "Out to dry process 1", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S4-Out to Dry/out to dry process2.jpg", "alt": "Out to dry process 2", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S4-Out to Dry/out to dry process3.jpg", "alt": "Out to dry process 3", "folder": "glass-sculpture" },
+    { "src": "glass/sculpture copy/S7-wave/wave1.jpeg", "alt": "Glass sculpture wave 1", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S7-wave/wave process 2.jpg", "alt": "Wave process 2", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S7-wave/wave process1.MOV", "alt": "Wave process video 1", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S7-wave/wave.MOV", "alt": "Wave video", "folder": "glass-sculpture" },
+
+  { "src": "glass/sculpture copy/S16-Pole/pole1.jpeg", "alt": "pole", "folder": "glass-sculpture" },
+
+  
+
+  
+  { "src": "glass/sculpture copy/S9-bubbles/bubbles.jpeg", "alt": "Bubbles", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S9-bubbles/bubbles process 2.jpg", "alt": "Bubbles process 2", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S9-bubbles/bubbles process 3.jpg", "alt": "Bubbles process 3", "folder": "glass-sculpture" },
+
+  { "src": "glass/sculpture copy/S9-bubbles/bubble progress 4.jpg", "alt": "Bubble progress 4", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S9-bubbles/bubble process 5.jpg", "alt": "Bubbles process 5", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/S9-bubbles/bubbles process 6.jpg", "alt": "Bubbles process 6", "folder": "glass-sculpture" },
+  
+
 
   { "src": "glass/vessels/IMG_0629.jpeg", "alt": "Glass vessel 0629", "folder": "glass-vessels" },
   { "src": "glass/vessels/IMG_1256.jpeg", "alt": "Glass vessel 1256", "folder": "glass-vessels" },
   { "src": "glass/vessels/IMG_7035.jpeg", "alt": "Glass vessel 7035", "folder": "glass-vessels" },
   { "src": "glass/vessels/IMG_8216.jpeg", "alt": "Glass vessel 8216", "folder": "glass-vessels" },
+
   {"src": "glass/blow/IMG_1843.jpeg", "alt": "Glass blowing 1843", "folder": "glass-blow"},
   {"src": "glass/blow/IMG_1844.jpeg", "alt": "Glass blowing 1844", "folder": "glass-blow"},
   {"src": "glass/blow/IMG_1845.jpeg", "alt": "Glass blowing 1845", "folder": "glass-blow"},
+
+
 
 
 
@@ -35,13 +80,9 @@
   { "src": "jewelry/jewelry1.JPG", "alt": "Jewelry piece 1", "folder": "jewelry" },
   
   { "src": "paint/IMG_0619.jpeg", "alt": "Painting 0619", "folder": "paint" },
-
-  
   { "src": "paint/IMG_0664.jpeg", "alt": "Painting 0664", "folder": "paint" },
-    { "src": "paint/IMG_0356.jpg", "alt": "Painting 0356", "folder": "paint" },
-
+  { "src": "paint/IMG_0356.jpg", "alt": "Painting 0356", "folder": "paint" },
   { "src": "paint/IMG_3199.jpg", "alt": "Painting 3199", "folder": "paint" },
-  
   { "src": "paint/IMG_0537.jpg", "alt": "Painting 0537", "folder": "paint" },
 
   { "src": "clothing/embroidery/IMG_7318.jpeg", "alt": "Embroidery 7318", "folder": "clothing-embroidery" },
@@ -61,68 +102,6 @@
   { "src": "clothing/reclaimed/IMG_2016.jpeg", "alt": "Reclaimed 2016", "folder": "clothing-reclaimed" },
   { "src": "clothing/reclaimed/IMG_2027.jpeg", "alt": "Reclaimed 2027", "folder": "clothing-reclaimed" },
 
-  { "src": "glass/sculpture copy/S1-Lagniappe/lagniappe process1.jpg", "alt": "Lagniappe process 1", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S1-Lagniappe/lagniappe process2.jpg", "alt": "Lagniappe process 2", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S1-Lagniappe/lagniappe1.5.mov", "alt": "Lagniappe video 1.5", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S1-Lagniappe/lagniappe1.jpg", "alt": "Lagniappe 1", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S1-Lagniappe/Lagniappe2.5.MOV", "alt": "Lagniappe video 2.5", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S1-Lagniappe/Lagniappe2.jpg", "alt": "Lagniappe 2", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S1-Lagniappe/lagniappe3.jpg", "alt": "Lagniappe 3", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S1-Lagniappe/lagniappe4.jpg", "alt": "Lagniappe 4", "folder": "glass-sculpture" },
-
-  { "src": "glass/sculpture copy/S10-silenced/silenced.jpg", "alt": "Silenced", "folder": "glass-sculpture" },
-
-  { "src": "glass/sculpture copy/S11-rake/rake.jpg", "alt": "Rake", "folder": "glass-sculpture" },
-
-  { "src": "glass/sculpture copy/S12 - wood slump/wood slump.jpg", "alt": "Wood slump", "folder": "glass-sculpture" },
-
-  { "src": "glass/sculpture copy/S13-flowers/flowers.jpg", "alt": "Flowers", "folder": "glass-sculpture" },
-
-  { "src": "glass/sculpture copy/S14-hanging on by a thread/hanging on by a thread.jpg", "alt": "Hanging on by a thread", "folder": "glass-sculpture" },
-
-  { "src": "glass/sculpture copy/S15- wood mold cast/wood mold cast.jpg", "alt": "Wood mold cast", "folder": "glass-sculpture" },
-
-  { "src": "glass/sculpture copy/S2-Closure/closure-1.jpg", "alt": "Closure 1", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S2-Closure/closure-2.mov", "alt": "Closure video", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S2-Closure/IMG_6827.HEIC", "alt": "IMG 6827", "folder": "glass-sculpture" },
-
-  { "src": "glass/sculpture copy/S3-Trapped/trapped-1.jpg", "alt": "Trapped 1", "folder": "glass-sculpture" },
-
-  { "src": "glass/sculpture copy/S4-Out to Dry/out to dry 1.jpg", "alt": "Out to dry 1", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S4-Out to Dry/out to dry 2.jpg", "alt": "Out to dry 2", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S4-Out to Dry/out to dry hotshop vid.MOV", "alt": "Out to dry hotshop video", "folder": "glass-sculpture" },
-
-  { "src": "glass/sculpture copy/S4-Out to Dry/out to dry process1.jpg", "alt": "Out to dry process 1", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S4-Out to Dry/out to dry process2.jpg", "alt": "Out to dry process 2", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S4-Out to Dry/out to dry process3.jpg", "alt": "Out to dry process 3", "folder": "glass-sculpture" },
-
-  { "src": "glass/sculpture copy/S5-burn at both ends/burnt at both ends process.jpg", "alt": "Burnt at both ends process", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S5-burn at both ends/burnt at both ends.jpg", "alt": "Burnt at both ends", "folder": "glass-sculpture" },
-
-  { "src": "glass/sculpture copy/S6-cactus/cactus process 5.jpg", "alt": "Cactus process 5", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S6-cactus/cactus process1.jpg", "alt": "Cactus process 1", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S6-cactus/cactus process2.jpg", "alt": "Cactus process 2", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S6-cactus/cactus process3.jpg", "alt": "Cactus process 3", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S6-cactus/cactus process4.jpg", "alt": "Cactus process 4", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S6-cactus/cactus.jpg", "alt": "Cactus", "folder": "glass-sculpture" },
-
-  { "src": "glass/sculpture copy/S7-wave/wave process 2.jpg", "alt": "Wave process 2", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S7-wave/wave process  3.jpg", "alt": "Wave process 3", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S7-wave/wave process1.MOV", "alt": "Wave process video 1", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S7-wave/wave.jpg", "alt": "Wave", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S7-wave/wave.MOV", "alt": "Wave video", "folder": "glass-sculpture" },
-
-  { "src": "glass/sculpture copy/S8-fireplace/fireplace.jpg", "alt": "Fireplace", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S8-fireplace/fireplace.MOV", "alt": "Fireplace video", "folder": "glass-sculpture" },
-
-  { "src": "glass/sculpture copy/S9-bubbles/bubble process 5.jpg", "alt": "Bubble process 5", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S9-bubbles/bubble progress 4.jpg", "alt": "Bubble progress 4", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S9-bubbles/bubbles process 2.jpg", "alt": "Bubbles process 2", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S9-bubbles/bubbles process 3.jpg", "alt": "Bubbles process 3", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S9-bubbles/bubbles process 6.jpg", "alt": "Bubbles process 6", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S9-bubbles/bubbles process1.jpg", "alt": "Bubbles process 1", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S9-bubbles/bubbles.jpg", "alt": "Bubbles", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/S9-bubbles/IMG_5959.HEIC", "alt": "IMG 5959", "folder": "glass-sculpture" },
   { "src": "branding/everloom trifold 1.jpg", "alt": "Everloom Trifold 1", "folder": "branding" },
   { "src": "branding/everloom trifold 2.jpg", "alt": "Everloom Trifold 2", "folder": "branding" },
   { "src": "branding/2305_Cause_Logo-Mockup_JMajchrzak.jpg", "alt": "Cause Logo Mockup", "folder": "branding" },
