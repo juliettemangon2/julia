@@ -82,6 +82,7 @@ h3{
 .nav-buttons a:hover {
   background: var(--lightyellow2);
   color: var(--copper);
+  text-decoration: none;
 }
 
 .nav-buttons a.active {
@@ -141,6 +142,16 @@ hr {
   font-size: clamp(1rem, 2.5vw, 1.25rem);
   color: var(--coffee);
   opacity: 0.9;
+}
+a {
+  color: var(--flame);
+  text-decoration: none;
+  transform: none;
+  transition: text-decoration 0.2s;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 
