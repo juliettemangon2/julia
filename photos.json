@@ -1,5 +1,7 @@
 [
   {"src": "collage/IMG_6881.jpeg", "alt": "Collage piece", "folder": "collage"},
+    { "src": "branding/everloom moodboard.jpg", "alt": "Everloom Moodboard", "folder": "collage" },
+
 
   { "src": "glass/sculpture copy/S8-fireplace/fireplace.jpeg", "alt": "Fireplace", "folder": "glass-sculpture" },
   { "src": "glass/sculpture copy/S8-fireplace/fireplace.MOV", "alt": "Fireplace video", "folder": "glass-sculpture" },
