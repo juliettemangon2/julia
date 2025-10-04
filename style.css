@@ -9,6 +9,8 @@
   --lightgray: #daeaf0;
   --lightyellow2:  #fffef3;
   --goldenbrown: #8E712C;
+  --lightgreen: #c2db54;
+  --orange: #fa861a;
 }
 
 * {
@@ -106,14 +108,14 @@ hr {
 
 .one {
   border: none;
-  border-top: 10px dotted var(--lightyellow2);
+  border-top: 10px dotted var(--lightgreen);
   margin-left: 5rem;
   width: 500px;
 }
 
 .two {
   border: none;
-  border-top: 10px dotted var(--flame);
+  border-top: 10px dotted var(--orange);
   width: 100%;
   margin-top: 1rem;
 }
