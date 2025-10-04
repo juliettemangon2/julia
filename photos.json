@@ -1,12 +1,12 @@
 [
   {"src": "collage/IMG_6881.jpeg", "alt": "Collage piece", "folder": "collage"},
-    { "src": "branding/everloom moodboard.jpg", "alt": "Everloom Moodboard", "folder": "collage" },
+  { "src": "branding/everloom moodboard.jpg", "alt": "Everloom Moodboard", "folder": "collage" },
 
 
   { "src": "glass/sculpture copy/Fireplace/fireplace.jpeg", "alt": "Fireplace", "folder": "glass-sculpture" },
   { "src": "glass/sculpture copy/Fireplace/fireplace.MOV", "alt": "Fireplace video", "folder": "glass-sculpture" },
 
-   { "src": "glass/sculpture copy/Cactus/cactus.jpeg", "alt": "Cactus process 1", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/Cactus/cactus.jpeg", "alt": "Cactus process 1", "folder": "glass-sculpture" },
 
   { "src": "glass/sculpture copy/Cactus/cactus process 5.jpg", "alt": "Cactus process 5", "folder": "glass-sculpture" },
   { "src": "glass/sculpture copy/Cactus/cactus process2.jpg", "alt": "Cactus process 2", "folder": "glass-sculpture" },
