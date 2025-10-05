@@ -117,11 +117,12 @@
   { "src": "branding/everloom logo ideations.jpg", "alt": "Everloom Logo Ideations", "folder": "branding" },
   { "src": "branding/everloom moodboard.jpg", "alt": "Everloom Moodboard", "folder": "branding" },
   { "src": "branding/everloom style sheet.jpg", "alt": "Everloom Style Sheet", "folder": "branding" },
+
+  { "src": "branding/van wrap .jpg", "alt": "Van Wrap", "folder": "branding2" },
   
   { "src": "branding/van back.jpeg", "alt": "Van Back", "folder": "branding2" },
-  { "src": "branding/van front.jpeg", "alt": "Van Front", "folder": "branding2" },
   { "src": "branding/van side 1.jpeg", "alt": "Van Side 1", "folder": "branding2" },
-  { "src": "branding/van side 2.jpeg", "alt": "Van Side 2", "folder": "branding2" },
-  { "src": "branding/van wrap .jpg", "alt": "Van Wrap", "folder": "branding2" }
+  { "src": "branding/van side 2.jpeg", "alt": "Van Side 2", "folder": "branding2" }
+  
   
 ]

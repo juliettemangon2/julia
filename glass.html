@@ -13,7 +13,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Josephin-Slab:wght@700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
     rel="stylesheet" />
 
@@ -21,9 +23,11 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     p {
-      margin-bottom: 1.5rem;
-      font-size: 10.6rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.4rem;
       font-weight: 400;
+      margin-left: 5rem;
+      margin-right: 5rem;
     }
 
     .flowers-img {
@@ -78,46 +82,55 @@
 
   <main>
     <section class="name-section">
-       <section class="name-section">
-      <div class="nav-title" style="display: flex; align-items: center; justify-content: center;">
-  <img src="name.png" alt="Julia Majchrzak" style="height: 4.7rem; vertical-align: middle;" />
-</div>
+      <section class="name-section">
+        <div class="nav-title" style="display: flex; align-items: center; justify-content: center;">
+          <img src="name.png" alt="Julia Majchrzak" style="height: 4.7rem; vertical-align: middle;" />
+        </div>
 
-      <!-- Decorative lines -->
-      <hr class="two" />
+        <!-- Decorative lines -->
+        <hr class="two" />
 
-      <!-- Navigation -->
-      <nav class="nav-buttons">
-        <a href="index.html">About</a>
-        <a href="resume.html">Resume</a>
- 
-        <a href="glass.html" class="active">Glass</a>
-        <a href="clothing.html">Clothing</a>
-        <a href="collage.html">Collage</a>
-        <a href="branding.html">Branding</a>
-        <a href="jewelry.html">Jewelry</a>
-        <a href="paint.html">Paint</a>
-        <a href="contact.html">Contact</a>
+        <!-- Navigation -->
+        <nav class="nav-buttons">
+          <a href="index.html">About</a>
+          <a href="resume.html">Resume</a>
 
+          <a href="glass.html" class="active">Glass</a>
+          <a href="clothing.html">Clothing</a>
+          <a href="collage.html">Collage</a>
+          <a href="branding.html">Branding</a>
+          <a href="jewelry.html">Jewelry</a>
+          <a href="paint.html">Paint</a>
+          <a href="contact.html">Contact</a>
+
+        </nav>
+        <hr class="two" />
+        <hr class="three" />
+
+      </section>
+      <nav class="nav-buttons" id="glass-subnav" style="margin-top: 1.5rem; margin-bottom: 0rem;">
+        <a href="#" data-folder="glass-sculpture" tabindex="0" class="active">Sculptures</a>
+        <a href="#" data-folder="glass-vessels" tabindex="0">Vessels</a>
+        <a href="#" data-folder="glass-blow" tabindex="0">Blown Mold</a>
       </nav>
-      <hr class="two" />
-          <hr class="three" />
+      <section>
+        <p style="text-align:left; margin-top: 1.5rem"> I fell in love with glass in an intro course my sophomore year and
+          haven't left the hot shop since. My practice is sculpture-led, often pairing glass with metal and wood. I work
+          across many processes: furnace blowing and blown molds, steel, wood, sand and kiln casting, lost-wax choosing
+          the method that best serves the idea. Today I'm focused on bespoke, sustainability-minded pieces that bridge
+          sculpture and design: objects with presence, purpose, and a lighter footprint.
 
-    </section>
-    <nav class="nav-buttons" id="glass-subnav" style="margin-top: 1.5rem; margin-bottom: 0rem;">
-      <a href="#" data-folder="glass-sculpture" tabindex="0" class="active">Sculptures</a>
-      <a href="#" data-folder="glass-vessels" tabindex="0">Vessels</a>
-      <a href="#" data-folder="glass-blow"  tabindex="0">Blown Mold</a>
-    </nav>
+        </p>
+      </section>
 
-    <!-- Gallery -->
+      <!-- Gallery -->
 
-    <section style="padding: 1rem 0 3rem">
-      <div id="gallery" data-folder="glass-sculpture"></div>
-    </section>
+      <section style="padding: 1rem 0 3rem">
+        <div id="gallery" data-folder="glass-sculpture"></div>
+      </section>
 
 
-    
+
   </main>
 
 
@@ -134,10 +147,11 @@
         padding-bottom: 2rem;
         margin-top: 1rem;
       ">
-    © 2025 Juliette Mangon | 
+    © 2025 Juliette Mangon |
     <a href="https://juliettemangon.com/" target="_blank" style="color: var(--text); text-decoration: underline;">
       juliettemangon.com
     </a>
   </p>
 </footer>
+
 </html>
