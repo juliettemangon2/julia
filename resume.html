@@ -15,7 +15,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
     rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Shared palette and base styles -->
   <link rel="stylesheet" href="style.css" />
@@ -26,6 +28,7 @@
     p {
       color: var(--blue);
     }
+
     .page {
       max-width: 1200px;
       margin: 0 auto;
@@ -149,235 +152,266 @@
 <body>
   <!-- Top strip and NAV kept EXACTLY the same as original -->
   <div class="top-strip"></div>
-  <section class="name-section">
-     <section class="name-section">
-      <div class="nav-title" style="display: flex; align-items: center; justify-content: center;">
-  <img src="name.png" alt="Julia Majchrzak" style="height: 4.7rem; vertical-align: middle;" />
-</div>
-    <hr class="two" />
-    <nav class="nav-buttons">
-      <a href="index.html">About</a>
-      <a href="resume.html" class="active">Resume</a>
-      <a href="glass.html">Glass</a>
-      <a href="clothing.html">Clothing</a>
-      <a href="collage.html">Collage</a>
-      <a href="branding.html">Branding</a>
-      <a href="jewelry.html">Jewelry</a>
-      <a href="paint.html">Paint</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </section>
-  <hr class="two" />
-  <hr class="three" />
+  <main>
+    <section class="name-section">
+      <section class="name-section">
+        <div class="nav-title" style="display: flex; align-items: center; justify-content: center;">
+          <img src="name.png" alt="Julia Majchrzak" style="height: 4.7rem; vertical-align: middle;" class="name-img" />
+          <style>
+            @media (max-width: 600px) {
+              .name-img {
+                height: 2.7rem !important;
+                max-width: 80vw !important;
+                width: auto !important;
+                display: block !important;
+                margin: 0 auto !important;
+              }
+            }
+          </style>
+        </div>
+        <hr class="two" />
+        <nav class="nav-buttons">
+          <a href="index.html">About</a>
+          <a href="resume.html" class="active">Resume</a>
+          <a href="glass.html">Glass</a>
+          <a href="clothing.html">Clothing</a>
+          <a href="collage.html">Collage</a>
+          <a href="branding.html">Branding</a>
+          <a href="jewelry.html">Jewelry</a>
+          <a href="paint.html">Paint</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </section>
+      <hr class="two" />
+      <hr class="three" />
 
 
-  <!-- New collapsible layout under the unchanged nav -->
-  <main class="page">
-    <!-- Education -->
-    <h3 class="section-header" style="margin-top:3rem;"">Education</h3>
+      <!-- New collapsible layout under the unchanged nav -->
+      <main class="page">
+        <!-- Education -->
+        <h3 class="section-header" style="margin-top:3rem;"">Education</h3>
 
     <!-- Card 1: BS -->
-    <details class="resume-card" open>
-      <summary class="card-summary">
-        <span><strong>B.S. in Management, Marketing</strong>, Tulane University (2022-2026)</span>
-        <span class="pill">+</span>
-      </summary>
-      <div class="card-body">
-        <ul id="edu-list" class="section-list">
-          <li>
-            <p class="description">
-              <span class="desc-title">Relevant coursework:</span>
-              New Product Development, Social and Online Marketing, Brand Management, Sales
-              management, Marketing research and analytics, Financial Management, Legal Ethical and Regulatory Business,
-              Negotiations, Marketing Fundamentals, Consumer Behavior, Micro & Macro Economics, Financial & Managerial
-              Accounting, Management Communication, Organizational Behavior, Business Analytics.
-            </p>
-          </li>
-        </ul>
-      </div>
-    </details>
-
-    <!-- Card 2: Minor -->
-    <details class="resume-card">
-      <summary class="card-summary">
-        <span><strong>Minor in Design</strong>, Tulane University (2022-2026)</span>
-        <span class="pill">+</span>
-      </summary>
-      <div class="card-body">
-        <ul class="section-list">
-          <li>
-            <p class="description">
-              <span class="desc-title">Relevant coursework:</span>
-              Design History, Portfolio Design Lab, Fundamentals of Design and Making, Introduction to
-              Design/Creative Thinking, Visual Communication and Advocacy.
-            </p>
-          </li>
-        </ul>
-      </div>
-    </details>
-
-    <!-- Card 3: Glass -->
-    <details class="resume-card">
-      <summary class="card-summary">
-        <span><strong>Independent Exploration in Glass</strong></span>
-        <span class="pill">+</span>
-      </summary>
-      <div class="card-body">
-        <ul class="section-list">
-          <li>
-            <p class="description">
-              <span class="desc-title">Tulane coursework:</span>
-              Advanced Glass (3 semesters), Glass II: Hot Casting, Found of Art: Glass, occasional TA
-              experience for beginners.
-            </p>
-            <p class="description"><span class="desc-title">NOCA coursework:</span> Vessel Making (Summer 2025)</p>
-          </li>
-        </ul>
-      </div>
-    </details>
-
-    <!-- Work Experience -->
-    <div class="spacer"></div>
-    <h3 class="section-header">Work Experience</h3>
-
-    <!-- Card 4: TJX -->
-    <details class="resume-card" open>
-      <summary class="card-summary">
-        <span><strong>Product Development Design Intern, Women's Woven Apparel</strong>, The TJX Companies, Inc. (Summer
-          2025)</span>
-        <span class="pill">+</span>
-      </summary>
-      <div class="card-body">
-        <ul id="we-list" class="section-list">
-          <li>
-            <ul class="description">
-              <li>Collaborated with cross-functional teams (dresses, sleepwear, activewear, bottoms, sweaters, juniors,
-                luxe, etc.) to support design processes and deliverables across TJX’s women’s apparel divisions.</li>
-              <li>Conducted in-depth trend research on fabrics, silhouettes, trims, and colors, synthesizing findings
-                into Adobe Illustrator artboards and CLO3D sketches to inform seasonal design direction.</li>
-              <li> Strengthened adaptability by learning and implementing each designer’s preferred sketching and
-                presentation workflows, improving efficiency and accuracy of design outputs.</li>
-              <li>Developed and presented a sustainability-focused intern project, proposing innovations such as fabric
-                scrap hangers (via NUNOUS technology), biodegradable resin, gift-with-purchase items from marker scraps,
-                and new hang tags to increase sustainability visibility.</li>
-              <li>Analyzed business feasibility of sustainable initiatives by considering cost-saving scrap usage,
-                vendor negotiations, and packaging strategies, highlighting opportunities for product development to
-                drive sustainable change.</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </details>
-
-    <!-- Card 5: Independent Designer -->
-    <details class="resume-card">
-      <summary class="card-summary">
-        <span><strong>Independent Designer </strong>, Sustainable Fashion & Jewelry (2022-)</span>
-        <span class="pill">+</span>
-      </summary>
-      <div class="card-body">
-        <ul id="we-list" class="section-list">
-          <li>
-            <ul class="description">
-              <li>Design and produce one-of-a-kind garments from repurposed scrap textiles, creating apparel that
-                emphasizes sustainability and material innovation.</li>
-              <li>Handcrafted jewelry from reused beads, chains, and vintage buttons, and design glass pendants using
-                original glassblowing techniques.
-              </li>
-              <li>Create and sell embroidered garments and beaded embroidery pieces, combining traditional craftsmanship
-                with contemporary fashion trends.</li>
-              <li>Manage all aspects of a small creative business—design, production, sales, and marketing—building a
-                following among college students seeking sustainable, customized products.
+    <details class=" resume-card" open>
+          <summary class="card-summary">
+            <span><strong>B.S. in Management, Marketing</strong>, Tulane University (2022-2026)</span>
+            <span class="pill">+</span>
+          </summary>
+          <div class="card-body">
+            <ul id="edu-list" class="section-list">
+              <li>
+                <p class="description">
+                  <span class="desc-title">Relevant coursework:</span>
+                  New Product Development, Social and Online Marketing, Brand Management, Sales
+                  management, Marketing research and analytics, Financial Management, Legal Ethical and Regulatory
+                  Business,
+                  Negotiations, Marketing Fundamentals, Consumer Behavior, Micro & Macro Economics, Financial &
+                  Managerial
+                  Accounting, Management Communication, Organizational Behavior, Business Analytics.
+                </p>
               </li>
             </ul>
-          </li>
-        </ul>
-      </div>
-    </details>
+          </div>
+          </details>
 
-    <!-- Card 6: Buffalo Exchange -->
-    <details class="resume-card">
-      <summary class="card-summary">
-        <span><strong>Buyer</strong>, Buffalo Exchange (Summer 2024)</span>
-        <span class="pill">+</span>
-      </summary>
-      <div class="card-body">
-        <ul id="we-list" class="section-list">
-          <li>
-            <ul class="description">
-              <li>Evaluated and selected clothing items from sellers based on customer demographics, current trends,
-                seasonality, brand recognition, and garment condition to establish an optimal mix of inventory for
-                maximum profitability.
-              </li>
-              <li>Analyzed sales patterns to identify top-selling trends, guiding purchasing decisions to meet customer
-                demand and enhance store performance.
-              </li>
-              <li>Facilitated buy meetings with the buying team to discuss intake strategies and collaborated to curate
-                selections that aligned with revenue goals and supported Buffalo Exchange’s sustainability-focused
-                business model.
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </details>
+          <!-- Card 2: Minor -->
+          <details class="resume-card">
+            <summary class="card-summary">
+              <span><strong>Minor in Design</strong>, Tulane University (2022-2026)</span>
+              <span class="pill">+</span>
+            </summary>
+            <div class="card-body">
+              <ul class="section-list">
+                <li>
+                  <p class="description">
+                    <span class="desc-title">Relevant coursework:</span>
+                    Design History, Portfolio Design Lab, Fundamentals of Design and Making, Introduction to
+                    Design/Creative Thinking, Visual Communication and Advocacy.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </details>
 
-    <!-- Card 7: The SetUp Organization -->
-    <details class="resume-card">
-      <summary class="card-summary">
-        <span><strong>Brand and Visual Identity Designer</strong>, The SetUp Organization (August - November
-          2024)</span>
-        <span class="pill">+</span>
-      </summary>
-      <div class="card-body">
-        <ul id="we-list" class="section-list">
-          <li>
-            <ul class="description">
-              <li>Designed business cards and website to develop a cohesive brand identity, including logos, color
-                palette, and visual elements that aligned with the target customer demographic.
-              </li>
-              <li>Created a user-friendly website layout that effectively showcases the business’s interior design and
-                organization services, boosting online visibility and client engagement.
-              </li>
-              <li>Collaborated with business owner to ensure the branding and design elements resonated with the target
-                audience, fostering a professional and appealing aesthetic for both print and digital platforms. </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </details>
-  </main>
+          <!-- Card 3: Glass -->
+          <details class="resume-card">
+            <summary class="card-summary">
+              <span><strong>Independent Exploration in Glass</strong></span>
+              <span class="pill">+</span>
+            </summary>
+            <div class="card-body">
+              <ul class="section-list">
+                <li>
+                  <p class="description">
+                    <span class="desc-title">Tulane coursework:</span>
+                    Advanced Glass (3 semesters), Glass II: Hot Casting, Found of Art: Glass, occasional TA
+                    experience for beginners.
+                  </p>
+                  <p class="description"><span class="desc-title">NOCA coursework:</span> Vessel Making (Summer 2025)
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </details>
 
-  <script>
-    // Persist open/closed state per card for better UX (optional)
-    const cards = document.querySelectorAll('details.resume-card');
-    cards.forEach((card, idx) => {
-      const key = `resume-card-${idx}`;
-      const saved = localStorage.getItem(key);
-      if (saved === "open") card.setAttribute("open", "");
-      if (saved === "closed") card.removeAttribute("open");
-      card.addEventListener("toggle", () => {
-        localStorage.setItem(key, card.open ? "open" : "closed");
-      });
-    });
+          <!-- Work Experience -->
+          <div class="spacer"></div>
+          <h3 class="section-header">Work Experience</h3>
 
-    // Toggle pill +/-, always + when closed, always - when open
-    function updatePills() {
-      document.querySelectorAll('details.resume-card').forEach(details => {
-        const pill = details.querySelector('.pill');
-        if (pill) {
-          pill.textContent = details.open ? '-' : '+';
+          <!-- Card 4: TJX -->
+          <details class="resume-card" open>
+            <summary class="card-summary">
+              <span><strong>Product Development Design Intern, Women's Woven Apparel</strong>, The TJX Companies, Inc.
+                (Summer
+                2025)</span>
+              <span class="pill">+</span>
+            </summary>
+            <div class="card-body">
+              <ul id="we-list" class="section-list">
+                <li>
+                  <ul class="description">
+                    <li>Collaborated with cross-functional teams (dresses, sleepwear, activewear, bottoms, sweaters,
+                      juniors,
+                      luxe, etc.) to support design processes and deliverables across TJX’s women’s apparel divisions.
+                    </li>
+                    <li>Conducted in-depth trend research on fabrics, silhouettes, trims, and colors, synthesizing
+                      findings
+                      into Adobe Illustrator artboards and CLO3D sketches to inform seasonal design direction.</li>
+                    <li> Strengthened adaptability by learning and implementing each designer’s preferred sketching and
+                      presentation workflows, improving efficiency and accuracy of design outputs.</li>
+                    <li>Developed and presented a sustainability-focused intern project, proposing innovations such as
+                      fabric
+                      scrap hangers (via NUNOUS technology), biodegradable resin, gift-with-purchase items from marker
+                      scraps,
+                      and new hang tags to increase sustainability visibility.</li>
+                    <li>Analyzed business feasibility of sustainable initiatives by considering cost-saving scrap usage,
+                      vendor negotiations, and packaging strategies, highlighting opportunities for product development
+                      to
+                      drive sustainable change.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Card 5: Independent Designer -->
+          <details class="resume-card">
+            <summary class="card-summary">
+              <span><strong>Independent Designer </strong>, Sustainable Fashion & Jewelry (2022-)</span>
+              <span class="pill">+</span>
+            </summary>
+            <div class="card-body">
+              <ul id="we-list" class="section-list">
+                <li>
+                  <ul class="description">
+                    <li>Design and produce one-of-a-kind garments from repurposed scrap textiles, creating apparel that
+                      emphasizes sustainability and material innovation.</li>
+                    <li>Handcrafted jewelry from reused beads, chains, and vintage buttons, and design glass pendants
+                      using
+                      original glassblowing techniques.
+                    </li>
+                    <li>Create and sell embroidered garments and beaded embroidery pieces, combining traditional
+                      craftsmanship
+                      with contemporary fashion trends.</li>
+                    <li>Manage all aspects of a small creative business—design, production, sales, and
+                      marketing—building a
+                      following among college students seeking sustainable, customized products.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Card 6: Buffalo Exchange -->
+          <details class="resume-card">
+            <summary class="card-summary">
+              <span><strong>Buyer</strong>, Buffalo Exchange (Summer 2024)</span>
+              <span class="pill">+</span>
+            </summary>
+            <div class="card-body">
+              <ul id="we-list" class="section-list">
+                <li>
+                  <ul class="description">
+                    <li>Evaluated and selected clothing items from sellers based on customer demographics, current
+                      trends,
+                      seasonality, brand recognition, and garment condition to establish an optimal mix of inventory for
+                      maximum profitability.
+                    </li>
+                    <li>Analyzed sales patterns to identify top-selling trends, guiding purchasing decisions to meet
+                      customer
+                      demand and enhance store performance.
+                    </li>
+                    <li>Facilitated buy meetings with the buying team to discuss intake strategies and collaborated to
+                      curate
+                      selections that aligned with revenue goals and supported Buffalo Exchange’s sustainability-focused
+                      business model.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Card 7: The SetUp Organization -->
+          <details class="resume-card">
+            <summary class="card-summary">
+              <span><strong>Brand and Visual Identity Designer</strong>, The SetUp Organization (August - November
+                2024)</span>
+              <span class="pill">+</span>
+            </summary>
+            <div class="card-body">
+              <ul id="we-list" class="section-list">
+                <li>
+                  <ul class="description">
+                    <li>Designed business cards and website to develop a cohesive brand identity, including logos, color
+                      palette, and visual elements that aligned with the target customer demographic.
+                    </li>
+                    <li>Created a user-friendly website layout that effectively showcases the business’s interior design
+                      and
+                      organization services, boosting online visibility and client engagement.
+                    </li>
+                    <li>Collaborated with business owner to ensure the branding and design elements resonated with the
+                      target
+                      audience, fostering a professional and appealing aesthetic for both print and digital platforms.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </details>
+      </main>
+
+      <script>
+        // Persist open/closed state per card for better UX (optional)
+        const cards = document.querySelectorAll('details.resume-card');
+        cards.forEach((card, idx) => {
+          const key = `resume-card-${idx}`;
+          const saved = localStorage.getItem(key);
+          if (saved === "open") card.setAttribute("open", "");
+          if (saved === "closed") card.removeAttribute("open");
+          card.addEventListener("toggle", () => {
+            localStorage.setItem(key, card.open ? "open" : "closed");
+          });
+        });
+
+        // Toggle pill +/-, always + when closed, always - when open
+        function updatePills() {
+          document.querySelectorAll('details.resume-card').forEach(details => {
+            const pill = details.querySelector('.pill');
+            if (pill) {
+              pill.textContent = details.open ? '-' : '+';
+            }
+          });
         }
-      });
-    }
 
-    document.addEventListener('DOMContentLoaded', () => {
-      updatePills();
-      document.querySelectorAll('details.resume-card').forEach(details => {
-        details.addEventListener('toggle', updatePills);
-      });
-    });
-  </script>
+        document.addEventListener('DOMContentLoaded', () => {
+          updatePills();
+          document.querySelectorAll('details.resume-card').forEach(details => {
+            details.addEventListener('toggle', updatePills);
+          });
+        });
+      </script>
 </body>
 <footer>
   <p style="
@@ -388,10 +422,11 @@
         padding-bottom: 2rem;
         margin-top: 1rem;
       ">
-    © 2025 Juliette Mangon | 
+    © 2025 Juliette Mangon |
     <a href="https://juliettemangon.com/" target="_blank" style="color: var(--text); text-decoration: underline;">
       juliettemangon.com
     </a>
   </p>
 </footer>
+
 </html>

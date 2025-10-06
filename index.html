@@ -9,6 +9,8 @@
 
 
   <!-- Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -61,7 +63,18 @@
   <main>
     <section class="name-section">
       <div class="nav-title" style="display: flex; align-items: center; justify-content: center;">
-  <img src="name.png" alt="Julia Majchrzak" style="height: 4.7rem; vertical-align: middle;" />
+  <img src="name.png" alt="Julia Majchrzak" style="height: 4.7rem; vertical-align: middle;" class="name-img" />
+  <style>
+    @media (max-width: 600px) {
+      .name-img {
+        height: 2.7rem !important;
+        max-width: 80vw !important;
+        width: auto !important;
+        display: block !important;
+        margin: 0 auto !important;
+      }
+    }
+  </style>
 </div>
 
       <!-- Decorative lines -->
@@ -83,11 +96,11 @@
     </section>
     <hr class="two" />
     <hr class="three" />
-   <h3 style=" text-align: left; grid-column: span 2; margin-left: 5rem; margin-right: 5rem; margin-top: 2rem;">About Me</h3>
+   <h3 style=" text-align: left; grid-column: span 2; margin-left: 5rem; margin-right: 5rem; margin-top: 3rem; ">About Me</h3>
   
     
     <section class="about-section" style="display: grid; grid-template-columns: 1fr 2fr; align-items: start; gap: 0rem; margin-top: 2rem;">
-      <div class="about-image" style="justify-self: center; align-self: start; margin-top: 1rem; padding-left: 5rem;">
+      <div class="about-image" style="justify-self: center; align-self: start; margin-top:0.5rem; padding-left: 5rem;">
         <img src="about.jpeg" alt="About Julia" style="max-width: 100%; height: auto; " />
       </div>
       <div class="about-info">
