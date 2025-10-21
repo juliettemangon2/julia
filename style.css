@@ -11,6 +11,7 @@
   --goldenbrown: #8E712C;
   --lightgreen: #c2db54;
   --orange: #fa861a;
+  --pink: #fddfdc;
 }
 
 * {
@@ -254,7 +255,7 @@ p {
 .top-strip {
   width: 100%;
   height: 15px;
-  background-color: var(--pink);
+  background-color: var(--lightgray);
 }
 #gallery {
   margin: 0 auto;      /* centers container */

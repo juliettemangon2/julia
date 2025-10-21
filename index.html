@@ -7,135 +7,369 @@
   <title>Julia Majchrzak</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-
-  <!-- Fonts -->
-   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
-
+  <!-- match site fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Josephin-Slab:wght@700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
-  <link href="https://api.fontshare.com/css?family=Tanker" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-
-  <!-- Shared stylesheet -->
+  <!-- your shared styles -->
   <link rel="stylesheet" href="style.css" />
+
   <style>
-    p {
-      margin-bottom: 1.5rem;
-      font-size: 1.7rem;
-      font-weight: 400;
-      margin-left: 5rem;
-      margin-right: 5rem;
+    :root {
+      /* final header Y position for the stack when it rises */
+      --header-top: 18px;
+      /* tweak if needed */
     }
 
-    .flowers-img {
-      float: left;
-      /* keeps it aligned to the left */
-      margin: rem 2rem 1rem 0;
-      /* adds spacing around the image */
-      width: 600px;
-      /* scale as needed */
-      height: auto;
+    /* Page baseline */
+    html,
+    body {
+      height: 100%;
     }
 
-    .flowers-img {
+    body {
+      margin: 0;
+      background: var(--lightgray);
+      color: var(--lightyellow2);
+      overflow: hidden;
+      font-family: "Be Vietnam Pro", sans-serif;
+    }
+
+    /* DECORATIVE IMAGES (behind the name) */
+    .decor {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      /* never block clicks */
+      z-index: 0;
+      /* stay behind the name/logo stack */
+    }
+
+    .decor img {
       position: absolute;
-      top: 28rem;
-      /* adjust depending on where you want it */
-      width: 400px;
       height: auto;
-      margin-left: 0;
-      opacity: 1;
-      left: -80px;
+      opacity: 0;
+      /* grow-in start */
+      transform: scale(.92);
+      transition:
+        opacity 420ms ease,
+        transform 600ms cubic-bezier(.2, .8, .2, 1);
+      will-change: opacity, transform;
     }
+
+    /* Default positions (you can tweak offsets/sizes later in style.css if you want).
+       These are placed "around" center so they shouldn't overlap the name.
+       Sizes use clamp to stay responsive but not huge. */
+    .decor .fish {
+  width: clamp(200px, 28vw, 420px);
+  right: 8%;
+  top: 0%;          /* raise them upward (was 5%) */
+}
+
+/* left-side flowers */
+.decor .flowers {
+  width: clamp(200px, 28vw, 420px);
+  left: 5%;
+  bottom: -3%;       /* move slightly lower (was 0%) */
+  top: auto;
+  transform: scaleX(-1) scale(.92);
+}
+
+.decor .flowers.in {
+  transform: scaleX(-1) scale(1);
+}
+
+    .decor .leaves {
+      width: clamp(110px, 17vw, 240px);
+      left: 6%;
+      bottom: 10%;
+    }
+
+    /* Centered stack (logo + button) */
+    .stack {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      /* exact center */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      will-change: top, transform;
+      transition: top 800ms cubic-bezier(.2, .8, .2, 1),
+        transform 800ms cubic-bezier(.2, .8, .2, 1);
+      z-index: 1;
+      transform: translate(-50%, calc(-50% + 5vh));
+      /* above decor */
+    }
+
+    /* Logo size (start) + grow-in */
+    .logo {
+      height: clamp(6rem, 18vw, 10rem);
+      opacity: 0;
+      /* grow-in start */
+      transform: scale(.92);
+      /* start a bit smaller */
+      transition:
+        height 800ms cubic-bezier(.2, .8, .2, 1),
+        opacity 420ms ease,
+        transform 600ms cubic-bezier(.2, .8, .2, 1);
+      will-change: height, opacity, transform;
+    }
+
+    .logo img {
+      display: block;
+      height: 100%;
+      width: auto;
+    }
+
+    /* Button sits 1.5rem under the logo, always */
+    .cta {
+      margin-top: 1.5rem;
+      font-weight: 580;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.9rem 1.6rem;
+      border: 4.5px solid var(--pink);
+      border-radius: 50px;
+      background: var(--lightyellow2);
+      color: var(--purple);
+      cursor: pointer;
+      transition:
+        opacity 300ms ease,
+        background 250ms ease,
+        color 250ms ease,
+        transform 180ms ease,
+        box-shadow 180ms ease;
+      box-shadow: 0 6px 0 var(--orange);
+      opacity: 0;
+      /* slide-in start */
+      transform: translateY(12px);
+      /* slide-in start */
+    }
+
+    .cta:hover {
+      background: var(--lightyellow2);
+      color: var(--orange);
+      transform: translateY(10px);
+      box-shadow: 0 8px 0 var(--flame);
+    }
+
+    .cta:active {
+      transform: translateY(12px);
+      box-shadow: 0 2px 0 var(--flame);
+    }
+
+    /* Staggered reveal classes (added via JS) */
+    .logo.in {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .decor img.in {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Keep flowers always flipped while preserving the grow-in scale */
+    .decor .flowers {
+      transform: scaleX(-1) scale(.92);
+    }
+
+    .decor .flowers.in {
+      transform: scaleX(-1) scale(1);
+    }
+
+    .decor .flowers.in {
+      transform: scaleX(-1) scale(1);
+      /* keep flipped + grow-in end */
+    }
+    /* Right-side flowers (using the .fish class) — raise it */
+.decor .fish {
+  width: clamp(200px, 28vw, 420px);
+  right: 0%;
+  top: 5%; /* keep your anchor */
+  /* nudge upward: negative translateY moves it up */
+  transform: scale(.92) translateY(-210px);
+}
+
+.decor .fish.in {
+  /* keep the nudge after grow-in finishes */
+  transform: scale(1) translateY(-210px);
+}
+
+
+    .cta.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Click/enter animation:
+       - Stack moves up to header
+       - Logo shrinks to header size (already defined)
+       - Button fades out
+       - Decor fades out (NOT the name) */
+    .enter .stack {
+      top: var(--header-top);
+      transform: translate(-50%, 0);
+      /* keep centered horizontally; move straight up */
+    }
+
+    .enter .logo {
+      height: 4.7rem;
+      /* desktop header size */
+    }
+
+    .enter .cta {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .enter .decor img {
+      opacity: 0;
+      transition: opacity 350ms ease;
+    }
+    /* make the logo scale down smoothly on smaller screens */
+@media (max-width: 900px) {
+  .logo {
+    height: clamp(4.5rem, 12vw, 8rem);
+  }
+}
+
+@media (max-width: 700px) {
+  .logo {
+    height: clamp(3.8rem, 14vw, 6.5rem);
+  }
+}
+
+@media (max-width: 500px) {
+  .logo {
+    height: clamp(2.7rem, 18vw, 5rem);
+  }
+}
+
+
+    /* Mobile header target for logo size */
+    @media (max-width: 600px) {
+      .enter .logo {
+        height: 2.7rem;
+      }
+    }
+    /* Mobile layout adjustments */
+@media (max-width: 600px) {
+  /* hide decorative images */
+  .decor {
+    display: none !important;
+  }
+
+  /* make name start at header size (no grow/shrink animation) */
+  .logo {
+    height: 2.7rem !important;  /* same as about.html final size */
+    opacity: 1 !important;      /* already visible */
+    transform: none !important; /* no scale in/out */
+    transition: none !important;
+  }
+
+  /* also prevent the logo from resizing on click */
+  .enter .logo {
+    height: 2.7rem !important;
+  }
+
+  /* keep stack centered and aligned for smaller screens */
+  .stack {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* keep button visible and sized appropriately */
+  .cta {
+    font-size: 1rem;
+    padding: 0.8rem 1.4rem;
+  }
+}
+
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+
+      .stack,
+      .logo,
+      .cta,
+      .decor img {
+        transition: none !important;
+      }
+    }
+
   </style>
 </head>
 
 <body>
-  <!-- Thin blue bar at top -->
-  <div class="top-strip"></div>
+  <!-- Decorative images behind the name -->
+  <div class="decor" aria-hidden="true">
+    <img class="fish" src="landing/flowers.png" alt="">
+    <img class="flowers" src="landing/flowers.png" alt="">
+  </div>
 
-  <main>
-    <section class="name-section">
-      <div class="nav-title" style="display: flex; align-items: center; justify-content: center;">
-  <img src="name.png" alt="Julia Majchrzak" style="height: 4.7rem; vertical-align: middle;" class="name-img" />
-  <style>
-    @media (max-width: 600px) {
-      .name-img {
-        height: 2.7rem !important;
-        max-width: 80vw !important;
-        width: auto !important;
-        display: block !important;
-        margin: 0 auto !important;
+  <div class="stack" role="main" aria-label="Landing">
+    <div class="logo" aria-label="Julia Majchrzak">
+      <img src="name.png" alt="Julia Majchrzak" />
+    </div>
+    <button class="cta" id="explore">Enter Here</button>
+  </div>
+
+  <script>
+    (function () {
+      const btn = document.getElementById('explore');
+      const logo = document.querySelector('.logo');
+      const decorImgs = Array.from(document.querySelectorAll('.decor img'));
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Staggered grow-in: name first, then decor, then button
+      function stagedReveal() {
+        if (prefersReduced) {
+          // Show everything immediately without animation
+          logo.classList.add('in');
+          decorImgs.forEach(img => img.classList.add('in'));
+          btn.classList.add('in');
+          return;
+        }
+        // Name first
+        setTimeout(() => { logo.classList.add('in'); }, 50);
+        // Then the three pngs
+        setTimeout(() => {
+          decorImgs.forEach((img, i) => {
+            setTimeout(() => img.classList.add('in'), i * 120);
+          });
+        }, 220);
+        // Then button slides in
+        setTimeout(() => { btn.classList.add('in'); }, 620);
       }
-    }
-  </style>
-</div>
 
-      <!-- Decorative lines -->
-      <hr class="two" />
+      function go() {
+        btn.disabled = true;
+        if (prefersReduced) {
+          window.location.href = 'about.html';
+          return;
+        }
+        document.body.classList.add('enter');
 
-      <!-- Navigation -->
-      <nav class="nav-buttons">
-        <a href="index.html" class="active">About</a>
-        <a href="resume.html">Resume</a>
+        // CSS duration = 800ms; add a buffer
+        setTimeout(function () {
+          window.location.href = 'about.html';
+        }, 900);
+      }
 
-        <a href=" glass.html">Glass</a>
-        <a href="clothing.html">Clothing</a>
-        <a href="collage.html">Collage</a>
-        <a href="branding.html">Branding</a>
-        <a href="jewelry.html">Jewelry</a>
-        <a href="paint.html">Paint</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </section>
-    <hr class="two" />
-    <hr class="three" />
-   <h3 style=" text-align: left; grid-column: span 2; margin-left: 5rem; margin-right: 5rem; margin-top: 3rem; ">About Me</h3>
-  
-    
-    <section class="about-section" style="display: grid; grid-template-columns: 1fr 2fr; align-items: start; gap: 0rem; margin-top: 2rem;">
-      <div class="about-image" style="justify-self: center; align-self: start; margin-top:0.5rem; padding-left: 5rem;">
-        <img src="about.jpeg" alt="About Julia" style="max-width: 100%; height: auto; " />
-      </div>
-      <div class="about-info">
-        <p style="text-align: left; margin-top: 0rem; margin-bottom: 2rem;"> My name is Julia Majchrzak and I am a designer, artist, and maker
-          passionate about creating products and brand strategies that drive positive environmental and social impact. I
-          am a senior at Tulane University, studying Marketing, Design, and Glassblowing, and will graduate in June 2026.
-        </p>
-        <p style="text-align: left; margin-top: 0rem">
-          I thrive in interdisciplinary environments that blend creativity with strategy, and I am eager to contribute my
-          skills in a professional setting. My work spans <a href="clothing.html" >textiles</a>,<a href="glass.html" >glass</a>, <a href="jewelry.html" >jewelry</a>, and <a href="paint.html" >painting</a>, reflecting both my
-          versatility and dedication to material innovation. I am especially interested in opportunities that allow me to
-          travel, learn from diverse perspectives, and continue to grow as a designer and creative thinker.
-        </p>
-        
-      </div>
-    </section>
-    
+      // Run on load
+      window.addEventListener('DOMContentLoaded', stagedReveal);
 
-  </main>
+      // Click handlers
+      btn.addEventListener('click', go);
+      btn.addEventListener('keyup', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') go();
+      });
+    })();
+  </script>
 </body>
-<footer>
-  <p style="
-        text-align: center;
-        font-size: 0.9rem;
-        color: var(--text);
-        margin-bottom: 2.7rem;
-        padding-bottom: 2rem;
-        margin-top: 1rem;
-      ">
-    © 2025 Juliette Mangon | 
-    <a href="https://juliettemangon.com/" target="_blank" style="color: var(--text); text-decoration: underline;">
-      juliettemangon.com
-    </a>
-  </p>
-</footer>
-
 
 </html>
