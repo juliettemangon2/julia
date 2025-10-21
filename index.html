@@ -125,40 +125,73 @@
 
     /* Button sits 1.5rem under the logo, always */
     .cta {
-      margin-top: 1.5rem;
-      font-weight: 580;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 0.9rem 1.6rem;
-      border: 4.5px solid var(--pink);
-      border-radius: 50px;
-      background: var(--lightyellow2);
-      color: var(--purple);
-      cursor: pointer;
-      transition:
-        opacity 300ms ease,
-        background 250ms ease,
-        color 250ms ease,
-        transform 180ms ease,
-        box-shadow 180ms ease;
-      box-shadow: 0 6px 0 var(--orange);
-      opacity: 0;
-      /* slide-in start */
-      transform: translateY(12px);
-      /* slide-in start */
-    }
+  margin-top: 1.5rem;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--coffee);
+  display: inline-flex;
+  gap: 0.25rem;
+  position: relative;
+  border-bottom: 7px dotted var(--orange); /* always visible */
+  transition:
+    padding-left 250ms ease,
+    padding-right 250ms ease,
+    border-color 200ms ease,
+    transform 200ms ease,
+    opacity 300ms ease;
+}
 
-    .cta:hover {
-      background: var(--lightyellow2);
-      color: var(--orange);
-      transform: translateY(10px);
-      box-shadow: 0 8px 0 var(--flame);
-    }
+/* Rainbow text colors stay as you had them */
+
+
+
+.cta:hover {
+  transform: translateY(-2px) scaleX(1.15); /* subtle stretch effect */
+  border-color: var(--coffee);              /* dotted line turns coffee */
+}
+/* Each letter as its own span so we can color them individually */
+.cta span:nth-child(1) { color: var(--flame); }
+.cta span:nth-child(2) { color: var(--olive); }
+.cta span:nth-child(3) { color: var(--blue); }
+.cta span:nth-child(4) { color: var(--purple); }
+.cta span:nth-child(5) { color: var(--orange); }
+.cta span:nth-child(6) { color: var(--copper); }
+.cta span:nth-child(7) { color: var(--goldenbrown); }
+.cta span:nth-child(8) { color: var(--lightgreen2); }
+.cta span:nth-child(9) { color: var(--flame); }
+.cta span:nth-child(10) { color: var(--yellow); }
+
+.cta:hover {
+  border-color: var(--coffee);
+  padding-left: 1.9rem;  /* was 1.6rem */
+  padding-right: 1.9rem; /* was 1.6rem */
+  transform: translateY(-2px);
+}
+
+/* dotted underline that appears on hover */
+.cta::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+.cta:hover::after {
+  opacity: 1;
+}
+
 
     .cta:active {
       transform: translateY(12px);
-      box-shadow: 0 2px 0 var(--flame);
     }
 
     /* Staggered reveal classes (added via JS) */
@@ -315,7 +348,12 @@
     <div class="logo" aria-label="Julia Majchrzak">
       <img src="name.png" alt="Julia Majchrzak" />
     </div>
-    <button class="cta" id="explore">Enter Here</button>
+    <button class="cta" id="explore">
+  <span>E</span><span>n</span><span>t</span><span>e</span><span>r</span>
+  <span> </span><span> </span>
+  <span>H</span><span>e</span><span>r</span><span>e</span>
+</button>
+
   </div>
 
   <script>
