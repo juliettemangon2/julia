@@ -2,17 +2,38 @@
   {"src": "collage/IMG_6881.jpeg", "alt": "Collage piece", "folder": "collage"},
   { "src": "branding/everloom moodboard.jpg", "alt": "Everloom Moodboard", "folder": "collage" },
 
+  { "src": "glass/sculpture copy/Closure/closure new whole 2.jpg", "alt": "Closure 1", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/Closure/closure whole new 1.jpg", "alt": "Closure 1", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/Closure/newclosure.jpg", "alt": "Closure 1", "folder": "glass-sculpture" },
+  
+  { "src": "glass/sculpture copy/Closure/closure close up 1.jpg", "alt": "Closure 1", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/Closure/closure close up 2.jpg", "alt": "Closure 1", "folder": "glass-sculpture" },
 
-  { "src": "glass/sculpture copy/Fireplace/fireplace.jpeg", "alt": "Fireplace", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/Fireplace/fireplace.MOV", "alt": "Fireplace video", "folder": "glass-sculpture" },
 
-  { "src": "glass/sculpture copy/Cactus/cactus.jpeg", "alt": "Cactus process 1", "folder": "glass-sculpture" },
+
+  { "src": "glass/sculpture copy/Cactus/new cactus 1.jpg", "alt": "Cactus process 1", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/Cactus/new cactus 2.jpg", "alt": "Cactus process 1", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/Cactus/new cactus 3.jpg", "alt": "Cactus process 1", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/Cactus/new cactus 4.jpg", "alt": "Cactus process 1", "folder": "glass-sculpture" },
 
   { "src": "glass/sculpture copy/Cactus/cactus process 5.jpg", "alt": "Cactus process 5", "folder": "glass-sculpture" },
   { "src": "glass/sculpture copy/Cactus/cactus process2.jpg", "alt": "Cactus process 2", "folder": "glass-sculpture" },
   { "src": "glass/sculpture copy/Cactus/cactus process3.jpg", "alt": "Cactus process 3", "folder": "glass-sculpture" },
   { "src": "glass/sculpture copy/Cactus/cactus process4.jpg", "alt": "Cactus process 4", "folder": "glass-sculpture" },
   { "src": "glass/sculpture copy/Cactus/cactus process1.jpg", "alt": "Cactus process 6", "folder": "glass-sculpture" },
+
+  { "src": "glass/sculpture copy/Out to Dry/hung out to dry 1 new.jpg", "alt": "Out to dry 1", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/Out to Dry/hung out to dry 2 new.jpg", "alt": "Out to dry 1", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/Out to Dry/out to dry hotshop vid.MOV", "alt": "Out to dry hotshop video", "folder": "glass-sculpture" },
+  
+  { "src": "glass/sculpture copy/Out to Dry/out to dry process2.jpg", "alt": "Out to dry process 2", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/Out to Dry/out to dry process3.jpg", "alt": "Out to dry process 3", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/Out to Dry/out to dry process1.jpg", "alt": "Out to dry process 1", "folder": "glass-sculpture" },
+
+
+  { "src": "glass/sculpture copy/Fireplace/fireplace.jpeg", "alt": "Fireplace", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/Fireplace/fireplace.MOV", "alt": "Fireplace video", "folder": "glass-sculpture" },
+
 
 
   { "src": "glass/sculpture copy/Lagniappe/lagniappe process1.jpg", "alt": "Lagniappe process 1", "folder": "glass-sculpture" },
@@ -22,9 +43,7 @@
 
   { "src": "glass/sculpture copy/Silenced/silenced.jpg", "alt": "Silenced", "folder": "glass-sculpture" },
 
-  { "src": "glass/sculpture copy/Closure/closure1.jpeg", "alt": "Closure 1", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/Closure/closure-2.mov", "alt": "Closure video", "folder": "glass-sculpture" },
-
+  
   { "src": "glass/sculpture copy/Wood slump/wood1.jpeg", "alt": "Wood slump", "folder": "glass-sculpture" },
   { "src": "glass/sculpture copy/Wood slump/wood2.jpeg", "alt": "Wood slump", "folder": "glass-sculpture" },
   { "src": "glass/sculpture copy/Flowers/flowers.jpeg", "alt": "Flowers", "folder": "glass-sculpture" },
@@ -36,17 +55,13 @@
   
   { "src": "glass/sculpture copy/Burn at both ends/burnt1.jpeg", "alt": "Burnt at both ends", "folder": "glass-sculpture" },
   { "src": "glass/sculpture copy/Burn at both ends/burnt at both ends process.jpg", "alt": "Burnt at both ends process", "folder": "glass-sculpture" },
-    { "src": "glass/sculpture copy/Rake/rake.jpeg", "alt": "Rake", "folder": "glass-sculpture" },
-    { "src": "glass/sculpture copy/Cast Body/cast body 1.jpg", "alt": "Cast Body 1", "folder": "glass-sculpture" },
-        { "src": "glass/sculpture copy/Cast Body/cast body 2.jpg", "alt": "Cast Body 1", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/Rake/rake.jpeg", "alt": "Rake", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/Cast Body/cast body 1.jpg", "alt": "Cast Body 1", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/Cast Body/cast body 2.jpg", "alt": "Cast Body 1", "folder": "glass-sculpture" },
 
 
    
-{ "src": "glass/sculpture copy/Out to Dry/dry1.jpeg", "alt": "Out to dry 1", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/Out to Dry/out to dry hotshop vid.MOV", "alt": "Out to dry hotshop video", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/Out to Dry/out to dry process1.jpg", "alt": "Out to dry process 1", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/Out to Dry/out to dry process2.jpg", "alt": "Out to dry process 2", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/Out to Dry/out to dry process3.jpg", "alt": "Out to dry process 3", "folder": "glass-sculpture" },
+  
     { "src": "glass/sculpture copy/Wave/wave1.jpeg", "alt": "Glass sculpture wave 1", "folder": "glass-sculpture" },
   { "src": "glass/sculpture copy/Wave/wave process 2.jpg", "alt": "Wave process 2", "folder": "glass-sculpture" },
   { "src": "glass/sculpture copy/Wave/wave process1.MOV", "alt": "Wave process video 1", "folder": "glass-sculpture" },
