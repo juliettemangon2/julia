@@ -136,6 +136,121 @@
       height: 0.25rem;
     }
 
+    /* Skills section */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.5rem 0.75rem;
+      margin: 0.5rem 0 0.25rem;
+      padding-left: 0.2rem;
+    }
+
+    .skill-line {
+      font-size: 1.05rem;
+      color: var(--blue);
+    }
+
+    .skill-pill {
+      display: inline-block;
+      border: 1px solid var(--flame);
+      background: var(--lightyellow2);
+      color: var(--coffee);
+      padding: 0.25rem 0.5rem;
+      border-radius: 0;
+      /* square corners to match your aesthetic */
+      letter-spacing: 0.01rem;
+    }
+
+    @media (max-width: 880px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ===== Skills Cards ===== */
+    .skills-wrap {
+      margin-top: 0.75rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    .skill-card {
+      border: 2px solid var(--flame);
+      background: #ffffff;
+      box-shadow: 0 0 0 6px var(--lightblue) inset;
+      padding: 0;
+    }
+
+    .skill-card-head {
+      padding: 0.7rem 0.9rem;
+      background: var(--lightyellow2);
+      border-bottom: 4px dashed var(--lightbrown);
+    }
+
+    .skill-card-title {
+      margin: 0;
+      color: var(--blue);
+      font-size: 1.25rem;
+      letter-spacing: 0.06rem;
+      text-transform: uppercase;
+    }
+
+    .skill-card-body {
+      padding: 0.8rem 0.9rem 1rem;
+    }
+
+    .skill-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.45rem;
+    }
+
+    .skill-badge {
+      display: inline-block;
+      border: 1px solid var(--flame);
+      background: var(--lightyellow2);
+      color: var(--coffee);
+      padding: 0.28rem 0.5rem;
+      font-size: 0.98rem;
+      line-height: 1.2;
+      letter-spacing: 0.01rem;
+      white-space: nowrap;
+    }
+
+    /* Subtle hover (optional) */
+    .skill-card:hover {
+      box-shadow: 0 0 0 6px rgba(137, 136, 38, 0.08) inset;
+      border-color: var(--flame);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skill-card-title {
+        font-size: 1.1rem;
+      }
+    }
+
+
     /* Responsive */
     @media (max-width: 720px) {
       .section-header {
@@ -380,7 +495,7 @@
               </ul>
             </div>
           </details>
-          
+
           <!-- Card 8: Tulane Student Organization Center -->
           <details class="resume-card">
             <summary class="card-summary">
@@ -391,10 +506,11 @@
               <ul id="we-list" class="section-list">
                 <li>
                   <ul class="description">
-                    <li>Offer support to student organizations regarding finances, event planning, transportation, and all other related logistics. 
+                    <li>Offer support to student organizations regarding finances, event planning, transportation, and
+                      all other related logistics.
 
                     </li>
-                    <li>Communicate directly with student organization leaders to solve any issues and ensure success. 
+                    <li>Communicate directly with student organization leaders to solve any issues and ensure success.
 
                     </li>
                     <li>Manage social media accounts and create content for Tulane Student Organization Center.
@@ -414,13 +530,15 @@
               <ul id="we-list" class="section-list">
                 <li>
                   <ul class="description">
-                    <li>Delegate $2,000,000 of Tulane’s endowment to student organizations based on presented budget proposals. 
+                    <li>Delegate $2,000,000 of Tulane’s endowment to student organizations based on presented budget
+                      proposals.
 
                     </li>
-                    <li>Manage and create policies regarding student organization budget requests, late budget requests, and travel budget requests. 
+                    <li>Manage and create policies regarding student organization budget requests, late budget requests,
+                      and travel budget requests.
 
                     </li>
-                    
+
                   </ul>
                 </li>
               </ul>
@@ -436,18 +554,84 @@
               <ul id="we-list" class="section-list">
                 <li>
                   <ul class="description">
-                    <li>Delivered full-time childcare for a three-year-old girl in Udine, Italy with a focus on English language development. 
+                    <li>Delivered full-time childcare for a three-year-old girl in Udine, Italy with a focus on English
+                      language development.
 
                     </li>
-                    <li>Adjusted to language barriers and adapted to living in a foreign country with significant cultural barriers.
+                    <li>Adjusted to language barriers and adapted to living in a foreign country with significant
+                      cultural barriers.
                     </li>
-                    <li>Gained international experience and improved communication skills through working with locals in Italy, France, and Austria.
-                    
+                    <li>Gained international experience and improved communication skills through working with locals in
+                      Italy, France, and Austria.
+
                   </ul>
                 </li>
               </ul>
             </div>
           </details>
+          <div class="spacer"></div>
+          <h3 class="section-header">Skills</h3>
+
+          <section class="skills-wrap">
+            <div class="skills-grid">
+              <!-- Card 1: Tools & Platforms -->
+              <article class="skill-card">
+                <div class="skill-card-head">
+                  <h4 class="skill-card-title">Tools & Platforms</h4>
+                </div>
+                <div class="skill-card-body">
+                  <div class="skill-badges">
+                    <span class="skill-badge">Adobe Illustrator</span>
+                    <span class="skill-badge">Adobe Photoshop</span>
+                    <span class="skill-badge">Adobe InDesign</span>
+                    <span class="skill-badge">Adobe Animate</span>
+                    <span class="skill-badge">Clo3D</span>
+                    <span class="skill-badge">Figma</span>
+                    <span class="skill-badge">Excel</span>
+                    <span class="skill-badge">Microsoft Office</span>
+                    <span class="skill-badge">Google Suite</span>
+                    <span class="skill-badge">R</span>
+                    <span class="skill-badge">RStudio</span>
+                    <span class="skill-badge">Java (proficient)</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 2: Languages -->
+              <article class="skill-card">
+                <div class="skill-card-head">
+                  <h4 class="skill-card-title">Languages</h4>
+                </div>
+                <div class="skill-card-body">
+                  <div class="skill-badges">
+                    <span class="skill-badge">English</span>
+                    <span class="skill-badge">American Sign Language (conversational)</span>
+                    <span class="skill-badge">Spanish (conversational)</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 3: Personal -->
+              <article class="skill-card">
+                <div class="skill-card-head">
+                  <h4 class="skill-card-title">Personal</h4>
+                </div>
+                <div class="skill-card-body">
+                  <div class="skill-badges">
+                    <span class="skill-badge">Sewing</span>
+                    <span class="skill-badge">Glassblowing</span>
+                    <span class="skill-badge">Painting</span>
+                    <span class="skill-badge">Photography</span>
+                    <span class="skill-badge">Fashion</span>
+                    <span class="skill-badge">Traveling</span>
+                    <span class="skill-badge">Yoga</span>
+                    <span class="skill-badge">Personal Investing</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
       </main>
 
       <script>
