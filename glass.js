@@ -263,7 +263,7 @@ const renderSculptureGrid = () => {
 
     const caption = document.createElement('figcaption');
     caption.textContent = key;
-    caption.style.cssText = 'font:14px/1.4 system-ui,sans-serif;color:var(--blue);margin-top:4px;';
+    caption.style.cssText = 'font:18px/1.5 system-ui,sans-serif;color:var(--coffee);margin-top:4px;';
 
     fig.appendChild(wrap);
     fig.appendChild(caption);
