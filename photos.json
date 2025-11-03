@@ -127,8 +127,8 @@
   { "src": "clothing/embroidery/IMG_7318.jpeg", "alt": "Embroidery 7318", "folder": "clothing-embroidery" },
   { "src": "clothing/embroidery/IMG_7852.jpeg", "alt": "Embroidery 7852", "folder": "clothing-embroidery" },
 
-  { "src": "clothing/gameday/IMG_0438.jpeg", "alt": "Gameday 0438", "folder": "clothing-gameday" },
-  { "src": "clothing/gameday/IMG_0445.jpeg", "alt": "Gameday 0445", "folder": "clothing-gameday" },
+  { "src": "clothing/gameday/IMG_0438.jpeg", "alt": "Gameday 0438", "folder": "clothing-embroidery" },
+  { "src": "clothing/gameday/IMG_0445.jpeg", "alt": "Gameday 0445", "folder": "clothing-embroidery" },
 
   
   { "src": "clothing/reclaimed/IMG_1939.jpeg", "alt": "Reclaimed 1939", "folder": "clothing-reclaimed" },
