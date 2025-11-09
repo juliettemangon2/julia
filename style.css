@@ -7,7 +7,7 @@
   --purple: #9D1A5F;
   --copper: #B4A94D;
   --lightgray: #d3e9f2;
-  --lightyellow2:  #f6fdff;
+  --lightyellow2:  #fcffff;
   --goldenbrown: #8E712C;
   --lightgreen: #e4f4b9;
   --orange: #fa861a;
@@ -42,6 +42,14 @@ main {
   
 }
 
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 3rem;
+  display: grid;
+  gap: 1.25rem;
+  overflow-x: hidden; /* ADD THIS */
+}
 h2 {
   color: var(--coffee);
   font-size: 4rem;
@@ -346,7 +354,28 @@ p {
     max-width: 100vw !important;
   }
 }
-
+@media (max-width: 900px) {
+  /* your existing mobile styles... */
+  
+  .about-info {
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    opacity: 1 !important;
+  }
+  
+  .about-info::before {
+    display: none !important;
+  }
+  
+  .about-info p {
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+  }
+}
 @media (max-width: 768px) {
   .contact-columns {
     grid-template-columns: 1fr;
