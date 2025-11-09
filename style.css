@@ -6,12 +6,12 @@
   --blue: #174a71;
   --purple: #9D1A5F;
   --copper: #B4A94D;
-  --lightgray: #dce8bc;
-  --lightyellow2:  #fffef3;
+  --lightgray: #d3e9f2;
+  --lightyellow2:  #fffff6;
   --goldenbrown: #8E712C;
-  --lightgreen: #c2db54;
+  --lightgreen: #e4f4b9;
   --orange: #fa861a;
-  --pink: #fddfdc;
+  --pink: #ffc1c0;
   --yellow: #c3aa3c;
   --lightgreen2: rgb(59, 55, 78);
 }
@@ -53,7 +53,7 @@ h2 {
   letter-spacing: 0.2rem;
 }
 h3{
-  color: var(--blue);
+  color: var(--purple);
   font-size: 2.5rem;
   font-weight: 600;
   text-align: left;
@@ -110,7 +110,7 @@ hr {
 
 .one {
   border: none;
-  border-top: 10px dotted var(--lightgreen);
+  border-top: 10px dotted var(--pink);
   margin-left: 5rem;
   width: 500px;
 }
@@ -160,6 +160,26 @@ a:hover {
   text-decoration: underline;
 }
 
+.about-info {
+  background: var(--lightyellow2);
+  border: 5px dashed var(--pink);
+  padding: 1rem;
+  margin-right: 5rem;
+  margin-left: 2rem; /* adds gap between image and text */
+  position: relative;
+}
+
+.about-info::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  right: -12px;
+  bottom: -12px;
+  border: 20px dotted var(--purple); /* increased from 3px to 5px for bigger dots */
+  
+  z-index: -1;
+}
 
 
 
@@ -296,6 +316,7 @@ p {
   .about-section {
     display: block !important;
     margin-top: 1rem !important;
+    
   }
   .about-image {
     margin: 0 auto 1rem auto !important;
