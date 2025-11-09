@@ -7,7 +7,7 @@
   --purple: #9D1A5F;
   --copper: #B4A94D;
   --lightgray: #d3e9f2;
-  --lightyellow2:  #fffff6;
+  --lightyellow2:  #f6fdff;
   --goldenbrown: #8E712C;
   --lightgreen: #e4f4b9;
   --orange: #fa861a;
@@ -150,7 +150,7 @@ hr {
   opacity: 0.9;
 }
 a {
-  color: var(--flame);
+  color: var(--orange);
   text-decoration: none;
   transform: none;
   transition: text-decoration 0.2s;
@@ -164,9 +164,12 @@ a:hover {
   background: var(--lightyellow2);
   border: 5px dashed var(--pink);
   padding: 1rem;
-  margin-right: 5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 0.5rem;
+  margin-right: 4rem;
   margin-left: 2rem; /* adds gap between image and text */
   position: relative;
+  margin-top: 1rem;
 }
 
 .about-info::before {
