@@ -26,7 +26,7 @@
   <style>
     /* Content wrapper under the unchanged top nav */
     p {
-      color: var(--blue);
+      color: var(--charcoal);
     }
 
     .page {
@@ -48,14 +48,14 @@
 
     /* Collapsible cards */
     details.resume-card {
-      border: 2px solid var(--flame);
+      border: 3px solid var(--cream);
       background: #ffffff;
-      box-shadow: 0 0 0 6px var(--lightblue) inset;
+      box-shadow: 0 0 0 6px var(--ice-blue) inset;
       transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
     details.resume-card[open] {
-      border-color: var(--flame);
+      border-color: var(--beeswax);
       box-shadow: 0 0 0 6px rgba(137, 136, 38, 0.08) inset;
     }
 
@@ -78,14 +78,14 @@
 
     .pill {
       font-size: 1.85rem;
-      color: var(--copper);
+      color: var(--charcoal);
       white-space: nowrap;
     }
 
 
     .card-body {
       padding: 0.75rem 1.1rem 1.1rem 1.1rem;
-      border-top: 4px dashed var(--lightbrown);
+      border-top: 4px dashed var(--ice-blue);
     }
 
     /* Lists and descriptions inside cards */
@@ -102,14 +102,14 @@
     .section-list>li>strong {
       font-size: 1.15rem;
       font-weight: 700;
-      color: var(--blue);
+      color: var(--charcoal);
     }
 
     .description {
       margin: 0.5rem 0 0.5rem 0;
       padding-left: 1rem;
       font-size: 1.05rem;
-      color: var(--blue);
+      color: var(--charcoal);
     }
 
     .description li {
@@ -119,16 +119,14 @@
 
     .desc-title {
       font-weight: 700;
-      color: var(--coffee);
+      color: var(--charcoal);
     }
 
     /* Work Experience special list style preserved but harmonized */
     #we-list.section-list>li {
-      border: 1px solid var(--flame);
       padding: 0.75rem 0.85rem;
       margin: 0.65rem 0;
       width: 100%;
-      background: var(--lightyellow2);
     }
 
     /* Keep hr.two from global stylesheet untouched; add a subtle spacer */
@@ -147,14 +145,10 @@
 
     .skill-line {
       font-size: 1.05rem;
-      color: var(--blue);
     }
 
     .skill-pill {
       display: inline-block;
-      border: 1px solid var(--flame);
-      background: var(--lightyellow2);
-      color: var(--coffee);
       padding: 0.25rem 0.5rem;
       border-radius: 0;
       /* square corners to match your aesthetic */
@@ -185,16 +179,16 @@
     }
 
     .skill-card {
-      border: 2px solid var(--flame);
+      border: 3px solid var(--beeswax);
       background: #ffffff;
-      box-shadow: 0 0 0 6px var(--lightblue) inset;
+      box-shadow: 0 0 0 6px var(--cream) inset;
       padding: 0;
     }
 
     .skill-card-head {
       padding: 0.7rem 0.9rem;
       background: var(--lightyellow2);
-      border-bottom: 4px dashed var(--lightbrown);
+      border-bottom: 4px dashed var(--ice-blue);
     }
 
     .skill-card-title {
@@ -217,20 +211,13 @@
 
     .skill-badge {
       display: inline-block;
-      border: 1px solid var(--flame);
-      background: var(--lightyellow2);
-      color: var(--coffee);
+      border: 1px solid var(--grenadine);
+      color: var(--charcoal);
       padding: 0.28rem 0.5rem;
       font-size: 0.98rem;
       line-height: 1.2;
       letter-spacing: 0.01rem;
       white-space: nowrap;
-    }
-
-    /* Subtle hover (optional) */
-    .skill-card:hover {
-      box-shadow: 0 0 0 6px rgba(137, 136, 38, 0.08) inset;
-      border-color: var(--flame);
     }
 
     /* Responsive */
@@ -436,39 +423,41 @@
 </head>
 
 <body>
-  <!-- Top strip and NAV kept EXACTLY the same as original -->
-  <div class="top-strip"></div>
   <main>
     <section class="name-section">
-      <section class="name-section">
-        <div class="nav-title" style="display: flex; align-items: center; justify-content: center;">
-          <img src="name.png" alt="Julia Majchrzak" style="height: 4.7rem; vertical-align: middle;" class="name-img" />
-          <style>
-            @media (max-width: 600px) {
-              .name-img {
-                height: 2.7rem !important;
-                max-width: 80vw !important;
-                width: auto !important;
-                display: block !important;
-                margin: 0 auto !important;
-              }
-            }
-          </style>
-        </div>
-        <hr class="two" />
+      <!-- Text header -->
+      <h1>Julia Majchrzak</h1>
         <nav class="nav-buttons">
-          <a href="about.html">About</a>
-          <a href="resume.html" class="active">Resume</a>
-          <a href="glass.html">Glass</a>
-          <a href="textiles.html">Textiles</a>
-          <a href="branding.html">Branding</a>
-          <a href="jewelry.html">Jewelry</a>
-          <a href="paint.html">Paint</a>
-          <a href="contact.html">Contact</a>
-        </nav>
+        <a href="about.html" class="nav-card burst2">
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
+            <polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58
+    4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73
+    40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86
+    111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57
+    156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
+          </svg>
+          About
+        </a>
+        <a class="nav-card spiral" href="resume.html">Resume</a>
+        <a class="nav-card glass2" href="glass.html">Glass</a>
+        <a class="nav-card star" href="textiles.html">Textiles</a>
+        <a href="paint.html" class="nav-card burst2">
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
+            <polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58
+    4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73
+    40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86
+    111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57
+    156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
+          </svg>
+          Paint
+        </a>
+        <a class="nav-card spiral" href="branding.html">Branding</a>
+        <a class="nav-card branding" href="jewelry.html">Jewelry</a>
+        <a class="nav-card star" href="contact.html">Contact</a>
+      </nav>
+    </section>
       </section>
-      <hr class="two" />
-      <hr class="three" />
+
 
 
       <!-- New collapsible layout under the unchanged nav -->
@@ -792,6 +781,7 @@
                     <span class="skill-badge">Glassblowing</span>
                     <span class="skill-badge">Painting</span>
                     <span class="skill-badge">Photography</span>
+                    <span class="skill-badge">Welding (MIG and stick)</span>
                     <span class="skill-badge">Fashion</span>
                     <span class="skill-badge">Traveling</span>
                     <span class="skill-badge">Yoga</span>

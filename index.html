@@ -1,458 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Julia Majchrzak</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Julia Majchrzak</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-  <!-- match site fonts -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josephin+Slab:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/css?family=Tanker" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
-  <!-- your shared styles -->
+  <!-- Shared stylesheet -->
   <link rel="stylesheet" href="style.css" />
 
-  <style>
-    :root {
-      /* final header Y position for the stack when it rises */
-      --header-top: 18px;
-      /* tweak if needed */
-    }
+<style>
+/* ------------------------------ */
+/*      COLOR VARIABLES           */
+/* ------------------------------ */
+:root {
+  --darlington: #ACCA82;
+  --beeswax: #e9d562;
+  --grenadine: #d95402;
+  --cafe-latte: #9B9180;
+  --lavender: #7c6a85;
+  --ice-blue: #D9E8E8;
+  --turquoise: #7EC5C0;
+  --cream: #FFF9F0;
+  --charcoal: #383838;
+  --lightyellow2: #ffeec0;
+}
 
-    /* Page baseline */
-    html,
-    body {
-      height: 100%;
-    }
+/* ------------------------------ */
+/*        GLOBAL RESET            */
+/* ------------------------------ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      background: var(--lightgray);
-      color: var(--lightyellow2);
-      overflow: hidden;
-      font-family: "Be Vietnam Pro", sans-serif;
-    }
+body {
+  background: var(--cream);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", sans-serif;
+  overflow: hidden;
+}
 
-    /* DECORATIVE IMAGES (behind the name) */
-    .decor {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      /* never block clicks */
-      z-index: 0;
-      /* stay behind the name/logo stack */
-    }
+/* ------------------------------ */
+/*       LANDING CONTAINER        */
+/* ------------------------------ */
+#landing {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-    .decor img {
-      position: absolute;
-      height: auto;
-      opacity: 0;
-      /* grow-in start */
-      transform: scale(.92);
-      transition:
-        opacity 420ms ease,
-        transform 600ms cubic-bezier(.2, .8, .2, 1);
-      will-change: opacity, transform;
-    }
+/* ------------------------------ */
+/*         STAR SVG ICON          */
+/* ------------------------------ */
+#landing-star {
+  width: 400px;
+  height: auto;
+  opacity: 0;
+  transform: scale(0.6);
+  animation: starFadeIn 1s ease forwards;
+  margin-bottom: 2rem;
+}
 
-    /* Default positions (you can tweak offsets/sizes later in style.css if you want).
-       These are placed "around" center so they shouldn't overlap the name.
-       Sizes use clamp to stay responsive but not huge. */
-    .decor .fish {
-      width: clamp(200px, 28vw, 420px);
-      right: 8%;
-      top: 0%;
-      /* raise them upward (was 5%) */
-    }
+#landing-star polygon {
+  fill: var(--beeswax);
+}
 
-    /* left-side flowers */
-    .decor .flowers {
-      width: clamp(200px, 28vw, 420px);
-      left: 5%;
-      bottom: -3%;
-      /* move slightly lower (was 0%) */
-      top: auto;
-      transform: scaleX(-1) scale(.92);
-    }
+/* ------------------------------ */
+/*        NAME TITLE              */
+/* ------------------------------ */
+#landing-name {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", sans-serif;
+  font-size: 5rem;
+  font-weight: 500;
+  letter-spacing: 0rem;
+  letter-spacing: -0.02rem;
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: var(--grenadine);
+  opacity: 0;
+  animation: nameFade 1s ease forwards 0.4s;
+  transition: all 0.9s ease;
+}
 
-    .decor .flowers.in {
-      transform: scaleX(-1) scale(1);
-    }
-
-    .decor .leaves {
-      width: clamp(110px, 17vw, 240px);
-      left: 6%;
-      bottom: 10%;
-    }
-
-    /* Centered stack (logo + button) */
-    .stack {
-      position: fixed;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      /* exact center */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      will-change: top, transform;
-      transition: top 800ms cubic-bezier(.2, .8, .2, 1),
-        transform 800ms cubic-bezier(.2, .8, .2, 1);
-      z-index: 1;
-      transform: translate(-50%, calc(-50% + 5vh));
-      /* above decor */
-    }
-
-    /* Logo size (start) + grow-in */
-    .logo {
-      height: clamp(6rem, 18vw, 10rem);
-      opacity: 0;
-      /* grow-in start */
-      transform: scale(.92);
-      /* start a bit smaller */
-      transition:
-        height 800ms cubic-bezier(.2, .8, .2, 1),
-        opacity 420ms ease,
-        transform 600ms cubic-bezier(.2, .8, .2, 1);
-      will-change: height, opacity, transform;
-    }
-
-    .logo img {
-      display: block;
-      height: 100%;
-      width: auto;
-    }
-
-    /* Button sits 1.5rem under the logo, always */
-    .cta {
-      margin-top: 1.5rem;
-      font-family: "Be Vietnam Pro", sans-serif;
-      font-weight: 600;
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: var(--coffee);
-      display: inline-flex;
-      gap: 0.25rem;
-      position: relative;
-      border-bottom: 7px dotted var(--orange);
-      /* always visible */
-      transition:
-        padding-left 250ms ease,
-        padding-right 250ms ease,
-        border-color 200ms ease,
-        transform 200ms ease,
-        opacity 300ms ease;
-    }
-
-    /* Rainbow text colors stay as you had them */
+/* ------------------------------ */
+/*           ENTER BUTTON         */
+/* ------------------------------ */
+#enter-btn {
+  margin-top: 2.5rem;
+  position: relative;
+  border: 6px solid var(--beeswax);
+  background: white;
+box-shadow: 0 0 0 8px var(--ice-blue) inset;
+  padding: 1.4rem 2.4rem 1.1rem;
+  font-size: 1rem;
+  letter-spacing: 0.17rem;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  cursor: pointer;
+  opacity: 0;
+  font-weight: 800;
+  transform: translateY(8px);
+  animation: buttonFade 1s ease forwards 1s;
+}
 
 
 
-    .cta:hover {
-      transform: translateY(-2px) scaleX(1.15);
-      /* subtle stretch effect */
-      border-color: var(--coffee);
-      /* dotted line turns coffee */
-    }
+#enter-btn span { position: relative; z-index: 1; }
 
-    /* Each letter as its own span so we can color them individually */
-    .cta span:nth-child(1) {
-      color: var(--flame);
-    }
+/* ------------------------------ */
+/*       EXIT ANIMATION STATE     */
+/* ------------------------------ */
+body.landing-finished #enter-btn {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: 0.6s ease;
+}
 
-    .cta span:nth-child(2) {
-      color: var(--olive);
-    }
+body.landing-finished #landing-name {
+  position: fixed;
+  top: 0rem;
+  right: 0rem;
+  text-align: right;
+  font-size: 2rem;
+  color: var(--grenadine);
+}
 
-    .cta span:nth-child(3) {
-      color: var(--blue);
-    }
+body.landing-finished #landing-star {
+  transform: scale(0.8);
+  transition: transform 0.7s ease;
+}
 
-    .cta span:nth-child(4) {
-      color: var(--purple);
-    }
+/* ------------------------------ */
+/*          KEYFRAMES             */
+/* ------------------------------ */
+@keyframes starFadeIn {
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes nameFade {
+  to { opacity: 1; }
+}
+@keyframes buttonFade {
+  to { opacity: 1; transform: translateY(0); }
+}
+/* ------------------------------ */
+/*        MOBILE RESPONSIVE       */
+/* ------------------------------ */
 
-    .cta span:nth-child(5) {
-      color: var(--orange);
-    }
+/* Medium screens: tablets */
+@media (max-width: 900px) {
 
-    .cta span:nth-child(6) {
-      color: var(--copper);
-    }
+  #landing-star {
+    width: 260px;
+    margin-bottom: 1.5rem;
+  }
 
-    .cta span:nth-child(7) {
-      color: var(--goldenbrown);
-    }
+  #landing-name {
+    font-size: 3.4rem;
+  }
 
-    .cta span:nth-child(8) {
-      color: var(--lightgreen2);
-    }
+  #enter-btn {
+    padding: 1.1rem 2rem 0.9rem;
+    font-size: 0.9rem;
+    border-width: 5px;
+  }
 
-    .cta span:nth-child(9) {
-      color: var(--flame);
-    }
+  body.landing-finished #landing-name {
+    font-size: 1.7rem;
+    right: 1rem;
+  }
+}
 
-    .cta span:nth-child(10) {
-      color: var(--yellow);
-    }
+/* Small screens: most phones */
+@media (max-width: 600px) {
 
-    .cta:hover {
-      border-color: var(--coffee);
-      padding-left: 1.9rem;
-      /* was 1.6rem */
-      padding-right: 1.9rem;
-      /* was 1.6rem */
-      transform: translateY(-2px);
-    }
+  #landing {
+    padding: 0 1rem;
+  }
 
-    /* dotted underline that appears on hover */
-    .cta::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -3px;
-      width: 100%;
+  #landing-star {
+    width: 200px;
+    margin-bottom: 1.2rem;
+    transform-origin: center;
+  }
 
-      opacity: 0;
-      transition: opacity 200ms ease;
-    }
+  #landing-name {
+     font-size: 2rem;
+    letter-spacing: -0.01rem;
+  }
 
-    .cta:hover::after {
-      opacity: 1;
-    }
+  #enter-btn {
+    padding: 1rem 1.7rem 0.8rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.14rem;
+    border-width: 4px;
+    box-shadow: 0 0 0 6px var(--ice-blue) inset;
+  }
 
+  body.landing-finished #landing-name {
 
-    .cta:active {
-      transform: translateY(12px);
-    }
+    font-size: 2.5rem;
+  }
+}
 
-    /* Staggered reveal classes (added via JS) */
-    .logo.in {
-      opacity: 1;
-      transform: scale(1);
-    }
+/* Very small screens: small iPhones, older devices */
+@media (max-width: 400px) {
 
-    .decor img.in {
-      opacity: 1;
-      transform: scale(1);
-    }
+  #landing-star {
+    width: 160px;
+  }
 
-    /* Keep flowers always flipped while preserving the grow-in scale */
-    .decor .flowers {
-      transform: scaleX(-1) scale(.92);
-    }
+  #landing-name {
+     font-size: 2rem;
+  }
 
-    .decor .flowers.in {
-      transform: scaleX(-1) scale(1);
-    }
+  #enter-btn {
+    padding: 0.85rem 1.4rem 0.7rem;
+    font-size: 0.75rem;
+    border-width: 4px;
+  }
 
-    .decor .flowers.in {
-      transform: scaleX(-1) scale(1);
-      /* keep flipped + grow-in end */
-    }
+  body.landing-finished #landing-name {
+     font-size: 2.5rem;
+  }
+}
 
-    /* Right-side flowers (using the .fish class) — raise it */
-    .decor .fish {
-      width: clamp(200px, 28vw, 420px);
-      right: 0%;
-      top: 5%;
-      /* keep your anchor */
-      /* nudge upward: negative translateY moves it up */
-      transform: scale(.92) translateY(-210px);
-    }
-
-    .decor .fish.in {
-      /* keep the nudge after grow-in finishes */
-      transform: scale(1) translateY(-210px);
-    }
-
-
-    .cta.in {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Click/enter animation:
-       - Stack moves up to header
-       - Logo shrinks to header size (already defined)
-       - Button fades out
-       - Decor fades out (NOT the name) */
-    .enter .stack {
-      top: var(--header-top);
-      transform: translate(-50%, 0);
-      /* keep centered horizontally; move straight up */
-    }
-
-    .enter .logo {
-      height: 4.7rem;
-      /* desktop header size */
-    }
-
-    .enter .cta {
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    .enter .decor img {
-      opacity: 0;
-      transition: opacity 350ms ease;
-    }
-
-    /* make the logo scale down smoothly on smaller screens */
-    @media (max-width: 900px) {
-      .logo {
-        height: clamp(4.5rem, 12vw, 8rem);
-      }
-    }
-
-    @media (max-width: 700px) {
-      .logo {
-        height: clamp(3.8rem, 14vw, 6.5rem);
-      }
-    }
-
-    @media (max-width: 500px) {
-      .logo {
-        height: clamp(2.7rem, 18vw, 5rem);
-      }
-    }
-
-
-    /* Mobile header target for logo size */
-    @media (max-width: 600px) {
-      .enter .logo {
-        height: 2.7rem;
-      }
-    }
-
-    /* Mobile layout adjustments */
-    @media (max-width: 600px) {
-
-      /* hide decorative images */
-      .decor {
-        display: none !important;
-      }
-
-      /* make name start at header size (no grow/shrink animation) */
-      .logo {
-        height: 2.7rem !important;
-        /* same as about.html final size */
-        opacity: 1 !important;
-        /* already visible */
-        transform: none !important;
-        /* no scale in/out */
-        transition: none !important;
-      }
-
-      /* also prevent the logo from resizing on click */
-      .enter .logo {
-        height: 2.7rem !important;
-      }
-
-      /* keep stack centered and aligned for smaller screens */
-      .stack {
-        top: 50%;
-        transform: translate(-50%, -50%);
-      }
-
-      /* keep button visible and sized appropriately */
-      .cta {
-        font-size: 1rem;
-        padding: 0.8rem 1.4rem;
-      }
-    }
-
-
-    /* Reduced motion */
-    @media (prefers-reduced-motion: reduce) {
-
-      .stack,
-      .logo,
-      .cta,
-      .decor img {
-        transition: none !important;
-      }
-    }
-  </style>
+</style>
 </head>
 
 <body>
-  <!-- Decorative images behind the name -->
-  <div class="decor" aria-hidden="true">
-    <img class="fish" src="landing/flowers.png" alt="">
-    <img class="flowers" src="landing/flowers.png" alt="">
-  </div>
 
-  <div class="stack" role="main" aria-label="Landing">
-    <div class="logo" aria-label="Julia Majchrzak">
-      <img src="name.png" alt="Julia Majchrzak" />
-    </div>
-    <button class="cta" id="explore">
-      <span>E</span><span>n</span><span>t</span><span>e</span><span>r</span>
-      <span> </span><span> </span>
-      <span>H</span><span>e</span><span>r</span><span>e</span>
-    </button>
+<div id="landing">
 
-  </div>
+  <!-- ⭐ YOUR EXACT SVG, beeswax fill via CSS -->
+  <svg id="landing-star" viewBox="0 0 161.57 153.1">
+    <polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 
+      39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 
+      18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 
+      94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 
+      156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 
+      142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
+  </svg>
 
-  <script>
-    (function () {
-      const btn = document.getElementById('explore');
-      const logo = document.querySelector('.logo');
-      const decorImgs = Array.from(document.querySelectorAll('.decor img'));
-      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  <h1 id="landing-name">JULIA MAJCHRZAK</h1>
 
-      // Staggered grow-in: name first, then decor, then button
-      function stagedReveal() {
-        if (prefersReduced) {
-          // Show everything immediately without animation
-          logo.classList.add('in');
-          decorImgs.forEach(img => img.classList.add('in'));
-          btn.classList.add('in');
-          return;
-        }
-        // Name first
-        setTimeout(() => { logo.classList.add('in'); }, 50);
-        // Then the three pngs
-        setTimeout(() => {
-          decorImgs.forEach((img, i) => {
-            setTimeout(() => img.classList.add('in'), i * 120);
-          });
-        }, 220);
-        // Then button slides in
-        setTimeout(() => { btn.classList.add('in'); }, 620);
-      }
+  <button id="enter-btn" onclick="enterSite()">
+    <span>ENTER</span>
+  </button>
 
-      function go() {
-        btn.disabled = true;
-        if (prefersReduced) {
-          window.location.href = 'about.html';
-          return;
-        }
-        document.body.classList.add('enter');
+</div>
 
-        // CSS duration = 800ms; add a buffer
-        setTimeout(function () {
-          window.location.href = 'about.html';
-        }, 900);
-      }
+<script>
+function enterSite() {
+  document.body.classList.add("landing-finished");
 
-      // Run on load
-      window.addEventListener('DOMContentLoaded', stagedReveal);
+  setTimeout(() => {
+    window.location.href = "about.html"; // change if needed
+  }, 1100);
+}
+</script>
 
-      // Click handlers
-      btn.addEventListener('click', go);
-      btn.addEventListener('keyup', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') go();
-      });
-    })();
-  </script>
 </body>
-
 </html>
