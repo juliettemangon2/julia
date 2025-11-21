@@ -307,7 +307,7 @@ h3 {
 
 
 .nav-card.spiral:hover {
-  transform: translate(-10x);
+  transform: rotate(-90deg);
   border-color: transparent;
   background-color: transparent;
 }
@@ -415,7 +415,7 @@ a:hover {
 
 /* Grid of contact cards */
 .contact-grid {
-  --card-gap: 1.25rem;
+  --card-gap: 2rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(240px, 1fr));
   gap: var(--card-gap);
@@ -448,8 +448,8 @@ a:hover {
 
 .contact-card:hover,
 .contact-card:focus-visible {
-  transform: translateY(-2px);
-  box-shadow: 0 20px 0 0 var(--beeswax);
+  transform: translateY(-30px);
+  box-shadow: 0 40px 0 0 var(--beeswax);
   text-decoration: none;
 }
 
