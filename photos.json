@@ -34,6 +34,21 @@
   { "src": "glass/sculpture copy/Out to Dry/out to dry process3.jpg", "alt": "Out to dry process 3", "folder": "glass-sculpture" },
   { "src": "glass/sculpture copy/Out to Dry/out to dry process1.jpg", "alt": "Out to dry process 1", "folder": "glass-sculpture" },
 
+  { "src": "glass/sculpture copy/Bubbles/bubbles1.jpg", "alt": "Bubbles", "folder": "glass-sculpture" },
+
+  { "src": "glass/sculpture copy/Bubbles/bubbles.jpeg", "alt": "Bubbles", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/Bubbles/bubbles process 2.jpg", "alt": "Bubbles process 2", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/Bubbles/bubbles process 3.jpg", "alt": "Bubbles process 3", "folder": "glass-sculpture" },
+
+  { "src": "glass/sculpture copy/Bubbles/bubble progress 4.jpg", "alt": "Bubble progress 4", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/Bubbles/bubble process 5.jpg", "alt": "Bubbles process 5", "folder": "glass-sculpture" },
+
+  { "src": "glass/sculpture copy/Cigarettes/cigs1.jpg", "alt": "Trapped 1", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/Cigarettes/cigs2.jpg", "alt": "Trapped 1", "folder": "glass-sculpture" },
+
+  { "src": "glass/sculpture copy/Wood slump/wood1.jpeg", "alt": "Wood slump", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/Wood slump/wood2.jpeg", "alt": "Wood slump", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture copy/Flowers/flowers.jpeg", "alt": "Flowers", "folder": "glass-sculpture" },
 
   { "src": "glass/sculpture copy/Fireplace/fireplace.jpeg", "alt": "Fireplace", "folder": "glass-sculpture" },
   { "src": "glass/sculpture copy/Fireplace/fireplace.MOV", "alt": "Fireplace video", "folder": "glass-sculpture" },
@@ -51,10 +66,9 @@
   
   { "src": "glass/sculpture copy/Trapped/trapped1.jpeg", "alt": "Trapped 1", "folder": "glass-sculpture" },
 
+
   
-  { "src": "glass/sculpture copy/Wood slump/wood1.jpeg", "alt": "Wood slump", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/Wood slump/wood2.jpeg", "alt": "Wood slump", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/Flowers/flowers.jpeg", "alt": "Flowers", "folder": "glass-sculpture" },
+  
   { "src": "glass/sculpture copy/Hanging on by a thread/hanging on by a thread.jpeg", "alt": "Hanging on by a thread", "folder": "glass-sculpture" },
   { "src": "glass/sculpture copy/Wood mold cast/woodmold.jpeg", "alt": "Wood mold cast", "folder": "glass-sculpture" },
   
@@ -76,15 +90,7 @@
 
   { "src": "glass/sculpture copy/Pole/pole1.jpeg", "alt": "pole", "folder": "glass-sculpture" },
 
-  
-  { "src": "glass/sculpture copy/Bubbles/bubbles.jpeg", "alt": "Bubbles", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/Bubbles/bubbles process 2.jpg", "alt": "Bubbles process 2", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/Bubbles/bubbles process 3.jpg", "alt": "Bubbles process 3", "folder": "glass-sculpture" },
-
-  { "src": "glass/sculpture copy/Bubbles/bubble progress 4.jpg", "alt": "Bubble progress 4", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/Bubbles/bubble process 5.jpg", "alt": "Bubbles process 5", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture copy/Bubbles/bubbles process 6.jpg", "alt": "Bubbles process 6", "folder": "glass-sculpture" },
-
+    
   { "src": "glass/vessels/rainbow.jpeg", "alt": "Glass vessel rainbow", "folder": "glass-vessels" },
   { "src": "glass/vessels/bluemarble.jpeg", "alt": "Glass vessel blue marble", "folder": "glass-vessels" },
   { "src": "glass/vessels/purplestripe.jpeg", "alt": "Glass vessel purple stripe", "folder": "glass-vessels" },
@@ -105,7 +111,7 @@
 
 
 
-
+  { "src": "jewelry/green.jpg", "alt": "Jewelry piece 1", "folder": "jewelry" },
   { "src": "jewelry/jewelry1.jpeg", "alt": "Jewelry piece 1", "folder": "jewelry" },
   { "src": "jewelry/IMG_0551.jpeg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
   
@@ -116,6 +122,8 @@
   { "src": "paint/swimming.jpeg", "alt": "Painting 1158", "folder": "paint" },
   { "src": "paint/IMG_1185.jpg", "alt": "Painting 1158", "folder": "paint" },
     { "src": "paint/IMG_0664.jpeg", "alt": "Painting 0664", "folder": "paint" },
+      { "src": "paint/groove.jpg", "alt": "Painting 0619", "folder": "paint" },
+
 
 
 
