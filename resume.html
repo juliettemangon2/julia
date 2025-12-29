@@ -122,6 +122,20 @@
       color: var(--charcoal);
     }
 
+    .award-title {
+      font-weight: 400;
+      color: var(--charcoal);
+      text-decoration: underline;
+
+    }
+
+    .award-info {
+      margin: 0rem;
+      font-weight: 400;
+      color: var(--charcoal);
+
+    }
+
     /* Work Experience special list style preserved but harmonized */
     #we-list.section-list>li {
       padding: 0.75rem 0.85rem;
@@ -181,7 +195,7 @@
     .skill-card {
       border: 3px solid var(--beeswax);
       background: #ffffff;
-      box-shadow: 0 0 0 6px var(--cream) inset;
+      box-shadow: 0 0 0 6px var(--ice-blue) inset;
       padding: 0;
     }
 
@@ -248,177 +262,178 @@
         padding: 0.75rem 1rem 2.25rem;
       }
     }
+
     /* ===== COMPREHENSIVE RESPONSIVE STYLES ===== */
 
-/* Tablets and smaller laptops */
-@media (max-width: 1024px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  
-  .page {
-    padding: 1rem 1.5rem 2.5rem;
-  }
-}
+    /* Tablets and smaller laptops */
+    @media (max-width: 1024px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
 
-/* Mobile landscape and small tablets */
-@media (max-width: 768px) {
-  .section-header {
-    font-size: 1.8rem;
-    letter-spacing: 0.12rem;
-  }
-  
-  .pill {
-    font-size: 1.5rem;
-  }
-  
-  summary.card-summary {
-    padding: 0.85rem 0.9rem;
-    gap: 0.5rem;
-  }
-  
-  .card-body {
-    padding: 0.6rem 0.9rem 0.9rem 0.9rem;
-  }
-  
-  #we-list.section-list > li {
-    padding: 0.6rem 0.7rem;
-    margin: 0.5rem 0;
-  }
-  
-  .section-list > li > strong {
-    font-size: 1.05rem;
-  }
-  
-  .description {
-    padding-left: 0.75rem;
-    font-size: 1rem;
-  }
-}
+      .page {
+        padding: 1rem 1.5rem 2.5rem;
+      }
+    }
 
-/* Mobile portrait */
-@media (max-width: 640px) {
-  .page {
-    padding: 0.75rem 1rem 2rem;
-    gap: 1rem;
-  }
-  
-  .section-header {
-    font-size: 1.5rem;
-    letter-spacing: 0.1rem;
-    margin: 0.5rem 0;
-  }
-  
-  .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-  }
-  
-  .skill-card-title {
-    font-size: 1.1rem;
-    letter-spacing: 0.04rem;
-  }
-  
-  .skill-badge {
-    font-size: 0.9rem;
-    padding: 0.25rem 0.45rem;
-  }
-  
-  summary.card-summary {
-    grid-template-columns: 1fr;
-    text-align: left;
-  }
-  
-  .pill {
-    font-size: 1.3rem;
-    justify-self: start;
-    margin-top: 0.25rem;
-  }
-}
+    /* Mobile landscape and small tablets */
+    @media (max-width: 768px) {
+      .section-header {
+        font-size: 1.8rem;
+        letter-spacing: 0.12rem;
+      }
 
-/* Small mobile phones */
-@media (max-width: 480px) {
-  .page {
-    padding: 0.5rem 0.75rem 1.5rem;
-  }
-  
-  .section-header {
-    font-size: 1.3rem;
-    letter-spacing: 0.08rem;
-  }
-  
-  summary.card-summary {
-    padding: 0.75rem;
-    font-size: 0.95rem;
-  }
-  
-  .pill {
-    font-size: 1.1rem;
-  }
-  
-  .card-body {
-    padding: 0.5rem 0.75rem 0.75rem;
-  }
-  
-  #we-list.section-list > li {
-    padding: 0.5rem 0.6rem;
-    font-size: 0.95rem;
-  }
-  
-  .section-list > li > strong {
-    font-size: 1rem;
-  }
-  
-  .description {
-    padding-left: 0.5rem;
-    font-size: 0.95rem;
-  }
-  
-  .description li {
-    margin: 0.3rem 0;
-    padding-left: 0.3rem;
-  }
-  
-  .skill-card-head {
-    padding: 0.6rem 0.75rem;
-  }
-  
-  .skill-card-body {
-    padding: 0.65rem 0.75rem 0.85rem;
-  }
-  
-  .skill-card-title {
-    font-size: 1rem;
-  }
-  
-  .skill-badge {
-    font-size: 0.85rem;
-    padding: 0.22rem 0.4rem;
-  }
-  
-  .skill-badges {
-    gap: 0.35rem;
-  }
-}
+      .pill {
+        font-size: 1.5rem;
+      }
 
-/* Extra small screens */
-@media (max-width: 360px) {
-  .page {
-    padding: 0.5rem;
-  }
-  
-  .section-header {
-    font-size: 1.2rem;
-  }
-  
-  summary.card-summary {
-    font-size: 0.9rem;
-  }
-  
-  .pill {
-    font-size: 1rem;
-  }
-}
+      summary.card-summary {
+        padding: 0.85rem 0.9rem;
+        gap: 0.5rem;
+      }
+
+      .card-body {
+        padding: 0.6rem 0.9rem 0.9rem 0.9rem;
+      }
+
+      #we-list.section-list>li {
+        padding: 0.6rem 0.7rem;
+        margin: 0.5rem 0;
+      }
+
+      .section-list>li>strong {
+        font-size: 1.05rem;
+      }
+
+      .description {
+        padding-left: 0.75rem;
+        font-size: 1rem;
+      }
+    }
+
+    /* Mobile portrait */
+    @media (max-width: 640px) {
+      .page {
+        padding: 0.75rem 1rem 2rem;
+        gap: 1rem;
+      }
+
+      .section-header {
+        font-size: 1.5rem;
+        letter-spacing: 0.1rem;
+        margin: 0.5rem 0;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+
+      .skill-card-title {
+        font-size: 1.1rem;
+        letter-spacing: 0.04rem;
+      }
+
+      .skill-badge {
+        font-size: 0.9rem;
+        padding: 0.25rem 0.45rem;
+      }
+
+      summary.card-summary {
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+
+      .pill {
+        font-size: 1.3rem;
+        justify-self: start;
+        margin-top: 0.25rem;
+      }
+    }
+
+    /* Small mobile phones */
+    @media (max-width: 480px) {
+      .page {
+        padding: 0.5rem 0.75rem 1.5rem;
+      }
+
+      .section-header {
+        font-size: 1.3rem;
+        letter-spacing: 0.08rem;
+      }
+
+      summary.card-summary {
+        padding: 0.75rem;
+        font-size: 0.95rem;
+      }
+
+      .pill {
+        font-size: 1.1rem;
+      }
+
+      .card-body {
+        padding: 0.5rem 0.75rem 0.75rem;
+      }
+
+      #we-list.section-list>li {
+        padding: 0.5rem 0.6rem;
+        font-size: 0.95rem;
+      }
+
+      .section-list>li>strong {
+        font-size: 1rem;
+      }
+
+      .description {
+        padding-left: 0.5rem;
+        font-size: 0.95rem;
+      }
+
+      .description li {
+        margin: 0.3rem 0;
+        padding-left: 0.3rem;
+      }
+
+      .skill-card-head {
+        padding: 0.6rem 0.75rem;
+      }
+
+      .skill-card-body {
+        padding: 0.65rem 0.75rem 0.85rem;
+      }
+
+      .skill-card-title {
+        font-size: 1rem;
+      }
+
+      .skill-badge {
+        font-size: 0.85rem;
+        padding: 0.22rem 0.4rem;
+      }
+
+      .skill-badges {
+        gap: 0.35rem;
+      }
+    }
+
+    /* Extra small screens */
+    @media (max-width: 360px) {
+      .page {
+        padding: 0.5rem;
+      }
+
+      .section-header {
+        font-size: 1.2rem;
+      }
+
+      summary.card-summary {
+        font-size: 0.9rem;
+      }
+
+      .pill {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 
@@ -427,7 +442,7 @@
     <section class="name-section">
       <!-- Text header -->
       <h1>Julia Majchrzak</h1>
-        <nav class="nav-buttons">
+      <nav class="nav-buttons">
         <a href="about.html" class="nav-card burst2">
           <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
             <polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58
@@ -456,374 +471,388 @@
         <a class="nav-card star" href="contact.html">Contact</a>
       </nav>
     </section>
-      </section>
+    </section>
 
 
 
-      <!-- New collapsible layout under the unchanged nav -->
-      <main class="page">
-        <!-- Education -->
-        <h3 class="section-header" style="margin-top:3rem;"">Education</h3>
+    <!-- New collapsible layout under the unchanged nav -->
+    <main class="page">
+      <!-- Education -->
+      <h3 class="section-header" style="margin-top:3rem;"">Education</h3>
 
     <!-- Card 1: BS -->
     <details class=" resume-card" open>
+        <summary class="card-summary">
+          <span><strong>B.S. in Management, Marketing</strong>, Tulane University Freeman School of Business (2022-2026)</span>
+          <span class="pill">+</span>
+        </summary>
+        <div class="card-body">
+          <ul id="edu-list" class="section-list">
+            <li>
+              <p class="description">
+                <span class="desc-title">Relevant coursework:</span>
+                New Product Development, Social and Online Marketing, Brand Management, Sales
+                management, Marketing research and analytics, Financial Management, Legal Ethical and Regulatory
+                Business,
+                Negotiations, Marketing Fundamentals, Consumer Behavior, Micro & Macro Economics, Financial &
+                Managerial
+                Accounting, Management Communication, Organizational Behavior, Business Analytics.
+              </p>
+            </li>
+          </ul>
+        </div>
+        </details>
+
+        <!-- Card 2: Minor -->
+        <details class="resume-card">
           <summary class="card-summary">
-            <span><strong>B.S. in Management, Marketing</strong>, Tulane University (2022-2026)</span>
+            <span><strong>Minor in Design</strong>, Tulane University (2022-2026)</span>
             <span class="pill">+</span>
           </summary>
           <div class="card-body">
-            <ul id="edu-list" class="section-list">
+            <ul class="section-list">
               <li>
                 <p class="description">
                   <span class="desc-title">Relevant coursework:</span>
-                  New Product Development, Social and Online Marketing, Brand Management, Sales
-                  management, Marketing research and analytics, Financial Management, Legal Ethical and Regulatory
-                  Business,
-                  Negotiations, Marketing Fundamentals, Consumer Behavior, Micro & Macro Economics, Financial &
-                  Managerial
-                  Accounting, Management Communication, Organizational Behavior, Business Analytics.
+                  Design History, Portfolio Design Lab, Fundamentals of Design and Making, Introduction to
+                  Design/Creative Thinking, Visual Communication and Advocacy.
+                </p>
+                
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Card 3: Glass -->
+        <details class="resume-card">
+          <summary class="card-summary">
+            <span><strong>Independent Exploration in Glass</strong></span>
+            <span class="pill">+</span>
+          </summary>
+          <div class="card-body">
+            <ul class="section-list">
+              <li>
+                <p class="description">
+                  <span class="desc-title">Tulane coursework:</span>
+                  Advanced Glass (3 semesters), Glass II: Hot Casting, Found of Art: Glass, occasional TA
+                  experience for beginners.
+                </p>
+                <p class="description"><span class="desc-title">NOCA coursework:</span> Vessel Making (Summer 2025)
+                <p class="description" style="font-weight:700;">Juror Award: <a href="https://liberalarts.tulane.edu/carroll-gallery/exhibitions" target="_blank"><span class="award-title">Tulane Undergraduate Juried Exhibition 2025</span> </a>
+                  <ul class="description">
+                    <li style="margin-left:2rem;">Piece: Cactus</li>
+                    <li style="margin-left:2rem;">Juror: <a href="https://www.emilyalesandrini.com/curatorial" target="_blank"><span class="award-title">Emily Alesandrini</span></a></li>
+                  </ul>
+                </p>
+                <p class="description" style="font-weight:700;">Pilchuck Glass School: <a href="https://www.pilchuck.org/programs/workshops/object-hardware-and-the-space-between" target="_blank"><span class="award-title">Object, Hardware and The Space Between (Incoming Summer 2026) </span> </a>
+                  <ul class="description">
+                    <li style="margin-left:2rem;">Plan to study under guest artists  <a href="https://www.jaymacdonell.com/" target="_blank"><span class="award-title">Jay Macdonell </span></a> and <a href="https://pollag.net/" target="_blank"><span class="award-title">Jakub Pollág </span></a></li>
+                  </ul>
                 </p>
               </li>
             </ul>
           </div>
-          </details>
+        </details>
 
-          <!-- Card 2: Minor -->
-          <details class="resume-card">
-            <summary class="card-summary">
-              <span><strong>Minor in Design</strong>, Tulane University (2022-2026)</span>
-              <span class="pill">+</span>
-            </summary>
-            <div class="card-body">
-              <ul class="section-list">
-                <li>
-                  <p class="description">
-                    <span class="desc-title">Relevant coursework:</span>
-                    Design History, Portfolio Design Lab, Fundamentals of Design and Making, Introduction to
-                    Design/Creative Thinking, Visual Communication and Advocacy.
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </details>
+        <!-- Work Experience -->
+        <div class="spacer"></div>
+        <h3 class="section-header">Work Experience</h3>
 
-          <!-- Card 3: Glass -->
-          <details class="resume-card">
-            <summary class="card-summary">
-              <span><strong>Independent Exploration in Glass</strong></span>
-              <span class="pill">+</span>
-            </summary>
-            <div class="card-body">
-              <ul class="section-list">
-                <li>
-                  <p class="description">
-                    <span class="desc-title">Tulane coursework:</span>
-                    Advanced Glass (3 semesters), Glass II: Hot Casting, Found of Art: Glass, occasional TA
-                    experience for beginners.
-                  </p>
-                  <p class="description"><span class="desc-title">NOCA coursework:</span> Vessel Making (Summer 2025)
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </details>
+        <!-- Card 4: TJX -->
+        <details class="resume-card" open>
+          <summary class="card-summary">
+            <span><strong>Product Development Design Intern, Women's Woven Apparel</strong>, The TJX Companies, Inc.
+              (Summer
+              2025)</span>
+            <span class="pill">+</span>
+          </summary>
+          <div class="card-body">
+            <ul id="we-list" class="section-list">
+              <li>
+                <ul class="description">
+                  <li>Collaborated with cross-functional teams (dresses, sleepwear, activewear, bottoms, sweaters,
+                    juniors,
+                    luxe, etc.) to support design processes and deliverables across TJX’s women’s apparel divisions.
+                  </li>
+                  <li>Conducted in-depth trend research on fabrics, silhouettes, trims, and colors, synthesizing
+                    findings
+                    into Adobe Illustrator artboards and CLO3D sketches to inform seasonal design direction.</li>
+                  <li> Strengthened adaptability by learning and implementing each designer’s preferred sketching and
+                    presentation workflows, improving efficiency and accuracy of design outputs.</li>
+                  <li>Developed and presented a sustainability-focused intern project, proposing innovations such as
+                    fabric
+                    scrap hangers (via NUNOUS technology), biodegradable resin, gift-with-purchase items from marker
+                    scraps,
+                    and new hang tags to increase sustainability visibility.</li>
+                  <li>Analyzed business feasibility of sustainable initiatives by considering cost-saving scrap usage,
+                    vendor negotiations, and packaging strategies, highlighting opportunities for product development
+                    to
+                    drive sustainable change.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </details>
 
-          <!-- Work Experience -->
-          <div class="spacer"></div>
-          <h3 class="section-header">Work Experience</h3>
+        <!-- Card 5: Independent Designer -->
+        <details class="resume-card">
+          <summary class="card-summary">
+            <span><strong>Independent Designer </strong>, Sustainable Fashion & Jewelry (2022 - Current)</span>
+            <span class="pill">+</span>
+          </summary>
+          <div class="card-body">
+            <ul id="we-list" class="section-list">
+              <li>
+                <ul class="description">
+                  <li>Design and produce one-of-a-kind garments from repurposed scrap textiles, creating apparel that
+                    emphasizes sustainability and material innovation.</li>
+                  <li>Handcrafted jewelry from reused beads, chains, and vintage buttons, and design glass pendants
+                    using
+                    original glassblowing techniques.
+                  </li>
+                  <li>Create and sell embroidered garments and beaded embroidery pieces, combining traditional
+                    craftsmanship
+                    with contemporary fashion trends.</li>
+                  <li>Manage all aspects of a small creative business—design, production, sales, and
+                    marketing—building a
+                    following among college students seeking sustainable, customized products.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </details>
 
-          <!-- Card 4: TJX -->
-          <details class="resume-card" open>
-            <summary class="card-summary">
-              <span><strong>Product Development Design Intern, Women's Woven Apparel</strong>, The TJX Companies, Inc.
-                (Summer
-                2025)</span>
-              <span class="pill">+</span>
-            </summary>
-            <div class="card-body">
-              <ul id="we-list" class="section-list">
-                <li>
-                  <ul class="description">
-                    <li>Collaborated with cross-functional teams (dresses, sleepwear, activewear, bottoms, sweaters,
-                      juniors,
-                      luxe, etc.) to support design processes and deliverables across TJX’s women’s apparel divisions.
-                    </li>
-                    <li>Conducted in-depth trend research on fabrics, silhouettes, trims, and colors, synthesizing
-                      findings
-                      into Adobe Illustrator artboards and CLO3D sketches to inform seasonal design direction.</li>
-                    <li> Strengthened adaptability by learning and implementing each designer’s preferred sketching and
-                      presentation workflows, improving efficiency and accuracy of design outputs.</li>
-                    <li>Developed and presented a sustainability-focused intern project, proposing innovations such as
-                      fabric
-                      scrap hangers (via NUNOUS technology), biodegradable resin, gift-with-purchase items from marker
-                      scraps,
-                      and new hang tags to increase sustainability visibility.</li>
-                    <li>Analyzed business feasibility of sustainable initiatives by considering cost-saving scrap usage,
-                      vendor negotiations, and packaging strategies, highlighting opportunities for product development
-                      to
-                      drive sustainable change.</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </details>
+        <!-- Card 6: Buffalo Exchange -->
+        <details class="resume-card">
+          <summary class="card-summary">
+            <span><strong>Buyer</strong>, Buffalo Exchange (Summer 2024)</span>
+            <span class="pill">+</span>
+          </summary>
+          <div class="card-body">
+            <ul id="we-list" class="section-list">
+              <li>
+                <ul class="description">
+                  <li>Evaluated and selected clothing items from sellers based on customer demographics, current
+                    trends,
+                    seasonality, brand recognition, and garment condition to establish an optimal mix of inventory for
+                    maximum profitability.
+                  </li>
+                  <li>Analyzed sales patterns to identify top-selling trends, guiding purchasing decisions to meet
+                    customer
+                    demand and enhance store performance.
+                  </li>
+                  <li>Facilitated buy meetings with the buying team to discuss intake strategies and collaborated to
+                    curate
+                    selections that aligned with revenue goals and supported Buffalo Exchange’s sustainability-focused
+                    business model.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </details>
 
-          <!-- Card 5: Independent Designer -->
-          <details class="resume-card">
-            <summary class="card-summary">
-              <span><strong>Independent Designer </strong>, Sustainable Fashion & Jewelry (2022 - Current)</span>
-              <span class="pill">+</span>
-            </summary>
-            <div class="card-body">
-              <ul id="we-list" class="section-list">
-                <li>
-                  <ul class="description">
-                    <li>Design and produce one-of-a-kind garments from repurposed scrap textiles, creating apparel that
-                      emphasizes sustainability and material innovation.</li>
-                    <li>Handcrafted jewelry from reused beads, chains, and vintage buttons, and design glass pendants
-                      using
-                      original glassblowing techniques.
-                    </li>
-                    <li>Create and sell embroidered garments and beaded embroidery pieces, combining traditional
-                      craftsmanship
-                      with contemporary fashion trends.</li>
-                    <li>Manage all aspects of a small creative business—design, production, sales, and
-                      marketing—building a
-                      following among college students seeking sustainable, customized products.
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </details>
+        <!-- Card 7: The SetUp Organization -->
+        <details class="resume-card">
+          <summary class="card-summary">
+            <span><strong>Brand and Visual Identity Designer</strong>, The SetUp Organization (August - November
+              2024)</span>
+            <span class="pill">+</span>
+          </summary>
+          <div class="card-body">
+            <ul id="we-list" class="section-list">
+              <li>
+                <ul class="description">
+                  <li>Designed business cards and website to develop a cohesive brand identity, including logos, color
+                    palette, and visual elements that aligned with the target customer demographic.
+                  </li>
+                  <li>Created a user-friendly website layout that effectively showcases the business’s interior design
+                    and
+                    organization services, boosting online visibility and client engagement.
+                  </li>
+                  <li>Collaborated with business owner to ensure the branding and design elements resonated with the
+                    target
+                    audience, fostering a professional and appealing aesthetic for both print and digital platforms.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </details>
 
-          <!-- Card 6: Buffalo Exchange -->
-          <details class="resume-card">
-            <summary class="card-summary">
-              <span><strong>Buyer</strong>, Buffalo Exchange (Summer 2024)</span>
-              <span class="pill">+</span>
-            </summary>
-            <div class="card-body">
-              <ul id="we-list" class="section-list">
-                <li>
-                  <ul class="description">
-                    <li>Evaluated and selected clothing items from sellers based on customer demographics, current
-                      trends,
-                      seasonality, brand recognition, and garment condition to establish an optimal mix of inventory for
-                      maximum profitability.
-                    </li>
-                    <li>Analyzed sales patterns to identify top-selling trends, guiding purchasing decisions to meet
-                      customer
-                      demand and enhance store performance.
-                    </li>
-                    <li>Facilitated buy meetings with the buying team to discuss intake strategies and collaborated to
-                      curate
-                      selections that aligned with revenue goals and supported Buffalo Exchange’s sustainability-focused
-                      business model.
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </details>
+        <!-- Card 8: Tulane Student Organization Center -->
+        <details class="resume-card">
+          <summary class="card-summary">
+            <span><strong>Student Organization Ambassador</strong>, Tulane University (August 2023 - Current)</span>
+            <span class="pill">+</span>
+          </summary>
+          <div class="card-body">
+            <ul id="we-list" class="section-list">
+              <li>
+                <ul class="description">
+                  <li>Offer support to student organizations regarding finances, event planning, transportation, and
+                    all other related logistics.
 
-          <!-- Card 7: The SetUp Organization -->
-          <details class="resume-card">
-            <summary class="card-summary">
-              <span><strong>Brand and Visual Identity Designer</strong>, The SetUp Organization (August - November
-                2024)</span>
-              <span class="pill">+</span>
-            </summary>
-            <div class="card-body">
-              <ul id="we-list" class="section-list">
-                <li>
-                  <ul class="description">
-                    <li>Designed business cards and website to develop a cohesive brand identity, including logos, color
-                      palette, and visual elements that aligned with the target customer demographic.
-                    </li>
-                    <li>Created a user-friendly website layout that effectively showcases the business’s interior design
-                      and
-                      organization services, boosting online visibility and client engagement.
-                    </li>
-                    <li>Collaborated with business owner to ensure the branding and design elements resonated with the
-                      target
-                      audience, fostering a professional and appealing aesthetic for both print and digital platforms.
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </details>
+                  </li>
+                  <li>Communicate directly with student organization leaders to solve any issues and ensure success.
 
-          <!-- Card 8: Tulane Student Organization Center -->
-          <details class="resume-card">
-            <summary class="card-summary">
-              <span><strong>Student Organization Ambassador</strong>, Tulane University (August 2023 - Current)</span>
-              <span class="pill">+</span>
-            </summary>
-            <div class="card-body">
-              <ul id="we-list" class="section-list">
-                <li>
-                  <ul class="description">
-                    <li>Offer support to student organizations regarding finances, event planning, transportation, and
-                      all other related logistics.
+                  </li>
+                  <li>Manage social media accounts and create content for Tulane Student Organization Center.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </details>
+        <!-- Card 9: Tulane Student Organization Center 2 -->
+        <details class="resume-card">
+          <summary class="card-summary">
+            <span><strong>Allocation Comittee Chair</strong>, Tulane University (August 2023 - Current)</span>
+            <span class="pill">+</span>
+          </summary>
+          <div class="card-body">
+            <ul id="we-list" class="section-list">
+              <li>
+                <ul class="description">
+                  <li>Delegate $2,000,000 of Tulane’s endowment to student organizations based on presented budget
+                    proposals.
 
-                    </li>
-                    <li>Communicate directly with student organization leaders to solve any issues and ensure success.
+                  </li>
+                  <li>Manage and create policies regarding student organization budget requests, late budget requests,
+                    and travel budget requests.
 
-                    </li>
-                    <li>Manage social media accounts and create content for Tulane Student Organization Center.
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </details>
-          <!-- Card 9: Tulane Student Organization Center 2 -->
-          <details class="resume-card">
-            <summary class="card-summary">
-              <span><strong>Allocation Comittee Chair</strong>, Tulane University (August 2023 - Current)</span>
-              <span class="pill">+</span>
-            </summary>
-            <div class="card-body">
-              <ul id="we-list" class="section-list">
-                <li>
-                  <ul class="description">
-                    <li>Delegate $2,000,000 of Tulane’s endowment to student organizations based on presented budget
-                      proposals.
+                  </li>
 
-                    </li>
-                    <li>Manage and create policies regarding student organization budget requests, late budget requests,
-                      and travel budget requests.
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </details>
+        <!-- Card 10: aupair -->
+        <details class="resume-card">
+          <summary class="card-summary">
+            <span><strong>Aupair</strong>, International Childcare (Summer 2023)</span>
+            <span class="pill">+</span>
+          </summary>
+          <div class="card-body">
+            <ul id="we-list" class="section-list">
+              <li>
+                <ul class="description">
+                  <li>Delivered full-time childcare for a three-year-old girl in Udine, Italy with a focus on English
+                    language development.
 
-                    </li>
+                  </li>
+                  <li>Adjusted to language barriers and adapted to living in a foreign country with significant
+                    cultural barriers.
+                  </li>
+                  <li>Gained international experience and improved communication skills through working with locals in
+                    Italy, France, and Austria.
 
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </details>
-          <!-- Card 10: aupair -->
-          <details class="resume-card">
-            <summary class="card-summary">
-              <span><strong>Aupair</strong>, International Childcare (Summer 2023)</span>
-              <span class="pill">+</span>
-            </summary>
-            <div class="card-body">
-              <ul id="we-list" class="section-list">
-                <li>
-                  <ul class="description">
-                    <li>Delivered full-time childcare for a three-year-old girl in Udine, Italy with a focus on English
-                      language development.
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </details>
+        <!-- Leadership -->
+        <div class="spacer"></div>
+        <h3 class="section-header">Leadership</h3>
+        <div class="spacer"></div>
+        <h3 class="section-header">Skills</h3>
 
-                    </li>
-                    <li>Adjusted to language barriers and adapted to living in a foreign country with significant
-                      cultural barriers.
-                    </li>
-                    <li>Gained international experience and improved communication skills through working with locals in
-                      Italy, France, and Austria.
-
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </details>
-          <div class="spacer"></div>
-          <h3 class="section-header">Skills</h3>
-
-          <section class="skills-wrap">
-            <div class="skills-grid">
-              <!-- Card 1: Tools & Platforms -->
-              <article class="skill-card">
-                <div class="skill-card-head">
-                  <h4 class="skill-card-title">Tools & Platforms</h4>
+        <section class="skills-wrap">
+          <div class="skills-grid">
+            <!-- Card 1: Tools & Platforms -->
+            <article class="skill-card">
+              <div class="skill-card-head">
+                <h4 class="skill-card-title">Tools & Platforms</h4>
+              </div>
+              <div class="skill-card-body">
+                <div class="skill-badges">
+                  <span class="skill-badge">Adobe Illustrator</span>
+                  <span class="skill-badge">Adobe Photoshop</span>
+                  <span class="skill-badge">Adobe InDesign</span>
+                  <span class="skill-badge">Adobe Animate</span>
+                  <span class="skill-badge">Clo3D</span>
+                  <span class="skill-badge">Figma</span>
+                  <span class="skill-badge">Excel</span>
+                  <span class="skill-badge">Microsoft Office</span>
+                  <span class="skill-badge">Google Suite</span>
+                  <span class="skill-badge">R</span>
+                  <span class="skill-badge">RStudio</span>
+                  <span class="skill-badge">Java (proficient)</span>
                 </div>
-                <div class="skill-card-body">
-                  <div class="skill-badges">
-                    <span class="skill-badge">Adobe Illustrator</span>
-                    <span class="skill-badge">Adobe Photoshop</span>
-                    <span class="skill-badge">Adobe InDesign</span>
-                    <span class="skill-badge">Adobe Animate</span>
-                    <span class="skill-badge">Clo3D</span>
-                    <span class="skill-badge">Figma</span>
-                    <span class="skill-badge">Excel</span>
-                    <span class="skill-badge">Microsoft Office</span>
-                    <span class="skill-badge">Google Suite</span>
-                    <span class="skill-badge">R</span>
-                    <span class="skill-badge">RStudio</span>
-                    <span class="skill-badge">Java (proficient)</span>
-                  </div>
-                </div>
-              </article>
+              </div>
+            </article>
 
-              <!-- Card 2: Languages -->
-              <article class="skill-card">
-                <div class="skill-card-head">
-                  <h4 class="skill-card-title">Languages</h4>
+            <!-- Card 2: Languages -->
+            <article class="skill-card">
+              <div class="skill-card-head">
+                <h4 class="skill-card-title">Languages</h4>
+              </div>
+              <div class="skill-card-body">
+                <div class="skill-badges">
+                  <span class="skill-badge">English</span>
+                  <span class="skill-badge">American Sign Language (conversational)</span>
+                  <span class="skill-badge">Spanish (conversational)</span>
                 </div>
-                <div class="skill-card-body">
-                  <div class="skill-badges">
-                    <span class="skill-badge">English</span>
-                    <span class="skill-badge">American Sign Language (conversational)</span>
-                    <span class="skill-badge">Spanish (conversational)</span>
-                  </div>
-                </div>
-              </article>
+              </div>
+            </article>
 
-              <!-- Card 3: Personal -->
-              <article class="skill-card">
-                <div class="skill-card-head">
-                  <h4 class="skill-card-title">Personal</h4>
+            <!-- Card 3: Personal -->
+            <article class="skill-card">
+              <div class="skill-card-head">
+                <h4 class="skill-card-title">Personal</h4>
+              </div>
+              <div class="skill-card-body">
+                <div class="skill-badges">
+                  <span class="skill-badge">Sewing</span>
+                  <span class="skill-badge">Glassblowing</span>
+                  <span class="skill-badge">Painting</span>
+                  <span class="skill-badge">Photography</span>
+                  <span class="skill-badge">Welding (MIG and stick)</span>
+                  <span class="skill-badge">Fashion</span>
+                  <span class="skill-badge">Traveling</span>
+                  <span class="skill-badge">Yoga</span>
+                  <span class="skill-badge">Personal Investing</span>
                 </div>
-                <div class="skill-card-body">
-                  <div class="skill-badges">
-                    <span class="skill-badge">Sewing</span>
-                    <span class="skill-badge">Glassblowing</span>
-                    <span class="skill-badge">Painting</span>
-                    <span class="skill-badge">Photography</span>
-                    <span class="skill-badge">Welding (MIG and stick)</span>
-                    <span class="skill-badge">Fashion</span>
-                    <span class="skill-badge">Traveling</span>
-                    <span class="skill-badge">Yoga</span>
-                    <span class="skill-badge">Personal Investing</span>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </section>
+              </div>
+            </article>
+          </div>
+        </section>
 
-      </main>
+    </main>
 
-      <script>
-        // Persist open/closed state per card for better UX (optional)
-        const cards = document.querySelectorAll('details.resume-card');
-        cards.forEach((card, idx) => {
-          const key = `resume-card-${idx}`;
-          const saved = localStorage.getItem(key);
-          if (saved === "open") card.setAttribute("open", "");
-          if (saved === "closed") card.removeAttribute("open");
-          card.addEventListener("toggle", () => {
-            localStorage.setItem(key, card.open ? "open" : "closed");
-          });
+    <script>
+      // Persist open/closed state per card for better UX (optional)
+      const cards = document.querySelectorAll('details.resume-card');
+      cards.forEach((card, idx) => {
+        const key = `resume-card-${idx}`;
+        const saved = localStorage.getItem(key);
+        if (saved === "open") card.setAttribute("open", "");
+        if (saved === "closed") card.removeAttribute("open");
+        card.addEventListener("toggle", () => {
+          localStorage.setItem(key, card.open ? "open" : "closed");
         });
+      });
 
-        // Toggle pill +/-, always + when closed, always - when open
-        function updatePills() {
-          document.querySelectorAll('details.resume-card').forEach(details => {
-            const pill = details.querySelector('.pill');
-            if (pill) {
-              pill.textContent = details.open ? '-' : '+';
-            }
-          });
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-          updatePills();
-          document.querySelectorAll('details.resume-card').forEach(details => {
-            details.addEventListener('toggle', updatePills);
-          });
+      // Toggle pill +/-, always + when closed, always - when open
+      function updatePills() {
+        document.querySelectorAll('details.resume-card').forEach(details => {
+          const pill = details.querySelector('.pill');
+          if (pill) {
+            pill.textContent = details.open ? '-' : '+';
+          }
         });
-      </script>
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        updatePills();
+        document.querySelectorAll('details.resume-card').forEach(details => {
+          details.addEventListener('toggle', updatePills);
+        });
+      });
+    </script>
 </body>
 <footer>
   <p style="
