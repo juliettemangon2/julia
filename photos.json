@@ -124,10 +124,14 @@
   { "src": "jewelry/IMG_9354.jpeg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
   
 
+
   { "src": "paint/IMG_0619.jpeg", "alt": "Painting 0619", "folder": "paint" },
   { "src": "paint/swimming.jpeg", "alt": "Painting 1158", "folder": "paint" },
-  { "src": "paint/IMG_1185.jpg", "alt": "Painting 1158", "folder": "paint" },
+    { "src": "paint/juliaparty.jpeg", "alt": "Painting 0619", "folder": "paint" },
+
     { "src": "paint/IMG_0664.jpeg", "alt": "Painting 0664", "folder": "paint" },
+      { "src": "paint/IMG_1185.jpg", "alt": "Painting 1158", "folder": "paint" },
+
       { "src": "paint/groove.jpg", "alt": "Painting 0619", "folder": "paint" },
 
 
