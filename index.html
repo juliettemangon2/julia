@@ -1,267 +1,674 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Julia Majchrzak</title>
-<link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Julia Majchrzak</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
-  <link href="https://api.fontshare.com/css?family=Tanker" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-  <link rel="preload" href="name.png" as="image">
 
-  <!-- Shared stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ------------------------------ */
+    /*      COLOR VARIABLES           */
+    /* ------------------------------ */
+    :root {
+      --darlington: #90be50;
+      --beeswax: #e9d562;
+      --grenadine: #d95402;
+      --cafe-latte: #47537b;
+      --lavender: #7c6a85;
+      --ice-blue: #D9E8E8;
+      --hover: #eaa594;
+      --active: #e9d562;
+      --turquoise: #50a5a0;
+      --cream: #abc9d3;
+      --charcoal: #383838;
+      --star-color: #ffd700;
 
-<style>
-/* ------------------------------ */
-/*      COLOR VARIABLES           */
-/* ------------------------------ */
-:root {
-  --darlington: #ACCA82;
-  --beeswax: #e9d562;
-  --grenadine: #d95402;
-  --cafe-latte: #9B9180;
-  --lavender: #7c6a85;
-  --ice-blue: #D9E8E8;
-  --turquoise: #7EC5C0;
-  --charcoal: #383838;
-  --lightyellow2: #ffeec0;
-}
+    }
 
-/* ------------------------------ */
-/*        GLOBAL RESET            */
-/* ------------------------------ */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+    /* ------------------------------ */
+    /*        GLOBAL RESET            */
+    /* ------------------------------ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  background: var(--cream);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", sans-serif;
-  overflow: hidden;
-}
+    body {
+      background: var(--cream);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", sans-serif;
+      overflow: hidden;
+      min-height: 100vh;
+    }
 
-/* ------------------------------ */
-/*       LANDING CONTAINER        */
-/* ------------------------------ */
-#landing {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+    /* ------------------------------ */
+    /*       LANDING CONTAINER        */
+    /* ------------------------------ */
+    #landing {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      background: var(--cream);
+      transition: background 0.8s ease;
+    }
 
-/* ------------------------------ */
-/*         STAR SVG ICON          */
-/* ------------------------------ */
-#landing-star {
-  width: 400px;
-  height: auto;
-  opacity: 0;
-  transform: scale(0.6);
-  animation: starFadeIn 1s ease forwards;
-  margin-bottom: 2rem;
-}
+    /* ------------------------------ */
+    /*        NAME TITLE              */
+    /* ------------------------------ */
+    #landing-name {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", sans-serif;
+      font-size: 5rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      line-height: 1.1;
+      color: var(--grenadine);
+      opacity: 0;
+      animation: gentleFadeIn 1.4s ease forwards 0.3s;
+      transition: all 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+      text-align: center;
+    }
 
-#landing-star polygon {
-  fill: var(--beeswax);
-}
+    /* ------------------------------ */
+    /*           ENTER BUTTON         */
+    /* ------------------------------ */
+    #enter-btn {
+      margin-top: 3rem;
+      background: transparent;
+      border: none;
+      padding: 0;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      color: var(--charcoal);
+      cursor: pointer;
+      opacity: 0;
+      font-weight: 500;
+      transform: translateY(8px);
+      animation: gentleFadeIn 1.2s ease forwards 1s;
+      transition: opacity 0.3s ease, color 0.3s ease;
+      font-family: inherit;
+      position: relative;
+      text-decoration: none;
+    }
 
-/* ------------------------------ */
-/*        NAME TITLE              */
-/* ------------------------------ */
-#landing-name {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", sans-serif;
-  font-size: 5rem;
-  font-weight: 500;
-  letter-spacing: 0rem;
-  letter-spacing: -0.02rem;
-  text-transform: uppercase;
-  line-height: 1.1;
-  color: var(--grenadine);
-  opacity: 0;
-  animation: nameFade 1s ease forwards 0.4s;
-  transition: all 0.9s ease;
-}
+    #enter-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--grenadine);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
 
-/* ------------------------------ */
-/*           ENTER BUTTON         */
-/* ------------------------------ */
-#enter-btn {
-  margin-top: 2.5rem;
-  position: relative;
-  border: 6px solid var(--beeswax);
-  background: white;
-box-shadow: 0 0 0 8px var(--ice-blue) inset;
-  padding: 1.4rem 2.4rem 1.1rem;
-  font-size: 1rem;
-  letter-spacing: 0.17rem;
-  text-transform: uppercase;
-  color: var(--charcoal);
-  cursor: pointer;
-  opacity: 0;
-  font-weight: 800;
-  transform: translateY(8px);
-  animation: buttonFade 1s ease forwards 1s;
-}
+    #enter-btn:hover::after {
+      transform: scaleX(1);
+    }
+
+    #enter-btn:hover {
+      color: var(--grenadine);
+    }
+
+    /* ------------------------------ */
+    /*       CLICKED STATE            */
+    /* ------------------------------ */
+    body.button-clicked #enter-btn {
+      opacity: 0 !important;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    body.button-clicked #enter-btn::after {
+      opacity: 0 !important;
+      transform: scaleX(0);
+    }
+
+    /* ------------------------------ */
+    /*      FLOATING TEXT ELEMENTS    */
+    /* ------------------------------ */
+    /* ------------------------------ */
+    /*      FLOATING CIRCLE ELEMENTS  */
+    /* ------------------------------ */
+    .floating-circle {
+      position: fixed;
+      pointer-events: none;
+      opacity: 0;
+      z-index: 0;
+    }
+
+    .circle-1 {
+      top: 12%;
+      left: 8%;
+      animation: floatDrift1 22s ease-in-out infinite, fadeInFloat 1.5s ease forwards 0.5s;
+    }
+
+    .circle-2 {
+      top: 22%;
+      right: 10%;
+      animation: floatDrift2 19s ease-in-out infinite, fadeInFloat 1.5s ease forwards 0.8s;
+    }
+
+    .circle-3 {
+      bottom: 15%;
+      left: 15%;
+      animation: floatDrift3 24s ease-in-out infinite, fadeInFloat 1.5s ease forwards 1.1s;
+    }
+
+    .circle-4 {
+      bottom: 5%;
+      right: 25%;
+      animation: floatDrift4 20s ease-in-out infinite, fadeInFloat 1.5s ease forwards 1.3s;
+    }
+
+    .circle-5 {
+      top: 35%;
+      left: 5%;
+      animation: floatDrift5 21s ease-in-out infinite, fadeInFloat 1.5s ease forwards 1.5s;
+    }
+
+    #landing-name {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ------------------------------ */
+    /*       GEOMETRIC SHAPES         */
+    /* ------------------------------ */
+    .shape {
+      position: fixed;
+      pointer-events: none;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .square-outline {
+      width: 120px;
+      height: 120px;
+      border: 3px solid var(--beeswax);
+      top: 60%;
+      right: 15%;
+      animation: shapeRotate1 30s linear infinite, fadeInShape 1.8s ease forwards 0.7s;
+    }
+
+    .spiral {
+      width: 100px;
+      height: 100px;
+      top: 15%;
+      right: 20%;
+      animation: shapeRotate2 25s linear infinite reverse, fadeInShape 1.8s ease forwards 1s;
+    }
+
+    .spiral svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .small-square {
+      width: 80px;
+      height: 80px;
+      border: 2px solid var(--lavender);
+      bottom: 12%;
+      right: 25%;
+      animation: shapeRotate3 35s linear infinite, fadeInShape 1.8s ease forwards 1.2s;
+    }
+
+    .circle-6 {
+      top: 50%;
+      right: 7%;
+      animation: floatDrift1 26s ease-in-out infinite, fadeInFloat 1.5s ease forwards 1.7s;
+    }
+
+    .circle-7 {
+      bottom: 35%;
+      left: 18%;
+      animation: floatDrift2 23s ease-in-out infinite, fadeInFloat 1.5s ease forwards 1.9s;
+    }
+
+    .circle-8 {
+      top: 8%;
+      left: 25%;
+      animation: floatDrift3 27s ease-in-out infinite, fadeInFloat 1.5s ease forwards 2.1s;
+    }
+
+    /* ------------------------------ */
+    /*  FADE OUT SHAPES & TEXT        */
+    /* ------------------------------ */
+    body.button-clicked .floating-text,
+    body.button-clicked .shape {
+      opacity: 0 !important;
+      transition: opacity 0.6s ease;
+    }
+
+    body.button-clicked .floating-circle,
+    body.button-clicked .shape {
+      opacity: 0 !important;
+      transition: opacity 0.6s ease;
+    }
+
+    body.landing-finished .floating-circle,
+    body.landing-finished .shape {
+      opacity: 0 !important;
+    }
 
 
+    /* ------------------------------ */
+    /*       EXIT ANIMATION STATE     */
+    /* ------------------------------ */
+    body.landing-finished #landing {
+      pointer-events: none;
+    }
 
-#enter-btn span { position: relative; z-index: 1; }
+    body.landing-finished .floating-text,
+    body.landing-finished .shape {
+      opacity: 0 !important;
+    }
 
-/* ------------------------------ */
-/*       EXIT ANIMATION STATE     */
-/* ------------------------------ */
-body.landing-finished #enter-btn {
-  opacity: 0;
-  transform: translateY(12px);
-  transition: 0.6s ease;
-}
+    body.landing-finished #landing-name {
+      position: fixed;
+      top: 0;
+      right: 0;
+      text-align: right;
+      font-size: 2rem;
+      color: var(--grenadine);
+      margin: 0;
+      padding: 0;
+      opacity: 1;
+      transition: all 1.2s ease;
+    }
 
-body.landing-finished #landing-name {
-  position: fixed;
-  top: 0rem;
-  right: 0rem;
-  text-align: right;
-  font-size: 2rem;
-  color: var(--grenadine);
-}
+    /* ------------------------------ */
+    /*          KEYFRAMES             */
+    /* ------------------------------ */
+    @keyframes gentleFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
 
-body.landing-finished #landing-star {
-  transform: scale(0.8);
-  transition: transform 0.7s ease;
-}
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-/* ------------------------------ */
-/*          KEYFRAMES             */
-/* ------------------------------ */
-@keyframes starFadeIn {
-  to { opacity: 1; transform: scale(1); }
-}
-@keyframes nameFade {
-  to { opacity: 1; }
-}
-@keyframes buttonFade {
-  to { opacity: 1; transform: translateY(0); }
-}
-/* ------------------------------ */
-/*        MOBILE RESPONSIVE       */
-/* ------------------------------ */
+    @keyframes fadeInFloat {
+      to {
+        opacity: 0.9;
+      }
+    }
 
-/* Medium screens: tablets */
-@media (max-width: 900px) {
+    @keyframes fadeInShape {
+      to {
+        opacity: 0.9;
+      }
+    }
 
-  #landing-star {
-    width: 260px;
-    margin-bottom: 1.5rem;
-  }
+    @keyframes floatDrift1 {
 
-  #landing-name {
-    font-size: 3.4rem;
-  }
+      0%,
+      100% {
+        transform: translate(0, 0) rotate(-1deg);
+      }
 
-  #enter-btn {
-    padding: 1.1rem 2rem 0.9rem;
-    font-size: 0.9rem;
-    border-width: 5px;
-  }
+      25% {
+        transform: translate(18px, -15px) rotate(2deg);
+      }
 
-  body.landing-finished #landing-name {
-    font-size: 1.7rem;
-    right: 1rem;
-  }
-}
+      50% {
+        transform: translate(-12px, -8px) rotate(-2deg);
+      }
 
-/* Small screens: most phones */
-@media (max-width: 600px) {
+      75% {
+        transform: translate(15px, 12px) rotate(1deg);
+      }
+    }
 
-  #landing {
-    padding: 0 1rem;
-  }
+    @keyframes floatDrift2 {
 
-  #landing-star {
-    width: 200px;
-    margin-bottom: 1.2rem;
-    transform-origin: center;
-  }
+      0%,
+      100% {
+        transform: translate(0, 0) rotate(1deg);
+      }
 
-  #landing-name {
-     font-size: 2rem;
-    letter-spacing: -0.01rem;
-  }
+      33% {
+        transform: translate(-15px, 12px) rotate(-1deg);
+      }
 
-  #enter-btn {
-    padding: 1rem 1.7rem 0.8rem;
-    font-size: 0.85rem;
-    letter-spacing: 0.14rem;
-    border-width: 4px;
-    box-shadow: 0 0 0 6px var(--ice-blue) inset;
-  }
+      66% {
+        transform: translate(12px, -18px) rotate(2deg);
+      }
+    }
 
-  body.landing-finished #landing-name {
+    @keyframes floatDrift3 {
 
-    font-size: 2.5rem;
-  }
-}
+      0%,
+      100% {
+        transform: translate(0, 0) rotate(-2deg);
+      }
 
-/* Very small screens: small iPhones, older devices */
-@media (max-width: 400px) {
+      30% {
+        transform: translate(20px, 8px) rotate(1deg);
+      }
 
-  #landing-star {
-    width: 160px;
-  }
+      60% {
+        transform: translate(-18px, -12px) rotate(-1deg);
+      }
+    }
 
-  #landing-name {
-     font-size: 2rem;
-  }
+    @keyframes floatDrift4 {
 
-  #enter-btn {
-    padding: 0.85rem 1.4rem 0.7rem;
-    font-size: 0.75rem;
-    border-width: 4px;
-  }
+      0%,
+      100% {
+        transform: translate(0, 0) rotate(2deg);
+      }
 
-  body.landing-finished #landing-name {
-     font-size: 2.5rem;
-  }
-}
+      40% {
+        transform: translate(-14px, -10px) rotate(-1deg);
+      }
 
-</style>
+      80% {
+        transform: translate(16px, 15px) rotate(2deg);
+      }
+    }
+
+    @keyframes floatDrift5 {
+
+      0%,
+      100% {
+        transform: translate(0, 0) rotate(-1deg);
+      }
+
+      50% {
+        transform: translate(10px, -20px) rotate(1deg);
+      }
+    }
+
+    @keyframes shapeRotate1 {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes shapeRotate2 {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes shapeRotate3 {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* ------------------------------ */
+    /*        MOBILE RESPONSIVE       */
+    /* ------------------------------ */
+
+    /* Tablets and smaller laptops */
+    @media (max-width: 900px) {
+      #landing-name {
+        font-size: 3.4rem;
+      }
+
+      #enter-btn {
+        font-size: 1rem;
+        margin-top: 2.5rem;
+      }
+
+      body.landing-finished #landing-name {
+        font-size: 1.7rem;
+      }
+
+      .square-outline {
+        width: 100px;
+        height: 100px;
+        border-width: 2px;
+      }
+
+      .spiral {
+        width: 80px;
+        height: 80px;
+      }
+
+      .small-square {
+        width: 65px;
+        height: 65px;
+      }
+    }
+
+    /* Most phones */
+    @media (max-width: 600px) {
+      #landing {
+        padding: 1.5rem;
+      }
+
+      #landing-name {
+        font-size: 2.5rem;
+        letter-spacing: -0.01em;
+      }
+
+      #enter-btn {
+        font-size: 0.95rem;
+        margin-top: 2rem;
+      }
+
+      body.landing-finished #landing-name {
+        font-size: 1.5rem;
+      }
+
+      .floating-text {
+        font-size: 0.75rem !important;
+      }
+
+      .float-1 {
+        top: 8%;
+        left: 5%;
+      }
+
+      .float-2 {
+        top: 18%;
+        right: 5%;
+      }
+
+      .float-3 {
+        bottom: 12%;
+        left: 5%;
+      }
+
+      .float-4 {
+        bottom: 22%;
+        right: 5%;
+      }
+
+      .float-5 {
+        display: none;
+      }
+
+      .square-outline {
+        width: 70px;
+        height: 70px;
+        right: 8%;
+        top: 55%;
+      }
+
+      .spiral {
+        width: 60px;
+        height: 60px;
+        right: 10%;
+      }
+
+      .small-square {
+        display: none;
+      }
+
+      .floating-circle {
+        transform: scale(0.7);
+      }
+
+      .circle-5 {
+        display: none;
+      }
+    }
+
+    /* Small phones */
+    @media (max-width: 400px) {
+      #landing-name {
+        font-size: 2rem;
+      }
+
+      #enter-btn {
+        font-size: 0.9rem;
+      }
+
+      body.landing-finished #landing-name {
+        font-size: 1.3rem;
+      }
+
+      .square-outline,
+      .spiral {
+        display: none;
+      }
+    }
+
+    /* Very small screens */
+    @media (max-width: 350px) {
+      #landing-name {
+        font-size: 1.8rem;
+      }
+
+      #enter-btn {
+        font-size: 0.85rem;
+      }
+
+      body.landing-finished #landing-name {
+        font-size: 1.2rem;
+      }
+    }
+
+    /* Landscape mobile devices */
+    @media (max-height: 500px) and (orientation: landscape) {
+      #landing {
+        padding: 1rem;
+      }
+
+      #landing-name {
+        font-size: 2.5rem;
+      }
+
+      #enter-btn {
+        margin-top: 1.5rem;
+        font-size: 0.9rem;
+      }
+
+      .shape,
+      .float-5 {
+        display: none;
+      }
+    }
+
+    /* Subtle texture for depth */
+  </style>
 </head>
 
 <body>
 
-<div id="landing">
+  <div id="landing">
+    <!-- Floating background circles -->
+    <svg class="floating-circle circle-1" width="300" height="300">
+      <circle cx="150" cy="150" r="148" fill="none" stroke="var(--lavender)" stroke-width="2.5" />
+    </svg>
 
-  
+    <svg class="floating-circle circle-2" width="180" height="180">
+      <circle cx="90" cy="90" r="87" fill="none" stroke="var(--charcoal)" stroke-width="3" />
+    </svg>
 
-  <h1 id="landing-name">JULIA MAJCHRZAK</h1>
+    <svg class="floating-circle circle-3" width="200" height="200">
+      <circle cx="100" cy="100" r="95" fill="none" stroke="var(--hover)" stroke-width="2.5" />
+    </svg>
 
-  <button id="enter-btn" onclick="enterSite()">
-    <span>ENTER</span>
-  </button>
+    <svg class="floating-circle circle-4" width="220" height="220">
+      <circle cx="110" cy="110" r="104" fill="none" stroke="var(--turquoise)" stroke-width="2.5" />
+    </svg>
 
-</div>
+    <svg class="floating-circle circle-5" width="150" height="150">
+      <circle cx="75" cy="75" r="72" fill="none" stroke="var(--cafe-latte)" stroke-width="2.5" />
+    </svg>
 
-<script>
-function enterSite() {
-  document.body.classList.add("landing-finished");
+    <svg class="floating-circle circle-6" width="330" height="330">
+      <circle cx="165" cy="165" r="162" fill="none" stroke="var(--darlington)" stroke-width="2.5" />
+    </svg>
 
-  setTimeout(() => {
-    window.location.href = "about.html"; // change if needed
-  }, 1100);
-}
-</script>
+    <svg class="floating-circle circle-7" width="200" height="200">
+      <circle cx="100" cy="100" r="95" fill="none" stroke="var(--star-color)" stroke-width="2" />
+    </svg>
+
+    <svg class="floating-circle circle-8" width="240" height="240">
+      <circle cx="120" cy="120" r="114" fill="none" stroke="var(--grenadine)" stroke-width="2.5" />
+    </svg>
+    <h1 id="landing-name">JULIA MAJCHRZAK</h1>
+
+    <button id="enter-btn" onclick="enterSite()">
+      enter
+    </button>
+  </div>
+
+  <script>
+    function enterSite() {
+      // Prevent any further interactions
+      const btn = document.getElementById('enter-btn');
+      btn.style.pointerEvents = 'none';
+
+      // First fade out the button and decorative elements
+      document.body.classList.add("button-clicked");
+
+      setTimeout(() => {
+        document.body.classList.add("landing-finished");
+
+        // Navigate to about page
+        setTimeout(() => {
+          window.location.href = "about.html";
+        }, 1300);
+      }, 100);
+    }
+
+    // Prevent accidental double-clicks
+    let hasClicked = false;
+    document.getElementById('enter-btn').addEventListener('click', function (e) {
+      if (hasClicked) {
+        e.preventDefault();
+        return false;
+      }
+      hasClicked = true;
+    }, { once: true });
+  </script>
 
 </body>
+
 </html>
