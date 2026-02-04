@@ -2,6 +2,10 @@
   {"src": "collage/IMG_6881.jpeg", "alt": "Collage piece", "folder": "collage"},
   { "src": "branding/everloom moodboard.jpg", "alt": "Everloom Moodboard", "folder": "collage" },
 
+  { "src": "glass/sculpture copy/Tree - Jury Nomination/tree close up.jpg", "alt": "Closure 1", "folder": "glass-sculpture" },
+    { "src": "glass/sculpture copy/Tree - Jury Nomination/tree.jpg", "alt": "Closure 1", "folder": "glass-sculpture" },
+
+
   { "src": "glass/sculpture copy/Efflorescence/full.jpg", "alt": "Closure 1", "folder": "glass-sculpture" },
   { "src": "glass/sculpture copy/Efflorescence/closeup1.jpg", "alt": "Closure 1", "folder": "glass-sculpture" },
   { "src": "glass/sculpture copy/Efflorescence/closeup2.jpg", "alt": "Closure 1", "folder": "glass-sculpture" },
@@ -121,8 +125,11 @@
   { "src": "jewelry/green.jpg", "alt": "Jewelry piece 1", "folder": "jewelry" },
   { "src": "jewelry/jewelry1.jpeg", "alt": "Jewelry piece 1", "folder": "jewelry" },
   
+    { "src": "jewelry/hoops.jpg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
+
+      { "src": "jewelry/button necklace.jpeg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
+
   { "src": "jewelry/IMG_9354.jpeg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
-  
 
 
   { "src": "paint/IMG_0619.jpeg", "alt": "Painting 0619", "folder": "paint" },
