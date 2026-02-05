@@ -76,7 +76,7 @@
       color: var(--grenadine);
       opacity: 0;
       animation: gentleFadeIn 1.4s ease forwards 0.3s;
-      transition: all 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transition: opacity 0.8s ease;
       text-align: center;
     }
 
@@ -137,9 +137,12 @@
       transform: scaleX(0);
     }
 
-    /* ------------------------------ */
-    /*      FLOATING TEXT ELEMENTS    */
-    /* ------------------------------ */
+    body.button-clicked #landing-name {
+      opacity: 0 !important;
+      transition: opacity 0.8s ease;
+    }
+
+
     /* ------------------------------ */
     /*      FLOATING CIRCLE ELEMENTS  */
     /* ------------------------------ */
@@ -185,47 +188,6 @@
       z-index: 2;
     }
 
-    /* ------------------------------ */
-    /*       GEOMETRIC SHAPES         */
-    /* ------------------------------ */
-    .shape {
-      position: fixed;
-      pointer-events: none;
-      opacity: 0;
-      z-index: 1;
-    }
-
-    .square-outline {
-      width: 120px;
-      height: 120px;
-      border: 3px solid var(--beeswax);
-      top: 60%;
-      right: 15%;
-      animation: shapeRotate1 30s linear infinite, fadeInShape 1.8s ease forwards 0.7s;
-    }
-
-    .spiral {
-      width: 100px;
-      height: 100px;
-      top: 15%;
-      right: 20%;
-      animation: shapeRotate2 25s linear infinite reverse, fadeInShape 1.8s ease forwards 1s;
-    }
-
-    .spiral svg {
-      width: 100%;
-      height: 100%;
-    }
-
-    .small-square {
-      width: 80px;
-      height: 80px;
-      border: 2px solid var(--lavender);
-      bottom: 12%;
-      right: 25%;
-      animation: shapeRotate3 35s linear infinite, fadeInShape 1.8s ease forwards 1.2s;
-    }
-
     .circle-6 {
       top: 50%;
       right: 7%;
@@ -247,22 +209,20 @@
     /* ------------------------------ */
     /*  FADE OUT SHAPES & TEXT        */
     /* ------------------------------ */
-    body.button-clicked .floating-text,
-    body.button-clicked .shape {
-      opacity: 0 !important;
-      transition: opacity 0.6s ease;
-    }
 
     body.button-clicked .floating-circle,
     body.button-clicked .shape {
       opacity: 0 !important;
-      transition: opacity 0.6s ease;
+      animation-play-state: paused !important;
+      transition: opacity 1.5s ease;
     }
 
-    body.landing-finished .floating-circle,
-    body.landing-finished .shape {
+    body.button-clicked #landing-name {
       opacity: 0 !important;
+      animation-play-state: paused !important;
+      transition: opacity 1.5s ease;
     }
+
 
 
     /* ------------------------------ */
@@ -272,22 +232,9 @@
       pointer-events: none;
     }
 
-    body.landing-finished .floating-text,
-    body.landing-finished .shape {
-      opacity: 0 !important;
-    }
 
     body.landing-finished #landing-name {
-      position: fixed;
-      top: 0;
-      right: 0;
-      text-align: right;
-      font-size: 2rem;
-      color: var(--grenadine);
-      margin: 0;
-      padding: 0;
-      opacity: 1;
-      transition: all 1.2s ease;
+      opacity: 0 !important;
     }
 
     /* ------------------------------ */
@@ -442,15 +389,7 @@
         margin-top: 2.5rem;
       }
 
-      body.landing-finished #landing-name {
-        font-size: 1.7rem;
-      }
 
-      .square-outline {
-        width: 100px;
-        height: 100px;
-        border-width: 2px;
-      }
 
       .spiral {
         width: 80px;
@@ -460,6 +399,10 @@
       .small-square {
         width: 65px;
         height: 65px;
+      }
+
+      .floating-circle {
+        transform: scale(0.7);
       }
     }
 
@@ -479,63 +422,104 @@
         margin-top: 2rem;
       }
 
-      body.landing-finished #landing-name {
-        font-size: 1.5rem;
-      }
-
-      .floating-text {
-        font-size: 0.75rem !important;
-      }
-
-      .float-1 {
-        top: 8%;
-        left: 5%;
-      }
-
-      .float-2 {
-        top: 18%;
-        right: 5%;
-      }
-
-      .float-3 {
-        bottom: 12%;
-        left: 5%;
-      }
-
-      .float-4 {
-        bottom: 22%;
-        right: 5%;
-      }
-
-      .float-5 {
+      /* Hide the darlington (circle-6) and lavender (circle-1) circles */
+      .circle-1,
+      .circle-6 {
         display: none;
       }
 
-      .square-outline {
-        width: 70px;
-        height: 70px;
-        right: 8%;
-        top: 55%;
-      }
-
-      .spiral {
-        width: 60px;
-        height: 60px;
-        right: 10%;
-      }
-
-      .small-square {
-        display: none;
-      }
-
-      .floating-circle {
-        transform: scale(0.7);
-      }
-
-      .circle-5 {
-        display: none;
-      }
+  
     }
+    @media (max-width: 600px) {
+  @keyframes floatDrift1Mobile {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(25vw, -20vh);
+    }
+    50% {
+      transform: translate(-20vw, 15vh);
+    }
+    75% {
+      transform: translate(15vw, 25vh);
+    }
+  }
+
+  @keyframes floatDrift2Mobile {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    33% {
+      transform: translate(-30vw, 20vh);
+    }
+    66% {
+      transform: translate(20vw, -25vh);
+    }
+  }
+
+  @keyframes floatDrift3Mobile {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    30% {
+      transform: translate(25vw, -30vh);
+    }
+    60% {
+      transform: translate(-25vw, 20vh);
+    }
+  }
+
+  @keyframes floatDrift4Mobile {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    40% {
+      transform: translate(-20vw, -25vh);
+    }
+    80% {
+      transform: translate(30vw, 15vh);
+    }
+  }
+
+  /* Slow animations (20-30s) + starting positions away from center */
+  .circle-2 {
+    top: 5%;
+    right: -10%;
+    animation: floatDrift2Mobile 25s ease-in-out infinite, fadeInFloat 1.5s ease forwards 0.8s;
+  }
+
+  .circle-3 {
+    bottom: 5%;
+    left: -10%;
+    animation: floatDrift3Mobile 28s ease-in-out infinite, fadeInFloat 1.5s ease forwards 1.1s;
+  }
+
+  .circle-4 {
+    bottom: -5%;
+    right: -15%;
+    animation: floatDrift4Mobile 24s ease-in-out infinite, fadeInFloat 1.5s ease forwards 1.3s;
+  }
+
+  .circle-5 {
+    top: 15%;
+    left: -20%;
+    animation: floatDrift1Mobile 30s ease-in-out infinite, fadeInFloat 1.5s ease forwards 1.5s;
+  }
+
+  .circle-7 {
+    bottom: 20%;
+    left: -15%;
+    animation: floatDrift2Mobile 26s ease-in-out infinite, fadeInFloat 1.5s ease forwards 1.9s;
+  }
+
+  .circle-8 {
+    top: -10%;
+    left: 30%;
+    animation: floatDrift3Mobile 27s ease-in-out infinite, fadeInFloat 1.5s ease forwards 2.1s;
+  }
+}
+
 
     /* Small phones */
     @media (max-width: 400px) {
@@ -547,14 +531,6 @@
         font-size: 0.9rem;
       }
 
-      body.landing-finished #landing-name {
-        font-size: 1.3rem;
-      }
-
-      .square-outline,
-      .spiral {
-        display: none;
-      }
     }
 
     /* Very small screens */
@@ -565,10 +541,6 @@
 
       #enter-btn {
         font-size: 0.85rem;
-      }
-
-      body.landing-finished #landing-name {
-        font-size: 1.2rem;
       }
     }
 
@@ -593,7 +565,10 @@
       }
     }
 
-    /* Subtle texture for depth */
+    body.fading-out .floating-circle {
+      opacity: 0 !important;
+      transition: opacity 1.5s ease !important;
+    }
   </style>
 </head>
 
@@ -601,36 +576,36 @@
 
   <div id="landing">
     <!-- Floating background circles -->
-    <svg class="floating-circle circle-1" width="300" height="300">
-      <circle cx="150" cy="150" r="148" fill="none" stroke="var(--lavender)" stroke-width="2.5" />
+    <svg class="floating-circle circle-1" width="330" height="330">
+      <circle cx="150" cy="150" r="148" fill="none" stroke="var(--lavender)" stroke-width="4.7" />
     </svg>
 
     <svg class="floating-circle circle-2" width="180" height="180">
-      <circle cx="90" cy="90" r="87" fill="none" stroke="var(--charcoal)" stroke-width="3" />
+      <circle cx="90" cy="90" r="87" fill="none" stroke="var(--charcoal)" stroke-width="5" />
     </svg>
 
     <svg class="floating-circle circle-3" width="200" height="200">
-      <circle cx="100" cy="100" r="95" fill="none" stroke="var(--hover)" stroke-width="2.5" />
+      <circle cx="100" cy="100" r="95" fill="none" stroke="var(--hover)" stroke-width="4" />
     </svg>
 
     <svg class="floating-circle circle-4" width="220" height="220">
-      <circle cx="110" cy="110" r="104" fill="none" stroke="var(--turquoise)" stroke-width="2.5" />
+      <circle cx="110" cy="110" r="104" fill="none" stroke="var(--turquoise)" stroke-width="6" />
     </svg>
 
     <svg class="floating-circle circle-5" width="150" height="150">
-      <circle cx="75" cy="75" r="72" fill="none" stroke="var(--cafe-latte)" stroke-width="2.5" />
+      <circle cx="75" cy="75" r="72" fill="none" stroke="var(--cafe-latte)" stroke-width="4" />
     </svg>
 
     <svg class="floating-circle circle-6" width="330" height="330">
-      <circle cx="165" cy="165" r="162" fill="none" stroke="var(--darlington)" stroke-width="2.5" />
+      <circle cx="165" cy="165" r="162" fill="none" stroke="var(--darlington)" stroke-width="7" />
     </svg>
 
     <svg class="floating-circle circle-7" width="200" height="200">
-      <circle cx="100" cy="100" r="95" fill="none" stroke="var(--star-color)" stroke-width="2" />
+      <circle cx="100" cy="100" r="95" fill="none" stroke="var(--star-color)" stroke-width="3" />
     </svg>
 
     <svg class="floating-circle circle-8" width="240" height="240">
-      <circle cx="120" cy="120" r="114" fill="none" stroke="var(--grenadine)" stroke-width="2.5" />
+      <circle cx="120" cy="120" r="114" fill="none" stroke="var(--grenadine)" stroke-width="5" />
     </svg>
     <h1 id="landing-name">JULIA MAJCHRZAK</h1>
 
@@ -641,21 +616,31 @@
 
   <script>
     function enterSite() {
-      // Prevent any further interactions
       const btn = document.getElementById('enter-btn');
-      btn.style.pointerEvents = 'none';
+      const name = document.getElementById('landing-name');
+      const circles = document.querySelectorAll('.floating-circle');
 
-      // First fade out the button and decorative elements
-      document.body.classList.add("button-clicked");
+      // Button - force immediate hide
+      btn.style.cssText = 'opacity: 0 !important; pointer-events: none;';
+
+      // Name
+      const nameOpacity = getComputedStyle(name).opacity;
+      name.style.animation = 'none';
+      name.style.opacity = nameOpacity;
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          name.style.transition = 'opacity 1.5s ease';
+          name.style.opacity = '0';
+        });
+      });
+
+      // Circles - use a CSS class instead
+      document.body.classList.add('fading-out');
 
       setTimeout(() => {
-        document.body.classList.add("landing-finished");
-
-        // Navigate to about page
-        setTimeout(() => {
-          window.location.href = "about.html";
-        }, 1300);
-      }, 100);
+        window.location.href = "about.html";
+      }, 1700);
     }
 
     // Prevent accidental double-clicks
