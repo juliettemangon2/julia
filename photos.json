@@ -112,20 +112,17 @@
   { "src": "glass/vessels/redOld.jpeg", "alt": "Glass vessel yellow old", "folder": "glass-vessels" },
   { "src": "glass/vessels/purpleOld.jpeg", "alt": "Glass vessel yellow old", "folder": "glass-vessels" },
 
-  
-  { "src": "glass/vessels/IMG_7035.jpeg", "alt": "Glass vessel 7035", "folder": "glass-vessels" },
+    { "src": "glass/vessels/fish.jpeg", "alt": "Glass vessel 7035", "folder": "glass-vessels" },
 
-  {"src": "glass/blow/IMG_1843.jpeg", "alt": "Glass blowing 1843", "folder": "glass-blow"},
-  {"src": "glass/blow/IMG_1844.jpeg", "alt": "Glass blowing 1844", "folder": "glass-blow"},
-  {"src": "glass/blow/IMG_1845.jpeg", "alt": "Glass blowing 1845", "folder": "glass-blow"},
+  { "src": "glass/vessels/butterfly.jpeg", "alt": "Glass vessel 7035", "folder": "glass-vessels" },
+  { "src": "glass/vessels/bowl.jpeg", "alt": "Glass vessel 7035", "folder": "glass-vessels" },
 
 
   { "src": "jewelry/green.jpg", "alt": "Jewelry piece 1", "folder": "jewelry" },
   { "src": "jewelry/jewelry1.jpeg", "alt": "Jewelry piece 1", "folder": "jewelry" },
   
-    { "src": "jewelry/hoops.jpg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
-
-      { "src": "jewelry/button necklace.jpeg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
+  { "src": "jewelry/hoops.jpg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
+  { "src": "jewelry/button necklace.jpeg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
 
   { "src": "jewelry/IMG_9354.jpeg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
 
