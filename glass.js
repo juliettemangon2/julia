@@ -1,13 +1,6 @@
-// glass-gallery.js (combined)
-// --------------------------
-// One script to handle all Glass subnavs.
-// - Sculptures -> grouped viewer with thumb sidebar (sculpture.js behavior)
-// - Vessels / Blown Mold -> simple grid + lightbox (gallery.js behavior)
-
 const JSON_URL = 'photos.json';
 const SELECTOR = '#gallery';
 
-// ---------------------- helpers ----------------------
 const VIDEO_EXT_RE = /\.(mov|mp4|webm|ogv)$/i;
 const isVideo = (src, type) =>
   (type && type.toLowerCase() === 'video') || VIDEO_EXT_RE.test(src);
@@ -272,7 +265,7 @@ const renderSculptureGrid = () => {
       currentGroupKey = key;
       currentIndex = items.indexOf(tileItem);
       if (currentIndex < 0) currentIndex = 0;
-      thumbCol.style.display = 'flex';     // show sidebar in sculpture mode
+      thumbCol.style.display = 'flex';    
       renderThumbColumn(items);
       showInViewer(items[currentIndex]);
       overlay.style.display = 'flex';
