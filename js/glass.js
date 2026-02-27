@@ -112,8 +112,8 @@ const showInViewer = (item) => {
 // ---------------------- sculpture grouping ----------------------
 const getGroupKey = (src, explicit) => {
   if (explicit) return explicit;
-  // matches ".../glass/sculpture copy/<GROUP>/..."
-  const m = src.match(/glass\/sculpture copy\/([^/]+)\//i);
+  // matches ".../glass/sculpture/<GROUP>/..."
+  const m = src.match(/glass\/sculpture\/([^/]+)\//i);
   return m ? m[1] : null;
 };
 
@@ -125,15 +125,16 @@ const buildSculptureBuckets = () => {
   allItems.forEach(it => {
     const src = it.src || '';
     if (/^glass\/sculpture\//i.test(src)) {
-      singles.push(it);
-    } else if (/^glass\/sculpture copy\//i.test(src)) {
       const key = getGroupKey(src, it.group);
-      if (!key) return;
-      if (!groups.has(key)) {
-        groups.set(key, []);
-        orderOfGroups.push(key);
+      if (!key) {
+        singles.push(it);
+      } else {
+        if (!groups.has(key)) {
+          groups.set(key, []);
+          orderOfGroups.push(key);
+        }
+        groups.get(key).push(it);
       }
-      groups.get(key).push(it);
     }
   });
 };
