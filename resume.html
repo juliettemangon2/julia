@@ -34,7 +34,6 @@
       gap: 1.25rem;
     }
 
-    /* Section headings inside content */
     .section-header {
       color: var(--grenadine);
       font-size: 2.2rem;
@@ -43,7 +42,6 @@
       margin: 0.2rem 0;
     }
 
-    /* Collapsible cards */
     details.resume-card {
       border: 3px solid var(--cream);
       background: #ffffff;
@@ -162,7 +160,6 @@
       display: inline-block;
       padding: 0.25rem 0.5rem;
       border-radius: 0;
-      /* square corners to match your aesthetic */
       letter-spacing: 0.01rem;
     }
 
@@ -229,6 +226,34 @@
       line-height: 1.2;
       letter-spacing: 0.01rem;
       white-space: nowrap;
+    }
+
+    .section-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .pdf-link {
+      border: 4px solid var(--ice-blue);
+      padding: 0.35rem 0.75rem;
+      font-size: 1rem;
+      color: #fff;
+      
+      text-decoration: none;
+      white-space: nowrap;
+      line-height: 1.4;
+      background: var(--dark-blue);
+      
+    }
+
+    .pdf-link:hover {
+      border-color: var(--beeswax);
+      background-color: var(--grenadine);
+      
+      
     }
 
     /* Responsive */
@@ -323,6 +348,11 @@
         margin: 0rem;
       }
 
+      .pdf-link {
+        font-size: 0.88rem;
+        padding: 0.28rem 0.55rem;
+      }
+
       .skills-grid {
         grid-template-columns: 1fr;
         gap: 0.75rem;
@@ -360,6 +390,11 @@
       .section-header {
         letter-spacing: 0.08rem;
 
+      }
+
+      .pdf-link {
+        font-size: 0.82rem;
+        padding: 0.25rem 0.5rem;
       }
 
       summary.card-summary {
@@ -475,11 +510,13 @@
     </section>
 
 
-
     <!-- New collapsible layout under the unchanged nav -->
     <main class="page">
       <!-- Education -->
-      <h3 class="section-header">Education</h3>
+      <div class="section-header-row">
+        <h3 class="section-header">Education</h3>
+        <a href="Resume.pdf" target="_blank" class="pdf-link">view PDF version</a>
+      </div>
 
       <!-- Card 1: BS -->
       <details class=" resume-card" open>
@@ -753,14 +790,12 @@
               <ul class="description">
                 <li>Delivered full-time childcare for a three-year-old girl in Udine, Italy with a focus on English
                   language development.
-
                 </li>
                 <li>Adjusted to language barriers and adapted to living in a foreign country with significant
                   cultural barriers.
                 </li>
                 <li>Gained international experience and improved communication skills through working with locals in
                   Italy, France, and Austria.
-
               </ul>
             </li>
           </ul>
@@ -841,11 +876,7 @@
                   engagement and retention.
                 </li>
                 <li>Create graphics and advertisements for events and guest speakers.
-
                 </li>
-
-
-
               </ul>
             </li>
           </ul>

@@ -275,6 +275,66 @@ const renderSculptureGrid = () => {
   });
 };
 
+// ---------------------- generic grouped grid (for any folder with group fields) ----------------------
+const buildGroupedBuckets = (folder) => {
+  singles = [];
+  groups = new Map();
+  orderOfGroups = [];
+
+  allItems.filter(x => x.folder === folder).forEach(it => {
+    const key = it.group || null;
+    if (!key) return;
+    if (!groups.has(key)) {
+      groups.set(key, []);
+      orderOfGroups.push(key);
+    }
+    groups.get(key).push(it);
+  });
+};
+
+const renderGroupedGrid = (folder) => {
+  buildGroupedBuckets(folder);
+
+  mount.innerHTML = '';
+  mount.style.display = 'grid';
+  mount.style.gridTemplateColumns = 'repeat(auto-fill, minmax(320px, 1fr))';
+  mount.style.gap = '12px';
+  mount.style.justifyContent = 'center';
+
+  orderOfGroups.forEach(key => {
+    const items = groups.get(key);
+    if (!items || !items.length) return;
+
+    const tileItem = items.find(i => !isVideo(i.src, i.type)) || items[0];
+
+    const fig = document.createElement('figure');
+    fig.style.margin = '0';
+    fig.style.cursor = 'pointer';
+
+    const wrap = document.createElement('div');
+    wrap.appendChild(createThumbEl(tileItem, false));
+
+    const caption = document.createElement('figcaption');
+    caption.textContent = key;
+    caption.style.cssText = 'font:18px/1.5 system-ui,sans-serif;color:var(--coffee);margin-top:4px;';
+
+    fig.appendChild(wrap);
+    fig.appendChild(caption);
+
+    fig.addEventListener('click', () => {
+      currentGroupKey = key;
+      currentIndex = items.indexOf(tileItem);
+      if (currentIndex < 0) currentIndex = 0;
+      thumbCol.style.display = items.length > 1 ? 'flex' : 'none';
+      renderThumbColumn(items);
+      showInViewer(items[currentIndex]);
+      overlay.style.display = 'flex';
+    });
+
+    mount.appendChild(fig);
+  });
+};
+
 // ---------------------- subnav wiring ----------------------
 document.addEventListener('DOMContentLoaded', () => {
   mount = document.querySelector(SELECTOR);
@@ -337,6 +397,8 @@ function routeAndRender(folder) {
   if (!mount) return;
   if (folder === 'glass-sculpture') {
     renderSculptureGrid();
+  } else if (folder === 'clothing-reclaimed') {
+    renderGroupedGrid(folder);
   } else {
     renderStandardGrid(folder);
   }

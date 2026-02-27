@@ -1,5 +1,9 @@
 [
   { "src": "branding/everloom moodboard.jpg", "alt": "Everloom Moodboard", "folder": "collage" },
+  
+
+    { "src": "glass/sculpture copy/Tree - Jury Nomination/closeup.jpeg", "alt": "Closure 1", "folder": "glass-sculpture" },
+      { "src": "glass/sculpture copy/Tree - Jury Nomination/far.jpeg", "alt": "Closure 1", "folder": "glass-sculpture" },
 
   { "src": "glass/sculpture copy/Efflorescence/full.jpg", "alt": "Closure 1", "folder": "glass-sculpture" },
   { "src": "glass/sculpture copy/Efflorescence/closeup1.jpg", "alt": "Closure 1", "folder": "glass-sculpture" },
@@ -116,22 +120,32 @@
   { "src": "paint/IMG_3199.jpg", "alt": "Painting 3199", "folder": "paint" },
   { "src": "paint/IMG_0537.jpg", "alt": "Painting 0537", "folder": "paint" },
 
-
+{ "src": "clothing/embroidery/fish.jpg", "alt": "Embroidery 7318", "folder": "clothing-embroidery" },
   { "src": "clothing/embroidery/IMG_7318.jpeg", "alt": "Embroidery 7318", "folder": "clothing-embroidery" },
   { "src": "clothing/embroidery/IMG_7852.jpeg", "alt": "Embroidery 7852", "folder": "clothing-embroidery" },
 
   { "src": "clothing/gameday/IMG_0438.jpeg", "alt": "Gameday 0438", "folder": "clothing-embroidery" },
   { "src": "clothing/gameday/IMG_0445.jpeg", "alt": "Gameday 0445", "folder": "clothing-embroidery" },
 
-  { "src": "clothing/reclaimed/IMG_1939.jpeg", "alt": "Reclaimed 1939", "folder": "clothing-reclaimed" },
-  { "src": "clothing/reclaimed/IMG_1945.jpeg", "alt": "Reclaimed 1945", "folder": "clothing-reclaimed" },
-  { "src": "clothing/reclaimed/IMG_1949.jpeg", "alt": "Reclaimed 1949", "folder": "clothing-reclaimed" },
-  { "src": "clothing/reclaimed/IMG_1957.jpeg", "alt": "Reclaimed 1957", "folder": "clothing-reclaimed" },
-  { "src": "clothing/reclaimed/IMG_1969.jpeg", "alt": "Reclaimed 1969", "folder": "clothing-reclaimed" },
-  { "src": "clothing/reclaimed/IMG_1998.jpeg", "alt": "Reclaimed 1998", "folder": "clothing-reclaimed" },
-  { "src": "clothing/reclaimed/IMG_2016.jpeg", "alt": "Reclaimed 2016", "folder": "clothing-reclaimed" },
-  { "src": "clothing/reclaimed/IMG_2027.jpeg", "alt": "Reclaimed 2027", "folder": "clothing-reclaimed" },
-  { "src": "clothing/reclaimed/IMG_0477.jpeg", "alt": "Reclaimed 0477", "folder": "clothing-reclaimed" },
+    { "src": "clothing/reclaimed/Flower jeans/flower jeans front.jpeg", "alt": "Flower jeans", "group": "Flower jeans", "folder": "clothing-reclaimed" },
+  { "src": "clothing/reclaimed/Flower jeans/flower jeans.jpeg", "alt": "Flower jeans", "group": "Flower jeans", "folder": "clothing-reclaimed" },
+
+  { "src": "clothing/reclaimed/Chain top/IMG_1939.jpeg", "alt": "Chain top", "group": "Chain top", "folder": "clothing-reclaimed" },
+  { "src": "clothing/reclaimed/Chain top/IMG_1945.jpeg", "alt": "Chain top", "group": "Chain top", "folder": "clothing-reclaimed" },
+
+
+  { "src": "clothing/reclaimed/Cross top/IMG_1949.jpeg", "alt": "Cross top", "group": "Cross top", "folder": "clothing-reclaimed" },
+  { "src": "clothing/reclaimed/Cross top/IMG_1957.jpeg", "alt": "Cross top", "group": "Cross top", "folder": "clothing-reclaimed" },
+    { "src": "clothing/reclaimed/Dress/IMG_0477.jpeg", "alt": "Dress", "group": "Dress", "folder": "clothing-reclaimed" },
+
+
+  { "src": "clothing/reclaimed/Cross jeans/IMG_1969.jpeg", "alt": "Cross jeans", "group": "Cross jeans", "folder": "clothing-reclaimed" },
+  { "src": "clothing/reclaimed/Cross jeans/IMG_1998.jpeg", "alt": "Cross jeans", "group": "Cross jeans", "folder": "clothing-reclaimed" },
+  { "src": "clothing/reclaimed/Cross jeans/IMG_2016.jpeg", "alt": "Cross jeans", "group": "Cross jeans", "folder": "clothing-reclaimed" },
+  { "src": "clothing/reclaimed/Cross jeans/IMG_2027.jpeg", "alt": "Cross jeans", "group": "Cross jeans", "folder": "clothing-reclaimed" },
+
+
+
 
   { "src": "branding/everloom trifold 1.jpg", "alt": "Everloom Trifold 1", "folder": "branding" },
   { "src": "branding/everloom trifold 2.jpg", "alt": "Everloom Trifold 2", "folder": "branding" },
