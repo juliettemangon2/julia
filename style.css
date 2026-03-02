@@ -1,18 +1,10 @@
-/*style.css*/
-
 :root {
-  --darlington: #ACCA82;
+  --bg: #abc9d3;
+  --charcoal: #383838;
   --beeswax: #e9d562;
   --grenadine: #d95402;
   --dark-blue: #47537b;
-  --lavender: #7c6a85;
   --ice-blue: #D9E8E8;
-  --hover: #eaa594;
-  --active: #e9d562;
-  --turquoise: #7EC5C0;
-  --cream: #abc9d3;
-  --charcoal: #383838;
-  --star-color: #ffd700;
 }
 
 * {
@@ -27,7 +19,7 @@ body {
 }
 
 body {
-  background: var(--cream);
+  background: var(--bg);
   color: var(--grenadine);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
@@ -53,10 +45,8 @@ main {
 h1 {
   color: var(--grenadine);
   font-size: 2rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", sans-serif;
   font-weight: 500;
   text-align: right;
-
   line-height: 1.1;
   text-transform: uppercase;
   letter-spacing: -0.02rem;
@@ -68,7 +58,6 @@ h1 {
 h2 {
   color: var(--grenadine);
   font-size: 4rem;
-  font-family: "Be Vietnam Pro", sans-serif;
   font-weight: 400;
   text-align: center;
   line-height: 1.2;
@@ -88,45 +77,34 @@ h3 {
   margin-left: 5rem;
 }
 
-/* Navigation Grid */
-.nav-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
-  max-width: 400px;
-  margin: 3rem auto;
-  padding: 1rem;
-  box-align: center;
-}
 
 .nav-card {
   position: relative;
   display: block;
   text-align: left;
-
   text-decoration: none;
-  background: var(--cream);
+  background: var(--bg);
   transition: transform 0.15s ease, border-color 0.15s ease;
-}
-
-.nav-card-title {
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: -0.01rem;
-  color: var(--charcoal);
+  padding: 1rem 1rem;
 }
 
 
 .nav-buttons {
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-weight: 400;
+  margin: 1rem auto;
+  max-width: 1500px;
+  gap: 2.5rem;
+  font-size: 1rem;
 }
 
+
 .nav-buttons a {
-  font-family: inherit;
   font-size: 1.2rem;
-  font-weight: 400;
   text-decoration: none;
   letter-spacing: -0.01rem;
   background: var(--iceblue);
@@ -134,54 +112,9 @@ h3 {
   transition: transform 0.15s, border-color 0.15s;
   text-align: center;
   display: block;
-}
-
-.nav-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0rem;
-  font-weight: 400;
-  margin: 1rem auto;
-  max-width: 1500px;
-}
-
-.nav-buttons a {
-  padding: 0.35rem 0.75rem;
-  letter-spacing: 0.02rem;
   transition: background 0.2s ease, transform 0.2s ease;
-  background: var(--ice-blue);
+  padding: 0.35rem 0.75rem;
 
-
-}
-
-
-.nav-buttons a.active {
-  background: var(--grenadine);
-  color: var(--cream);
-}
-
-
-
-.nav-card.about {
-  --size: 100px;
-  width: var(--size);
-  height: var(--size);
-  font-weight: 700;
-  font-size: 1.3rem;
-  color: var(--turquoise);
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  text-decoration: none;
-  border: 5.5px solid var(--turquoise);
-}
-
-
-.nav-card.about:hover {
-  background: var(--ice-blue);
-  transform: rotate(-6deg) scale(1.06);
 }
 
 .nav-card.glass {
@@ -195,10 +128,6 @@ h3 {
   display: grid;
   place-items: center;
   text-decoration: none;
-}
-
-.nav-card.glass:hover {
-  background-color: var(--lavender)
 }
 
 .nav-card.star {
@@ -245,8 +174,7 @@ h3 {
 }
 
 .nav-card.branding:hover {
-  transform: scale(1.2);
-  background-color: var(--grenadine);
+  background-color: var(--charcoal);
 }
 
 .nav-card.glass2 {
@@ -263,17 +191,14 @@ h3 {
 }
 
 .nav-card.glass2:hover {
-  transform: scale(1.2);
-  background-color: var(--grenadine);
-
+  background-color: var(--charcoal);
 }
 
-/* Spiral Button using your SVG */
 .nav-card.spiral {
   --size: 140px;
   width: var(--size);
   height: var(--size);
-  background: var(--cream);
+  background: var(--bg);
   display: grid;
   font-size: 1.2rem;
   background-color: transparent;
@@ -297,7 +222,6 @@ h3 {
   height: 210%;
   margin-bottom: 0rem;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cpath d='m600 275c-4.223 79.009-39.281 151.851-96.707 203.293-54.96 49.233-127.807 76.046-203.293 71.707-70.41-4.047-137.692-35.317-185.616-89.384-44.63-50.352-68.7326-116.88-64.384-185.616 4.0685-64.307 33.0541-125.052 82.062-167.938 45.775-40.0565 105.987-61.4196 167.938-57.062 57.424 4.0391 111.918 30.2252 150.26 74.74 35.4 41.099 54.118 94.972 49.74 150.26-4.044 51.078-27.785 99.125-67.417 132.583-36.566 30.868-84.14 46.803-132.583 42.417-44.456-4.025-86.165-25.142-114.905-60.095-26.331-32.023-39.492-73.305-35.095-114.905 4.011-37.945 22.578-73.277 52.773-97.227 27.447-21.77 62.422-32.19 97.227-27.773 31.535 4.002 60.456 20.086 79.55 45.45 17.382 23.093 24.853 51.814 20.45 79.55-4.05 25.514-17.888 47.849-38.128 61.872-18.49 12.81-40.904 17.569-61.872 13.128-18.977-4.019-34.965-15.285-44.194-30.806-8.271-13.91-10.308-30.03-5.806-44.194 4.021-12.65 12.835-22.208 23.483-26.517 9.49-3.839 19.372-3.026 26.517 1.517 6.417 4.081 9.515 10.507 8.839 16.161-0.634 5.305-4.481 8.839-8.839 8.839' fill='none' stroke='%2347537b' stroke-width='30' stroke-linecap='round'/%3E%3C/svg%3E");
-
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -313,10 +237,9 @@ h3 {
 .nav-card.burst2 {
   --size: 130px;
   font-size: 1.2rem;
-  ;
   width: var(--size);
   height: var(--size);
-  background: var(--cream);
+  background: var(--bg);
   color: var(--grenadine);
   display: flex;
   flex-direction: column;
@@ -347,22 +270,12 @@ h3 {
   background-color: transparent;
 }
 
-
-
 @keyframes slideIn {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
-hr {
-  border: none;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  width: 100%;
-  margin: 1rem 0;
-}
-
 
 .contact-intro {
   margin: 3rem auto 1rem;
@@ -371,7 +284,6 @@ hr {
 }
 
 .contact-bigline {
-  font-family: "Be Vietnam Pro", sans-serif;
   font-size: clamp(2rem, 6vw, 3.5rem);
   color: var(--grenadine);
   font-weight: 600;
@@ -409,15 +321,15 @@ a:hover {
   background-color: var(--ice-blue);
   margin-top: 0.5rem;
 }
+
 #glass-subnav a:hover,
 #textiles-subnav a:hover {
   background-color: var(--beeswax);
-
 }
+
 #glass-subnav a.active,
 #textiles-subnav a.active {
   background-color: var(--beeswax);
-
 }
 
 .about-info {
@@ -431,7 +343,6 @@ a:hover {
   display: none;
 }
 
-/* Grid of contact cards */
 .contact-grid {
   --card-gap: 2rem;
   display: grid;
@@ -449,7 +360,6 @@ a:hover {
   }
 }
 
-/* Contact card styling */
 .contact-card {
   position: relative;
   display: grid;
@@ -472,7 +382,6 @@ a:hover {
   text-decoration: none;
 }
 
-/* Fills the 30px gap left behind when the card lifts, preventing hover flicker */
 .contact-card:hover::after,
 .contact-card:focus-visible::after {
   content: '';
@@ -504,27 +413,11 @@ a:hover {
   margin-top: -2px;
 }
 
-.nav-grid {
-  grid-template-columns: 1fr;
-  margin: 2rem auto;
-}
-
-.nav-card {
-  padding: 1rem 1rem;
-}
-
-.nav-buttons {
-  flex-wrap: wrap;
-  gap: 02.5rem;
-  font-size: 1rem;
-}
-
 .nav-buttons a {
   padding: 0.4rem 0.6rem;
   margin: 0.1rem 0.2rem;
 }
 
-/* Make the value wrap nicely on small screens */
 @media (max-width: 700px) {
   .contact-card {
     grid-template-columns: 36px 1fr auto;
@@ -569,18 +462,11 @@ p {
     margin-right: 1rem;
   }
 
-  .nav-grid {
-    grid-template-columns: 1fr;
-    margin: 2rem auto;
-  }
 
   .nav-card {
     padding: 0;
   }
 
-  .nav-card-title {
-    font-size: 1.5rem;
-  }
 
   .nav-buttons {
     position: absolute;
@@ -599,7 +485,7 @@ p {
 
   .nav-buttons a.active {
     background: var(--grenadine);
-    color: var(--cream);
+    color: var(--bg);
   }
 
 
@@ -662,27 +548,23 @@ p {
   }
 }
 
-/* ========== MOBILE NAVIGATION ========== */
 @media (max-width: 900px) {
 
-  /* Hide the name header on mobile */
   .name-section h1 {
     display: none;
   }
 
-  /* Remove default section margins that might interfere */
   .name-section {
     margin: 0;
     padding: 0;
   }
 
-  /* ---- MAIN NAV: Fixed top bar, two rows ---- */
   .name-section .nav-buttons {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    background: var(--cream);
+    background: var(--bg);
     border-bottom: 2px solid var(--charcoal);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -693,7 +575,6 @@ p {
     max-width: 100%;
   }
 
-  /* Reset ALL nav card variants to simple text links */
   .name-section .nav-buttons a,
   .name-section .nav-buttons a.nav-card,
   .name-section .nav-buttons a.nav-card.burst2,
@@ -720,7 +601,6 @@ p {
   }
 
   .name-section .nav-buttons a:hover {
-    background: var(--turquoise);
     color: var(--charcoal);
     transform: none;
   }
@@ -738,19 +618,17 @@ p {
     display: none;
   }
 
-  /* Remove spiral pseudo-element */
   .name-section .nav-buttons .nav-card.spiral::before {
     display: none;
   }
 
-  /* ---- SUB-NAV (glass/textiles pages) ---- */
   #glass-subnav,
   #textiles-subnav {
     position: absolute !important;
     top: 95px !important;
     left: 0 !important;
     right: 0 !important;
-    background: var(--cream) !important;
+    background: var(--bg) !important;
     border-bottom: 2px solid var(--charcoal) !important;
     display: flex !important;
     justify-content: center !important;
@@ -775,7 +653,6 @@ p {
     border: 2px solid var(--charcoal);
     background-color: var(--ice-blue);
     margin-top: 0.5rem;
-
   }
 
   #glass-subnav a.active,
@@ -790,19 +667,15 @@ p {
     background: var(--ice-blue);
   }
 
-  /* ---- CONTENT SPACING ---- */
-  /* Default: space for main nav only (about 95px) */
   main {
     padding-top: 105px !important;
     margin-top: 0 !important;
   }
 
-  /* Pages WITH sub-nav need more space */
   body.has-subnav main {
     padding-top: 150px !important;
   }
 
-  /* ---- ABOUT SECTION adjustments ---- */
   .about-section {
     display: block !important;
     padding: 0 1rem !important;
@@ -832,7 +705,6 @@ p {
     margin: 0 0 1rem 0 !important;
   }
 
-  /* ---- Page text/paragraphs ---- */
   main p,
   section p {
     margin-left: 1rem !important;
@@ -840,12 +712,10 @@ p {
     font-size: 1rem !important;
   }
 
-  /* ---- Gallery spacing ---- */
   #gallery {
     padding: 1rem !important;
   }
 
-  /* ---- Footer ---- */
   footer p {
     font-size: 0.85rem !important;
     margin: 1rem !important;
