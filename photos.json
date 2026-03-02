@@ -59,15 +59,18 @@
   { "src": "glass/sculpture/Out to Dry/out to dry process2.jpg", "alt": "Out to dry process 2", "folder": "glass-sculpture" },
   { "src": "glass/sculpture/Out to Dry/out to dry process3.jpg", "alt": "Out to dry process 3", "folder": "glass-sculpture" },
   { "src": "glass/sculpture/Out to Dry/out to dry process1.jpg", "alt": "Out to dry process 1", "folder": "glass-sculpture" },
-    { "src": "glass/sculpture/Fireplace/fireplace.jpeg", "alt": "Fireplace", "folder": "glass-sculpture" },
-  { "src": "glass/sculpture/Fireplace/fireplace.MOV", "alt": "Fireplace video", "folder": "glass-sculpture" },
+    { "src": "glass/sculpture/Drop Trap/drop trap.jpg", "alt": "Trapped 1", "folder": "glass-sculpture" },
+
 
   { "src": "glass/sculpture/Trapped Swirl - Homecoming Demo/IMG_4618.jpeg", "alt": "Out to dry process 1", "folder": "glass-sculpture" },
   { "src": "glass/sculpture/Trapped Swirl - Homecoming Demo/IMG_4610.jpeg", "alt": "Out to dry process 1", "folder": "glass-sculpture" },
 
   { "src": "glass/sculpture/Wood slump/wood1.jpeg", "alt": "Wood slump", "folder": "glass-sculpture" },
   { "src": "glass/sculpture/Wood slump/wood2.jpeg", "alt": "Wood slump", "folder": "glass-sculpture" },
+  
   { "src": "glass/sculpture/Flowers/flowers.jpeg", "alt": "Flowers", "folder": "glass-sculpture" },
+      { "src": "glass/sculpture/Fireplace/fireplace.jpeg", "alt": "Fireplace", "folder": "glass-sculpture" },
+  { "src": "glass/sculpture/Fireplace/fireplace.MOV", "alt": "Fireplace video", "folder": "glass-sculpture" },
   { "src": "glass/sculpture/Trapped/trapped1.jpeg", "alt": "Trapped 1", "folder": "glass-sculpture" },
 
 
@@ -107,11 +110,14 @@
   { "src": "glass/vessels/bowl.jpeg", "alt": "Glass vessel 7035", "folder": "glass-vessels" },
 
 
-
+{ "src": "jewelry/bluesquare.jpg", "alt": "Jewelry piece 1", "folder": "jewelry" },
+{ "src": "jewelry/rednecklace.jpg", "alt": "Jewelry piece 1", "folder": "jewelry" },
   { "src": "jewelry/green.jpg", "alt": "Jewelry piece 1", "folder": "jewelry" },
+    { "src": "jewelry/button necklace.jpeg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
+      { "src": "jewelry/hoops.jpg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
+
+
   { "src": "jewelry/jewelry1.jpeg", "alt": "Jewelry piece 1", "folder": "jewelry" },
-  { "src": "jewelry/hoops.jpg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
-  { "src": "jewelry/button necklace.jpeg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
   { "src": "jewelry/IMG_9354.jpeg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
 
 
