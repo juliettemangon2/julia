@@ -102,6 +102,7 @@
   { "src": "glass/vessels/butterfly.jpeg", "alt": "Glass vessel 7035", "folder": "glass-vessels" },
   { "src": "glass/vessels/bowl.jpeg", "alt": "Glass vessel 7035", "folder": "glass-vessels" },
 
+  
 
     { "src": "jewelry/totem/blueLong4.jpeg", "alt": "Everloom Trifold 1", "folder": "jewelry" },
       { "src": "jewelry/totem/brown2.jpeg", "alt": "Everloom Trifold 1", "folder": "jewelry" },
@@ -159,6 +160,7 @@
 
 
 
+  { "src": "branding/totemMoodboard.JPEG", "alt": "Everloom Trifold 1", "folder": "totemBoard" },
 
   { "src": "branding/everloom trifold 1.jpg", "alt": "Everloom Trifold 1", "folder": "branding" },
   { "src": "branding/everloom trifold 2.jpg", "alt": "Everloom Trifold 2", "folder": "branding" },
