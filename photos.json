@@ -103,14 +103,23 @@
   { "src": "glass/vessels/bowl.jpeg", "alt": "Glass vessel 7035", "folder": "glass-vessels" },
 
 
-  { "src": "jewelry/bluesquare.jpg", "alt": "Jewelry piece 1", "folder": "jewelry" },
-  { "src": "jewelry/rednecklace.jpg", "alt": "Jewelry piece 1", "folder": "jewelry" },
+    { "src": "jewelry/totem/blueLong4.jpeg", "alt": "Everloom Trifold 1", "folder": "jewelry" },
+      { "src": "jewelry/totem/brown2.jpeg", "alt": "Everloom Trifold 1", "folder": "jewelry" },
+        { "src": "jewelry/totem/blueShort1.jpeg", "alt": "Everloom Trifold 1", "folder": "jewelry" },
+            { "src": "jewelry/totem/tealWhite1.jpeg", "alt": "Everloom Trifold 1", "folder": "jewelry" },
+
+
+
+
+
   { "src": "jewelry/green.jpg", "alt": "Jewelry piece 1", "folder": "jewelry" },
   { "src": "jewelry/button necklace.jpeg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
   { "src": "jewelry/hoops.jpg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
 
 
   { "src": "jewelry/jewelry1.jpeg", "alt": "Jewelry piece 1", "folder": "jewelry" },
+    { "src": "jewelry/bluesquare.jpg", "alt": "Jewelry piece 1", "folder": "jewelry" },
+  { "src": "jewelry/rednecklace.jpg", "alt": "Jewelry piece 1", "folder": "jewelry" },
   { "src": "jewelry/IMG_9354.jpeg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
 
 
@@ -163,5 +172,29 @@
   { "src": "branding/van wrap .jpg", "alt": "Van Wrap", "folder": "branding2" },
   { "src": "branding/van back.jpeg", "alt": "Van Back", "folder": "branding2" },
   { "src": "branding/van side 1.jpeg", "alt": "Van Side 1", "folder": "branding2" },
-  { "src": "branding/van side 2.jpeg", "alt": "Van Side 2", "folder": "branding2" }
+  { "src": "branding/van side 2.jpeg", "alt": "Van Side 2", "folder": "branding2" }, 
+
+
+
+
+  { "src": "jewelry/totem/blueLong4.jpeg", "alt": "Everloom Trifold 1", "folder": "totem" },
+  { "src": "jewelry/totem/brown2.jpeg", "alt": "Everloom Trifold 1", "folder": "totem" },
+    { "src": "jewelry/totem/tealWhite2.jpeg", "alt": "Everloom Trifold 1", "folder": "totem" },
+
+  { "src": "jewelry/totem/blueShort1.jpeg", "alt": "Everloom Trifold 1", "folder": "totem" },
+  { "src": "jewelry/totem/brown3.jpeg", "alt": "Everloom Trifold 1", "folder": "totem" },
+    { "src": "jewelry/totem/double1.jpeg", "alt": "Everloom Trifold 1", "folder": "totem" },
+
+  { "src": "jewelry/totem/blueLong3.jpeg", "alt": "Everloom Trifold 1", "folder": "totem" },
+  { "src": "jewelry/totem/double2.jpeg", "alt": "Everloom Trifold 1", "folder": "totem" },
+
+    { "src": "jewelry/totem/blueLong2.jpeg", "alt": "Everloom Trifold 1", "folder": "totem" },
+        { "src": "jewelry/totem/blueShort2.jpeg", "alt": "Everloom Trifold 1", "folder": "totem" },
+                { "src": "jewelry/totem/brown1.jpeg", "alt": "Everloom Trifold 1", "folder": "totem" },
+                    { "src": "jewelry/totem/tealWhite1.jpeg", "alt": "Everloom Trifold 1", "folder": "totem" }
+
+
+
+
+
 ]
