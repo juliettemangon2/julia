@@ -44,6 +44,7 @@
     }
 
     details.resume-card {
+      border-radius:10px;
       background: #ffffff;
       border: 3px solid var(--beeswax);
       box-shadow: 0 0 0 6px var(--green) inset;
@@ -56,6 +57,7 @@
     }
 
     summary.card-summary {
+      
       list-style: none;
       cursor: pointer;
       padding: 1rem 1.1rem;
@@ -146,6 +148,7 @@
 
     /* Skills section */
     .skills-grid {
+      
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 0.5rem 0.75rem;
@@ -158,6 +161,7 @@
     }
 
     .skill-pill {
+
       display: inline-block;
       padding: 0.25rem 0.5rem;
       border-radius: 0;
@@ -190,6 +194,8 @@
     }
 
     .skill-card {
+            border-radius:10px;
+
       border: 3px solid var(--beeswax);
       background: #ffffff;
       box-shadow: 0 0 0 6px var(--green) inset;
@@ -240,20 +246,22 @@
 
     .pdf-link {
       border: 4px solid var(--green);
+      border-radius: 10px;
       padding: 0.35rem 0.75rem;
       font-size: 1rem;
-      color: #fff;
+      color: var(--charcoal);
       
       text-decoration: none;
       white-space: nowrap;
       line-height: 1.4;
-      background: var(--charcoal);
+      font-weight:600;
       
     }
 
     .pdf-link:hover {
-      border-color: var(--beeswax);
-      background-color: var(--grenadine);
+      border-color: var(--green);
+      background-color: var(--beeswax);
+      color: var(--charcoal);
       
       
     }

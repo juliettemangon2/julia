@@ -132,44 +132,9 @@ h3 {
   justify-content: center;
 }
 
-.nav-card.glass {
-  --size: 90px;
-  font-size: 0.9rem;
-  width: var(--size);
-  height: var(--size);
-  background-color: var(--charcoal);
-  font-weight: 700;
-  color: #fff;
-  display: grid;
-  place-items: center;
-  text-decoration: none;
-}
 
-.nav-card.star {
-  --size: 120px;
-  font-size: 0.8rem;
-  width: var(--size);
-  height: var(--size);
-  background: transparent;
-  color: var(--charcoal);
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  font-weight: 700;
-  transition: transform 0.25s ease;
-}
 
-.nav-card.star::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--beeswax);
-  clip-path: polygon(50% 0%, 65% 35%,
-      100% 50%, 65% 65%,
-      50% 100%, 35% 65%,
-      0% 50%, 35% 35%);
-  z-index: -1;
-}
+
 
 .nav-card.star:hover {
   transform: rotate(60deg);
@@ -231,23 +196,7 @@ h3 {
   color: var(--charcoal);
 }
 
-.nav-card.spiral::before {
-  content: "";
-  width: 210%;
-  height: 210%;
-  margin-bottom: 0rem;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cpath d='m600 275c-4.223 79.009-39.281 151.851-96.707 203.293-54.96 49.233-127.807 76.046-203.293 71.707-70.41-4.047-137.692-35.317-185.616-89.384-44.63-50.352-68.7326-116.88-64.384-185.616 4.0685-64.307 33.0541-125.052 82.062-167.938 45.775-40.0565 105.987-61.4196 167.938-57.062 57.424 4.0391 111.918 30.2252 150.26 74.74 35.4 41.099 54.118 94.972 49.74 150.26-4.044 51.078-27.785 99.125-67.417 132.583-36.566 30.868-84.14 46.803-132.583 42.417-44.456-4.025-86.165-25.142-114.905-60.095-26.331-32.023-39.492-73.305-35.095-114.905 4.011-37.945 22.578-73.277 52.773-97.227 27.447-21.77 62.422-32.19 97.227-27.773 31.535 4.002 60.456 20.086 79.55 45.45 17.382 23.093 24.853 51.814 20.45 79.55-4.05 25.514-17.888 47.849-38.128 61.872-18.49 12.81-40.904 17.569-61.872 13.128-18.977-4.019-34.965-15.285-44.194-30.806-8.271-13.91-10.308-30.03-5.806-44.194 4.021-12.65 12.835-22.208 23.483-26.517 9.49-3.839 19.372-3.026 26.517 1.517 6.417 4.081 9.515 10.507 8.839 16.161-0.634 5.305-4.481 8.839-8.839 8.839' fill='none' stroke='%2347537b' stroke-width='30' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
-
-.nav-card.spiral:hover {
-  transform: rotate(-90deg);
-  border-color: transparent;
-  background-color: transparent;
-}
 
 .nav-card.burst2 {
   --size: 95px;
@@ -255,7 +204,7 @@ h3 {
   width: var(--size);
   height: var(--size);
   background: transparent;
-  color: var(--charcoal);
+  color: var(--green);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -278,7 +227,7 @@ h3 {
 
 /* Alternating icon colors */
 .nav-buttons a:nth-child(odd) .burst2-icon {
-  fill: var(--charcoal);
+  fill: var(--beeswax);
 }
 
 .nav-buttons a:nth-child(even) .burst2-icon {
@@ -407,6 +356,7 @@ a {
 }
 
 a:hover {
+  color: var(--grenadine);
   text-decoration: none;
 }
 
@@ -426,7 +376,8 @@ a:hover {
   letter-spacing: 0.02rem;
   padding: 0.45rem 0.8rem;
   cursor: pointer;
-  border: 5px solid var(--charcoal);
+  border: 5px solid var(--green);
+  border-radius: 10px;
   color: var(--charcoal);
   margin-top: 0.5rem;
 }
@@ -435,17 +386,18 @@ a:hover {
 #textiles-subnav a:hover {
     color: var(--bg);
 
-  background-color: var(--grenadine);
+  background-color: var(--beeswax);
 }
 
 #glass-subnav a.active,
 #textiles-subnav a.active {
     color: var(--bg);
 
-  background-color: var(--grenadine);
+  background-color: var(--beeswax);
 }
 
 .about-info {
+  color: var(--charcoal);
   padding: 1rem 1rem 1rem 1.5rem;
   margin-right: 0rem;
   margin-left: 0rem;
