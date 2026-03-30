@@ -1,655 +1,144 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Julia Majchrzak</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josephin+Slab:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/css?family=Tanker" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
+  <link rel="stylesheet" href="style.css" />
   <style>
-    /* ------------------------------ */
-    /*      COLOR VARIABLES           */
-    /* ------------------------------ */
-    :root {
-      --darlington: #90be50;
-      --beeswax: #e9d562;
-      --grenadine: #d95402;
-      --cafe-latte: #47537b;
-      --lavender: #7c6a85;
-      --ice-blue: #D9E8E8;
-      --hover: #eaa594;
-      --active: #e9d562;
-      --turquoise: #50a5a0;
-      --cream: #abc9d3;
-      --charcoal: #383838;
-      --star-color: #ffd700;
-
+    .about-info p {
+      font-size: 1.4rem;
+      line-height: 1.7;
     }
 
-    /* ------------------------------ */
-    /*        GLOBAL RESET            */
-    /* ------------------------------ */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    .about-info h1 {
+      margin-top: 0rem;
+      padding-top: 0rem;
+      align-items: left;
+      text-align: left;
+      font-size: 1.5rem;
+      text-transform: none;
     }
-
-    body {
-      background: var(--cream);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", sans-serif;
-      overflow: hidden;
-      min-height: 100vh;
-    }
-
-    /* ------------------------------ */
-    /*       LANDING CONTAINER        */
-    /* ------------------------------ */
-    #landing {
-      position: fixed;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-      background: var(--cream);
-      transition: background 0.8s ease;
-    }
-
-    /* ------------------------------ */
-    /*        NAME TITLE              */
-    /* ------------------------------ */
-    #landing-name {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", sans-serif;
-      font-size: 5rem;
-      font-weight: 500;
-      letter-spacing: -0.02em;
-      text-transform: uppercase;
-      line-height: 1.1;
-      color: var(--grenadine);
-      opacity: 0;
-      animation: gentleFadeIn 1.4s ease forwards 0.3s;
-      transition: opacity 0.8s ease;
-      text-align: center;
-    }
-
-    /* ------------------------------ */
-    /*           ENTER BUTTON         */
-    /* ------------------------------ */
-    #enter-btn {
-      margin-top: 3rem;
-      background: transparent;
-      border: none;
-      padding: 0;
-      font-size: 1.1rem;
-      letter-spacing: 0.05em;
+    .name {
       color: var(--charcoal);
-      cursor: pointer;
-      opacity: 0;
-      font-weight: 500;
-      transform: translateY(8px);
-      animation: gentleFadeIn 1.2s ease forwards 1s;
-      transition: opacity 0.3s ease, color 0.3s ease;
-      font-family: inherit;
-      position: relative;
-      text-decoration: none;
-    }
-
-    #enter-btn::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: var(--grenadine);
-      transform: scaleX(0);
-      transform-origin: center;
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    #enter-btn:hover::after {
-      transform: scaleX(1);
-    }
-
-    #enter-btn:hover {
-      color: var(--grenadine);
-    }
-
-    /* ------------------------------ */
-    /*       CLICKED STATE            */
-    /* ------------------------------ */
-    body.button-clicked #enter-btn {
-      opacity: 0 !important;
-      transition: opacity 0.3s ease;
-      pointer-events: none;
-    }
-
-    body.button-clicked #enter-btn::after {
-      opacity: 0 !important;
-      transform: scaleX(0);
-    }
-
-    body.button-clicked #landing-name {
-      opacity: 0 !important;
-      transition: opacity 0.8s ease;
-    }
-
-
-    /* ------------------------------ */
-    /*      FLOATING CIRCLE ELEMENTS  */
-    /* ------------------------------ */
-    .floating-circle {
-      position: fixed;
-      pointer-events: none;
-      opacity: 0;
-      z-index: 0;
-    }
-
-    .circle-1 {
-      top: 12%;
-      left: 8%;
-      animation: floatDrift1 22s ease-in-out infinite, fadeInFloat 1.5s ease forwards 0.5s;
-    }
-
-    .circle-2 {
-      top: 22%;
-      right: 10%;
-      animation: floatDrift2 19s ease-in-out infinite, fadeInFloat 1.5s ease forwards 0.8s;
-    }
-
-    .circle-3 {
-      bottom: 15%;
-      left: 15%;
-      animation: floatDrift3 24s ease-in-out infinite, fadeInFloat 1.5s ease forwards 1.1s;
-    }
-
-    .circle-4 {
-      bottom: 5%;
-      right: 25%;
-      animation: floatDrift4 20s ease-in-out infinite, fadeInFloat 1.5s ease forwards 1.3s;
-    }
-
-    .circle-5 {
-      top: 35%;
-      left: 5%;
-      animation: floatDrift5 21s ease-in-out infinite, fadeInFloat 1.5s ease forwards 1.5s;
-    }
-
-    #landing-name {
-      position: relative;
-      z-index: 2;
-    }
-
-    .circle-6 {
-      top: 50%;
-      right: 7%;
-      animation: floatDrift1 26s ease-in-out infinite, fadeInFloat 1.5s ease forwards 1.7s;
-    }
-
-    .circle-7 {
-      bottom: 35%;
-      left: 18%;
-      animation: floatDrift2 23s ease-in-out infinite, fadeInFloat 1.5s ease forwards 1.9s;
-    }
-
-    .circle-8 {
-      top: 8%;
-      left: 25%;
-      animation: floatDrift3 27s ease-in-out infinite, fadeInFloat 1.5s ease forwards 2.1s;
-    }
-
-    /* ------------------------------ */
-    /*  FADE OUT SHAPES & TEXT        */
-    /* ------------------------------ */
-
-    body.button-clicked .floating-circle,
-    body.button-clicked .shape {
-      opacity: 0 !important;
-      animation-play-state: paused !important;
-      transition: opacity 1.5s ease;
-    }
-
-    body.button-clicked #landing-name {
-      opacity: 0 !important;
-      animation-play-state: paused !important;
-      transition: opacity 1.5s ease;
-    }
-
-
-
-    /* ------------------------------ */
-    /*       EXIT ANIMATION STATE     */
-    /* ------------------------------ */
-    body.landing-finished #landing {
-      pointer-events: none;
-    }
-
-
-    body.landing-finished #landing-name {
-      opacity: 0 !important;
-    }
-
-    /* ------------------------------ */
-    /*          KEYFRAMES             */
-    /* ------------------------------ */
-    @keyframes gentleFadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(12px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeInFloat {
-      to {
-        opacity: 0.9;
-      }
-    }
-
-    @keyframes fadeInShape {
-      to {
-        opacity: 0.9;
-      }
-    }
-
-    @keyframes floatDrift1 {
-
-      0%,
-      100% {
-        transform: translate(0, 0) rotate(-1deg);
-      }
-
-      25% {
-        transform: translate(18px, -15px) rotate(2deg);
-      }
-
-      50% {
-        transform: translate(-12px, -8px) rotate(-2deg);
-      }
-
-      75% {
-        transform: translate(15px, 12px) rotate(1deg);
-      }
-    }
-
-    @keyframes floatDrift2 {
-
-      0%,
-      100% {
-        transform: translate(0, 0) rotate(1deg);
-      }
-
-      33% {
-        transform: translate(-15px, 12px) rotate(-1deg);
-      }
-
-      66% {
-        transform: translate(12px, -18px) rotate(2deg);
-      }
-    }
-
-    @keyframes floatDrift3 {
-
-      0%,
-      100% {
-        transform: translate(0, 0) rotate(-2deg);
-      }
-
-      30% {
-        transform: translate(20px, 8px) rotate(1deg);
-      }
-
-      60% {
-        transform: translate(-18px, -12px) rotate(-1deg);
-      }
-    }
-
-    @keyframes floatDrift4 {
-
-      0%,
-      100% {
-        transform: translate(0, 0) rotate(2deg);
-      }
-
-      40% {
-        transform: translate(-14px, -10px) rotate(-1deg);
-      }
-
-      80% {
-        transform: translate(16px, 15px) rotate(2deg);
-      }
-    }
-
-    @keyframes floatDrift5 {
-
-      0%,
-      100% {
-        transform: translate(0, 0) rotate(-1deg);
-      }
-
-      50% {
-        transform: translate(10px, -20px) rotate(1deg);
-      }
-    }
-
-    @keyframes shapeRotate1 {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    @keyframes shapeRotate2 {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    @keyframes shapeRotate3 {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    /* ------------------------------ */
-    /*        MOBILE RESPONSIVE       */
-    /* ------------------------------ */
-
-    /* Tablets and smaller laptops */
-    @media (max-width: 900px) {
-      #landing-name {
-        font-size: 3.4rem;
-      }
-
-      #enter-btn {
-        font-size: 1rem;
-        margin-top: 2.5rem;
-      }
-      .spiral {
-        width: 80px;
-        height: 80px;
-      }
-
-      .small-square {
-        width: 65px;
-        height: 65px;
-      }
-
-      .floating-circle {
-        transform: scale(0.7);
-      }
-    }
-
-    /* Most phones */
-    @media (max-width: 600px) {
-      #landing {
-        padding: 1.5rem;
-      }
-
-      #landing-name {
-        font-size: 2.5rem;
-        letter-spacing: -0.01em;
-      }
-
-      #enter-btn {
-        font-size: 0.95rem;
-        margin-top: 2rem;
-      }
-
-      /* Hide the darlington (circle-6) and lavender (circle-1) circles */
-      .circle-1,
-      .circle-6 {
-        display: none;
-      }
-
-  
-    }
-    @media (max-width: 600px) {
-  @keyframes floatDrift1Mobile {
-    0%, 100% {
-      transform: translate(0, 0);
-    }
-    25% {
-      transform: translate(25vw, -20vh);
-    }
-    50% {
-      transform: translate(-20vw, 15vh);
-    }
-    75% {
-      transform: translate(15vw, 25vh);
-    }
-  }
-
-  @keyframes floatDrift2Mobile {
-    0%, 100% {
-      transform: translate(0, 0);
-    }
-    33% {
-      transform: translate(-30vw, 20vh);
-    }
-    66% {
-      transform: translate(20vw, -25vh);
-    }
-  }
-
-  @keyframes floatDrift3Mobile {
-    0%, 100% {
-      transform: translate(0, 0);
-    }
-    30% {
-      transform: translate(25vw, -30vh);
-    }
-    60% {
-      transform: translate(-25vw, 20vh);
-    }
-  }
-
-  @keyframes floatDrift4Mobile {
-    0%, 100% {
-      transform: translate(0, 0);
-    }
-    40% {
-      transform: translate(-20vw, -25vh);
-    }
-    80% {
-      transform: translate(30vw, 15vh);
-    }
-  }
-
-  /* Slow animations (20-30s) + starting positions away from center */
-  .circle-2 {
-    top: 5%;
-    right: -10%;
-    animation: floatDrift2Mobile 25s ease-in-out infinite, fadeInFloat 1.5s ease forwards 0.8s;
-  }
-
-  .circle-3 {
-    bottom: 5%;
-    left: -10%;
-    animation: floatDrift3Mobile 28s ease-in-out infinite, fadeInFloat 1.5s ease forwards 1.1s;
-  }
-
-  .circle-4 {
-    bottom: -5%;
-    right: -15%;
-    animation: floatDrift4Mobile 24s ease-in-out infinite, fadeInFloat 1.5s ease forwards 1.3s;
-  }
-
-  .circle-5 {
-    top: 15%;
-    left: -20%;
-    animation: floatDrift1Mobile 30s ease-in-out infinite, fadeInFloat 1.5s ease forwards 1.5s;
-  }
-
-  .circle-7 {
-    bottom: 20%;
-    left: -15%;
-    animation: floatDrift2Mobile 26s ease-in-out infinite, fadeInFloat 1.5s ease forwards 1.9s;
-  }
-
-  .circle-8 {
-    top: -10%;
-    left: 30%;
-    animation: floatDrift3Mobile 27s ease-in-out infinite, fadeInFloat 1.5s ease forwards 2.1s;
-  }
-}
-
-
-    /* Small phones */
-    @media (max-width: 400px) {
-      #landing-name {
-        font-size: 2rem;
-      }
-
-      #enter-btn {
-        font-size: 0.9rem;
-      }
-
-    }
-
-    /* Very small screens */
-    @media (max-width: 350px) {
-      #landing-name {
-        font-size: 1.8rem;
-      }
-
-      #enter-btn {
-        font-size: 0.85rem;
-      }
-    }
-
-    /* Landscape mobile devices */
-    @media (max-height: 500px) and (orientation: landscape) {
-      #landing {
-        padding: 1rem;
-      }
-
-      #landing-name {
-        font-size: 2.5rem;
-      }
-
-      #enter-btn {
-        margin-top: 1.5rem;
-        font-size: 0.9rem;
-      }
-
-      .shape,
-      .float-5 {
-        display: none;
-      }
-    }
-
-    body.fading-out .floating-circle {
-      opacity: 0 !important;
-      transition: opacity 1.5s ease !important;
     }
   </style>
 </head>
 
 <body>
 
-  <div id="landing">
-    <!-- Floating background circles -->
-    <svg class="floating-circle circle-1" width="330" height="330">
-      <circle cx="150" cy="150" r="148" fill="none" stroke="var(--lavender)" stroke-width="4.7" />
-    </svg>
+  <div class="site-name">Julia Majchrzak</div>
+  <button class="hamburger" id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-overlay" id="nav-overlay"></div>
 
-    <svg class="floating-circle circle-2" width="180" height="180">
-      <circle cx="90" cy="90" r="87" fill="none" stroke="var(--charcoal)" stroke-width="5" />
-    </svg>
+  <main>
+    <section class="name-section">
+      <h1>Julia Majchrzak</h1>
+      <nav class="nav-buttons">
+        <a href="index.html" class="nav-card burst2 active">
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          About
+        </a>
+        <a href="resume.html" class="nav-card burst2">
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          Resume
+        </a>
+        <a href="glass.html" class="nav-card burst2">
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          Glass
+        </a>
+        <a href="textiles.html" class="nav-card burst2">
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          Textiles
+        </a>
+        <a href="paint.html" class="nav-card burst2">
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          Paint
+        </a>
+        <a href="branding.html" class="nav-card burst2">
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          Branding
+        </a>
+        <a href="jewelry.html" class="nav-card burst2">
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          Jewelry
+        </a>
+        <a href="contact.html" class="nav-card burst2">
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          Contact
+        </a>
+      </nav>
+    </section>
 
-    <svg class="floating-circle circle-3" width="200" height="200">
-      <circle cx="100" cy="100" r="95" fill="none" stroke="var(--hover)" stroke-width="4" />
-    </svg>
+    <section class="about-section"
+      style="display: grid; grid-template-columns: 340px 1fr; align-items: start; gap: 2rem; margin-top: 5rem; max-width: 1300px; padding-left: 5rem; margin-right: auto;">
+      <div class="about-image">
+        <img src="about.jpeg" alt="Julia Majchrzak"
+          style="width: 100%; height:100%; display: block; align-items: start; margin-top: 3rem;" fetchpriority="high" />
+      </div>
+      <div class="about-info">
+        <h1 style="margin-bottom: 1.5rem;">
+          I'm <span class="name">Julia Majchrzak</span>,
+        </h1>
+        <p>a product-focused designer working at the intersection of material exploration, <a href="branding.html">brand
+            strategy</a>, and sustainable development. My work spans <a href="textiles.html">apparel</a>, <a
+            href="glass.html">
+            glass</a>, and <a href="jewelry.html">accessories</a>, where I translate concept into tangible form through
+          research, prototyping, and technical execution.
+        </p>
+        <p>
+          This May, I will graduate from Tulane University having studied Marketing and Design with an independent focus
+          in glassblowing. I combine creative intuition with structured product thinking. My experience spans from CAD
+          development and tech packs to fabrication and small-batch production. I am drawn to environments where
+          craftsmanship meets scale, and where thoughtful design decisions can shape both aesthetic experience and
+          operational impact.
+        </p>
+        <p>
 
-    <svg class="floating-circle circle-4" width="220" height="220">
-      <circle cx="110" cy="110" r="104" fill="none" stroke="var(--turquoise)" stroke-width="6" />
-    </svg>
+          I’m especially interested in building products that are materially intentional, culturally aware, and built to
+          last.
+        </p>
 
-    <svg class="floating-circle circle-5" width="150" height="150">
-      <circle cx="75" cy="75" r="72" fill="none" stroke="var(--cafe-latte)" stroke-width="4" />
-    </svg>
+      </div>
+    </section>
 
-    <svg class="floating-circle circle-6" width="330" height="330">
-      <circle cx="165" cy="165" r="162" fill="none" stroke="var(--darlington)" stroke-width="7" />
-    </svg>
-
-    <svg class="floating-circle circle-7" width="200" height="200">
-      <circle cx="100" cy="100" r="95" fill="none" stroke="var(--star-color)" stroke-width="3" />
-    </svg>
-
-    <svg class="floating-circle circle-8" width="240" height="240">
-      <circle cx="120" cy="120" r="114" fill="none" stroke="var(--grenadine)" stroke-width="5" />
-    </svg>
-    <h1 id="landing-name">JULIA MAJCHRZAK</h1>
-
-    <button id="enter-btn" onclick="enterSite()">
-      enter
-    </button>
-  </div>
-
-  <script>
-    function enterSite() {
-      const btn = document.getElementById('enter-btn');
-      const name = document.getElementById('landing-name');
-      const circles = document.querySelectorAll('.floating-circle');
-
-      // Button - force immediate hide
-      btn.style.cssText = 'opacity: 0 !important; pointer-events: none;';
-
-      // Name
-      const nameOpacity = getComputedStyle(name).opacity;
-      name.style.animation = 'none';
-      name.style.opacity = nameOpacity;
-
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          name.style.transition = 'opacity 1.5s ease';
-          name.style.opacity = '0';
-        });
-      });
-
-      // Circles - use a CSS class instead
-      document.body.classList.add('fading-out');
-
-      setTimeout(() => {
-        window.location.href = "about.html";
-      }, 1700);
-    }
-
-    // Prevent accidental double-clicks
-    let hasClicked = false;
-    document.getElementById('enter-btn').addEventListener('click', function (e) {
-      if (hasClicked) {
-        e.preventDefault();
-        return false;
-      }
-      hasClicked = true;
-    }, { once: true });
-  </script>
-
+  </main>
+  <script src="js/nav.js"></script>
 </body>
+<footer>
+  <p style="
+        text-align: center;
+        font-size: 0.9rem;
+        color: var(--charcoal);
+        margin-bottom: 2.7rem;
+        padding-bottom: 2rem;
+        margin-top: 5rem;
+        padding-top: 2rem;
+      ">
+    © 2025 Juliette Mangon |
+    <a href="https://juliettemangon.com/" target="_blank" style="color: var(--grenadine); text-decoration: underline;">
+      juliettemangon.com
+    </a>
+  </p>
+</footer>
+
 </html>

@@ -32,10 +32,11 @@
       padding: 1rem 1.25rem 3rem;
       display: grid;
       gap: 1.25rem;
+      padding-top: 4rem;
     }
 
     .section-header {
-      color: var(--dark-blue);
+      color: var(--charcoal);
       font-size: 2.2rem;
       letter-spacing: 0.1rem;
       text-transform: uppercase;
@@ -43,9 +44,9 @@
     }
 
     details.resume-card {
-      border: 3px solid var(--bg);
       background: #ffffff;
-      box-shadow: 0 0 0 6px var(--ice-blue) inset;
+      border: 3px solid var(--beeswax);
+      box-shadow: 0 0 0 6px var(--green) inset;
       transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -62,7 +63,7 @@
       grid-template-columns: 1fr auto;
       align-items: center;
       gap: 0.75rem;
-      color: var(--coffee);
+      color: var(--charcoal);
       font-weight: 400;
       letter-spacing: 0.02rem;
     }
@@ -80,7 +81,7 @@
 
     .card-body {
       padding: 0.75rem 1.1rem 1.1rem 1.1rem;
-      border-top: 4px dashed var(--ice-blue);
+      border-top: 4px dashed var(--green);
     }
 
     /* Lists and descriptions inside cards */
@@ -191,19 +192,18 @@
     .skill-card {
       border: 3px solid var(--beeswax);
       background: #ffffff;
-      box-shadow: 0 0 0 6px var(--ice-blue) inset;
+      box-shadow: 0 0 0 6px var(--green) inset;
       padding: 0;
     }
 
     .skill-card-head {
       padding: 0.7rem 0.9rem;
-      background: var(--lightyellow2);
-      border-bottom: 4px dashed var(--ice-blue);
+      border-bottom: 4px dashed var(--green);
     }
 
     .skill-card-title {
       margin: 0;
-      color: var(--coffee);
+      color: var(--charcoal);
       font-size: 1.25rem;
       letter-spacing: 0.06rem;
       text-transform: uppercase;
@@ -221,7 +221,7 @@
 
     .skill-badge {
       display: inline-block;
-      border: 1px solid var(--grenadine);
+      border: 1.5px solid var(--grenadine);
       color: var(--charcoal);
       padding: 0.28rem 0.5rem;
       font-size: 0.98rem;
@@ -239,7 +239,7 @@
     }
 
     .pdf-link {
-      border: 4px solid var(--ice-blue);
+      border: 4px solid var(--green);
       padding: 0.35rem 0.75rem;
       font-size: 1rem;
       color: #fff;
@@ -247,7 +247,7 @@
       text-decoration: none;
       white-space: nowrap;
       line-height: 1.4;
-      background: var(--dark-blue);
+      background: var(--charcoal);
       
     }
 
@@ -476,37 +476,49 @@
 </head>
 
 <body>
+
+  <div class="site-name">Julia Majchrzak</div>
+  <button class="hamburger" id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-overlay" id="nav-overlay"></div>
+
   <main>
     <section class="name-section">
-      <!-- Text header -->
       <h1>Julia Majchrzak</h1>
       <nav class="nav-buttons">
-        <a href="about.html" class="nav-card burst2">
-          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
-            <polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58
-    4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73
-    40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86
-    111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57
-    156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
-          </svg>
+        <a href="index.html" class="nav-card burst2">
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
           About
         </a>
-        <a class="nav-card spiral" href="resume.html">Resume</a>
-        <a class="nav-card glass2" href="glass.html">Glass</a>
-        <a class="nav-card star" href="textiles.html">Textiles</a>
+        <a href="resume.html" class="nav-card burst2 active">
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          Resume
+        </a>
+        <a href="glass.html" class="nav-card burst2">
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          Glass
+        </a>
+        <a href="textiles.html" class="nav-card burst2">
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          Textiles
+        </a>
         <a href="paint.html" class="nav-card burst2">
-          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
-            <polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58
-    4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73
-    40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86
-    111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57
-    156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
-          </svg>
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
           Paint
         </a>
-        <a class="nav-card spiral" href="branding.html">Branding</a>
-        <a class="nav-card branding" href="jewelry.html">Jewelry</a>
-        <a class="nav-card star" href="contact.html">Contact</a>
+        <a href="branding.html" class="nav-card burst2">
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          Branding
+        </a>
+        <a href="jewelry.html" class="nav-card burst2">
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          Jewelry
+        </a>
+        <a href="contact.html" class="nav-card burst2">
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          Contact
+        </a>
       </nav>
     </section>
     </section>
@@ -980,6 +992,7 @@
         });
       });
     </script>
+  <script src="js/nav.js"></script>
 </body>
 <footer>
   <p style="
