@@ -103,6 +103,23 @@
   { "src": "glass/vessels/bowl.jpeg", "alt": "Glass vessel 7035", "folder": "glass-vessels" },
 
   
+  { "src": "jewelry/jm3/blueCloseUp.jpeg", "alt": "Everloom Trifold 1", "folder": "jewelry" },
+  { "src": "jewelry/jm3/pinCloseUp.jpeg", "alt": "Everloom Trifold 1", "folder": "jewelry" },
+  { "src": "jewelry/jm3/purpleCloseUp.jpeg", "alt": "Everloom Trifold 1", "folder": "jewelry" },
+
+  { "src": "jewelry/fern/redBlack2.jpeg", "alt": "Everloom Trifold 1", "folder": "jewelry" },
+  { "src": "jewelry/fern/blackZoomed.jpeg", "alt": "Everloom Trifold 1", "folder": "jewelry" },
+    { "src": "jewelry/fern/greenRed2.jpeg", "alt": "Everloom Trifold 1", "folder": "jewelry" },
+
+  { "src": "jewelry/fern/blackWide2.jpeg", "alt": "Everloom Trifold 1", "folder": "jewelry" },
+  { "src": "jewelry/redBlue2.jpeg", "alt": "Everloom Trifold 1", "folder": "jewelry" },
+  { "src": "jewelry/chokerJulia.jpeg", "alt": "Everloom Trifold 1", "folder": "jewelry" },
+    { "src": "jewelry/triple.jpeg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
+
+  { "src": "jewelry/greenWhite.jpeg", "alt": "Everloom Trifold 1", "folder": "jewelry" },
+
+
+
 
     { "src": "jewelry/totem/blueLong4.jpeg", "alt": "Everloom Trifold 1", "folder": "jewelry" },
       { "src": "jewelry/totem/brown2.jpeg", "alt": "Everloom Trifold 1", "folder": "jewelry" },
@@ -111,18 +128,19 @@
 
 
 
+  { "src": "jewelry/IMG_9354.jpeg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
+  { "src": "jewelry/bluesquare.jpg", "alt": "Jewelry piece 1", "folder": "jewelry" },
+  { "src": "jewelry/rednecklace.jpg", "alt": "Jewelry piece 1", "folder": "jewelry" },
 
 
-  { "src": "jewelry/green.jpg", "alt": "Jewelry piece 1", "folder": "jewelry" },
   { "src": "jewelry/button necklace.jpeg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
+    { "src": "jewelry/jewelry1.jpeg", "alt": "Jewelry piece 1", "folder": "jewelry" },
+
   { "src": "jewelry/hoops.jpg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
 
+  { "src": "jewelry/green.jpg", "alt": "Jewelry piece 1", "folder": "jewelry" },
 
-  { "src": "jewelry/jewelry1.jpeg", "alt": "Jewelry piece 1", "folder": "jewelry" },
-    { "src": "jewelry/bluesquare.jpg", "alt": "Jewelry piece 1", "folder": "jewelry" },
-  { "src": "jewelry/rednecklace.jpg", "alt": "Jewelry piece 1", "folder": "jewelry" },
-  { "src": "jewelry/IMG_9354.jpeg", "alt": "Jewelry piece 0551", "folder": "jewelry" },
-
+  
 
   { "src": "paint/IMG_0619.jpeg", "alt": "Painting 0619", "folder": "paint" },
   { "src": "paint/swimming.jpeg", "alt": "Painting 1158", "folder": "paint" },
