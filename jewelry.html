@@ -13,7 +13,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Josephin-Slab:wght@700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
     rel="stylesheet" />
 
@@ -21,11 +23,95 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     p {
-      margin-bottom: 1.5rem;
-      font-size: 10.6rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.4rem;
       font-weight: 400;
+      margin-left: 5rem;
+      margin-right: 5rem;
+      margin-top: 3rem;
+      color: var(--charcoal);
     }
 
+    @media (max-width: 1000px) {
+      p {
+        padding-top: 3.5rem;
+      }
+    }
+
+    .cad-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 2rem 5rem 0;
+    }
+
+    .cad-thumb {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      cursor: pointer;
+      padding: 0.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .cad-thumb:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 700px) {
+      .cad-row {
+        padding: 1.5rem 1rem 0;
+        gap: 1rem;
+      }
+      .cad-thumb {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .cad-thumb {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    /* Lightbox */
+    #cad-lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #cad-lightbox.open {
+      display: flex;
+    }
+
+    #cad-lightbox img {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      background: #fff;
+      padding: 1rem;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+    }
+
+    #cad-lightbox-close {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.5rem;
+      font-size: 2rem;
+      color: #fff;
+      background: none;
+      border: none;
+      cursor: pointer;
+      line-height: 1;
+    }
   </style>
 </head>
 
@@ -42,49 +128,128 @@
       <h1>Julia Majchrzak</h1>
       <nav class="nav-buttons">
         <a href="index.html" class="nav-card burst2">
-          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
+            <polygon
+              points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
+          </svg>
           About
         </a>
         <a href="resume.html" class="nav-card burst2">
-          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
+            <polygon
+              points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
+          </svg>
           Resume
         </a>
         <a href="glass.html" class="nav-card burst2">
-          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
+            <polygon
+              points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
+          </svg>
           Glass
         </a>
         <a href="textiles.html" class="nav-card burst2">
-          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
+            <polygon
+              points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
+          </svg>
           Textiles
         </a>
         <a href="paint.html" class="nav-card burst2">
-          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
+            <polygon
+              points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
+          </svg>
           Paint
         </a>
         <a href="branding.html" class="nav-card burst2">
-          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
+            <polygon
+              points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
+          </svg>
           Branding
         </a>
         <a href="jewelry.html" class="nav-card burst2 active">
-          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
+            <polygon
+              points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
+          </svg>
           Jewelry
         </a>
         <a href="contact.html" class="nav-card burst2">
-          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
+            <polygon
+              points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
+          </svg>
           Contact
         </a>
       </nav>
     </section>
 
+
+    </section>
+
+    <!-- CAD drawings row -->
+    <section>
+      <div class="cad-row">
+        <img class="cad-thumb" src="jewelry/cads/black circle necklace.svg" alt="Black circle necklace CAD">
+        <img class="cad-thumb" src="jewelry/cads/black rectangle .svg" alt="Black rectangle CAD">
+        <img class="cad-thumb" src="jewelry/cads/green bolo necklace.svg" alt="Green bolo necklace CAD">
+        <img class="cad-thumb" src="jewelry/cads/green orange bolo.svg" alt="Green orange bolo CAD">
+        <img class="cad-thumb" src="jewelry/cads/pink bead necklace.svg" alt="Pink bead necklace CAD">
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="cad-lightbox" role="dialog" aria-modal="true" aria-label="CAD drawing lightbox">
+      <button id="cad-lightbox-close" aria-label="Close lightbox">&times;</button>
+      <img id="cad-lightbox-img" src="" alt="">
+    </div>
+
+    <section>
+      <p style="text-align:left; margin-top: 1.5rem"> Rooted in self-expression, these statement accessories use
+        material exploration to shape how we present ourselves. Inspired by nature and guided by an iterative process of
+        making, refining, and reworking, the work lives between adornment, sculpture, and identity.
+
+      </p>
     </section>
     <section style="padding: 1rem 0 3rem; padding-left: 10 rem;">
       <div id="gallery" data-folder="jewelry"></div>
     </section>
-    
-    
+
+
   </main>
   <script src="js/gallery.js" defer></script>
   <script src="js/nav.js"></script>
+  <script>
+    (function () {
+      const lightbox = document.getElementById('cad-lightbox');
+      const lightboxImg = document.getElementById('cad-lightbox-img');
+      const closeBtn = document.getElementById('cad-lightbox-close');
+
+      document.querySelectorAll('.cad-thumb').forEach(function (img) {
+        img.addEventListener('click', function () {
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt;
+          lightbox.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      closeBtn.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+      });
+    })();
+  </script>
 </body>
 <footer>
   <p style="
@@ -95,10 +260,11 @@
         padding-bottom: 2rem;
         margin-top: 1rem;
       ">
-    © 2025 Juliette Mangon | 
+    © 2025 Juliette Mangon |
     <a href="https://juliettemangon.com/" target="_blank" style="color: var(--text); text-decoration: underline;">
       juliettemangon.com
     </a>
   </p>
 </footer>
+
 </html>

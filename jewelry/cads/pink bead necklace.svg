@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 371.37 228.76">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 3px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #efe7d4;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke-width: 4px;
+      }
+
+      .cls-3 {
+        fill: url(#Spring_Pink);
+      }
+    </style>
+    <linearGradient id="Spring_Pink" data-name="Spring Pink" x1="173.33" y1="190.8" x2="213.41" y2="190.8" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#efdbeb"/>
+      <stop offset=".5" stop-color="#e3b9d7"/>
+      <stop offset="1" stop-color="#dfaed1"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path class="cls-1" d="M185.59,41.93c95.28-6.9,160.19,41.43,182.28,92.52s-143.62,35.9-249.95,35.9S-47.79,80.6,54.4,61.27s236.14,5.52,276.19,29,9.67,92.52-71.81,127.05S33.68,188.31,7.45,151.03,51.64,65.41,191.11,58.51s144.69,59.57,128.43,92.52c-13.57,27.5-225.09,77.33-288.62,1.38S179.23,41.92,179.23,41.92"/>
+    <ellipse class="cls-3" cx="193.37" cy="190.8" rx="20.04" ry="14.62"/>
+    <g>
+      <path class="cls-2" d="M181.07,42.19S202.49-.33,229.84,2.65s-18.9,29.34-44.26,39.28-54.28,58.28-54.28,58.28"/>
+      <path class="cls-2" d="M182.15,41.11S160.23-.83,132.88,2.15s18.9,29.34,44.26,39.28,50.7,52.69,50.7,52.69"/>
+    </g>
+  </g>
+</svg>
