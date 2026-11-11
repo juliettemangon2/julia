@@ -38,6 +38,11 @@
       }
     }
 
+    /* match gallery width to the intro text (5rem side margins) */
+    #gallery {
+      padding: 2rem 5rem;
+    }
+
     .cad-row {
       display: flex;
       flex-wrap: wrap;
@@ -64,6 +69,7 @@
         padding: 1.5rem 1rem 0;
         gap: 1rem;
       }
+
       .cad-thumb {
         width: 100px;
         height: 100px;
@@ -82,7 +88,7 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.75);
+      background: rgba(0, 0, 0, 0.75);
       z-index: 9999;
       align-items: center;
       justify-content: center;
@@ -98,7 +104,7 @@
       object-fit: contain;
       background: #fff;
       padding: 1rem;
-      box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
     }
 
     #cad-lightbox-close {
@@ -117,7 +123,6 @@
 
 <body>
 
-  <div class="site-name">Julia Majchrzak</div>
   <button class="hamburger" id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -148,13 +153,6 @@
           </svg>
           Glass
         </a>
-        <a href="textiles.html" class="nav-card burst2">
-          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
-            <polygon
-              points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
-          </svg>
-          Textiles
-        </a>
         <a href="paint.html" class="nav-card burst2">
           <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
             <polygon
@@ -162,19 +160,19 @@
           </svg>
           Paint
         </a>
-        <a href="branding.html" class="nav-card burst2">
-          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
-            <polygon
-              points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
-          </svg>
-          Branding
-        </a>
         <a href="jewelry.html" class="nav-card burst2 active">
           <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
             <polygon
               points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
           </svg>
           Jewelry
+        </a>
+        <a href="branding.html" class="nav-card burst2">
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
+            <polygon
+              points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
+          </svg>
+          Branding
         </a>
         <a href="contact.html" class="nav-card burst2">
           <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
@@ -190,30 +188,21 @@
     </section>
 
     <!-- CAD drawings row -->
-    <section>
-      <div class="cad-row">
-        <img class="cad-thumb" src="jewelry/cads/black circle necklace.svg" alt="Black circle necklace CAD">
-        <img class="cad-thumb" src="jewelry/cads/black rectangle .svg" alt="Black rectangle CAD">
-        <img class="cad-thumb" src="jewelry/cads/green bolo necklace.svg" alt="Green bolo necklace CAD">
-        <img class="cad-thumb" src="jewelry/cads/green orange bolo.svg" alt="Green orange bolo CAD">
-        <img class="cad-thumb" src="jewelry/cads/pink bead necklace.svg" alt="Pink bead necklace CAD">
-      </div>
-    </section>
+
 
     <!-- Lightbox -->
-    <div id="cad-lightbox" role="dialog" aria-modal="true" aria-label="CAD drawing lightbox">
-      <button id="cad-lightbox-close" aria-label="Close lightbox">&times;</button>
-      <img id="cad-lightbox-img" src="" alt="">
-    </div>
+
 
     <section>
-      <p style="text-align:left; margin-top: 1.5rem"> Rooted in self-expression, these statement accessories use
-        material exploration to shape how we present ourselves. Inspired by nature and guided by an iterative process of
-        making, refining, and reworking, the work lives between adornment, sculpture, and identity.
+      <h3 style="margin-top: 3rem; margin-bottom: 0; text-transform: none;">juma jewelry</h3>
+      <p style="text-align:left; margin-top: 1.5rem"> Juma is a jewelry brand I co-founded with Juliette Mangon. Each
+        piece is made from handmade glass beads and pendants, cord cut from leather and suede, and a range of found
+        materials. At its core, Juma is an attempt to rethink what jewelry can be beyond an accessory: a form of
+        wearable art, where color and shape play out on the body the way they would on a canvas.
 
       </p>
     </section>
-    <section style="padding: 1rem 0 3rem; padding-left: 10 rem;">
+    <section style="padding: 1rem 0 3rem;">
       <div id="gallery" data-folder="jewelry"></div>
     </section>
 

@@ -24,13 +24,13 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     .about-info p {
-      color: var(--green);
+      color: var(--dark-blue);
       font-size: 1.4rem;
       line-height: 1.7;
     }
 
     .about-info h1 {
-      color: var(--green);
+      color: var(--dark-blue);
 
       margin-top: 0rem;
       padding-top: 0rem;
@@ -43,12 +43,24 @@
     .name {
       color: var(--charcoal);
     }
+
+    @media (min-width: 1024px) {
+      .about-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5rem;
+        align-items: start;
+      }
+
+      .about-col > p:first-child {
+        margin-top: 0;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <div class="site-name">Julia Majchrzak</div>
   <button class="hamburger" id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -79,13 +91,6 @@
           </svg>
           Glass
         </a>
-        <a href="textiles.html" class="nav-card burst2">
-          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
-            <polygon
-              points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
-          </svg>
-          Textiles
-        </a>
         <a href="paint.html" class="nav-card burst2">
           <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
             <polygon
@@ -93,19 +98,19 @@
           </svg>
           Paint
         </a>
-        <a href="branding.html" class="nav-card burst2">
-          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
-            <polygon
-              points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
-          </svg>
-          Branding
-        </a>
         <a href="jewelry.html" class="nav-card burst2">
           <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
             <polygon
               points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
           </svg>
           Jewelry
+        </a>
+        <a href="branding.html" class="nav-card burst2">
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
+            <polygon
+              points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
+          </svg>
+          Branding
         </a>
         <a href="contact.html" class="nav-card burst2">
           <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
@@ -118,34 +123,45 @@
     </section>
 
     <section class="about-section"
-      style="display: grid; grid-template-columns: 340px 1fr; align-items: start; gap: 2rem; margin-top: 5rem; max-width: 1300px; padding-left: 1rem; margin-right: auto;">
-      <div class="about-image">
-        <img src="about.jpeg" alt="Julia Majchrzak"
-          style="width: 100%; height:100%; display: block; align-items: start; margin-top: 3rem;"
-          fetchpriority="high" />
-      </div>
+      style="display: grid; grid-template-columns: 1fr; align-items: start; gap: 2rem; margin-top: 1.5rem; max-width: 1300px; padding-left: 1rem; margin-right: auto;">
       <div class="about-info">
-        <h1 style="margin-bottom: 1.5rem;">
+        <h1 style="margin-bottom: 1.5rem; font-size: 5rem;">
           I'm <span class="name">Julia Majchrzak</span>,
         </h1>
-        <p>a product-focused designer working at the intersection of material exploration, <a href="branding.html">brand
-            strategy</a>, and sustainable development. My work spans <a href="textiles.html">apparel</a>, <a
-            href="glass.html">
-            glass</a>, and <a href="jewelry.html">accessories</a>, where I translate concept into tangible form through
-          research, prototyping, and technical execution.
+        <div class="about-columns">
+          <div class="about-col">
+        <p>A multidisciplinary designer, artist, and product thinker interested in the intersection of creative
+          innovation, material exploration, and strategic business development.
         </p>
         <p>
-          This May, I will graduate from Tulane University having studied Marketing and Design with an independent focus
-          in glassblowing. I combine creative intuition with structured product thinking. My experience spans from CAD
-          development and tech packs to fabrication and small-batch production. I am drawn to environments where
-          craftsmanship meets scale, and where thoughtful design decisions can shape both aesthetic experience and
-          operational impact.
-        </p>
-        <p>
+          My experience spans the product lifecycle, from design and development to buying and merchandising. I am
+          particularly interested in how creative intuition, consumer behavior, and commercial strategy come together to
+          shape meaningful products and experiences.
 
-          I’m especially interested in building products that are materially intentional, culturally aware, and built to
-          last.
         </p>
+        <p>
+          I graduated from Tulane University in May 2026 with a degree in Business, minor in Design, and an independent
+          focus in glassblowing. My interdisciplinary background drives my curiosity to explore new mediums, challenge
+          conventional processes, and discover connections between seemingly unrelated fields.
+        </p>
+          </div>
+          <div class="about-col">
+        <p>
+          <strong>My 9 to 5:</strong> I'm currently working at Gap Inc. in San Francisco, supporting multiple product categories
+          at Banana
+          Republic Factory. Through my experience across design, buying, and merchandising, I've developed a holistic
+          perspective on the product lifecycle and an interest in bridging creative development with consumer insights
+          and business strategy.
+        </p>
+        <p>
+          <strong>My 5 to 9:</strong> I'm a glassblower exploring the intersection of art and function through lighting,
+          furniture, jewelry, and experimental objects. I'm also the co-founder of Juma, a glass jewelry brand focused
+          on sustainability and versatility, and I never see you., an art and technology collective exploring new forms
+          of creative expression.
+
+        </p>
+          </div>
+        </div>
 
       </div>
     </section>
@@ -164,7 +180,7 @@
         padding-top: 2rem;
       ">
     © 2025 Juliette Mangon |
-    <a href="https://juliettemangon.com/" target="_blank" style="color: var(--grenadine); text-decoration: underline;">
+    <a href="https://juliettemangon.com/" target="_blank" style="color: var(--dark-blue); text-decoration: underline;">
       juliettemangon.com
     </a>
   </p>

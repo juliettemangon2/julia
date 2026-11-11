@@ -44,8 +44,8 @@
     }
 
     details.resume-card {
-      border-radius:10px;
-      background: #ffffff;
+      border-radius: 10px;
+      background: #f6f5ef;
       border: 3px solid var(--beeswax);
       box-shadow: 0 0 0 6px var(--green) inset;
       transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -57,7 +57,7 @@
     }
 
     summary.card-summary {
-      
+
       list-style: none;
       cursor: pointer;
       padding: 1rem 1.1rem;
@@ -148,7 +148,7 @@
 
     /* Skills section */
     .skills-grid {
-      
+
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 0.5rem 0.75rem;
@@ -168,7 +168,7 @@
       letter-spacing: 0.01rem;
     }
 
-    
+
 
     @media (max-width: 880px) {
       .skills-grid {
@@ -194,10 +194,10 @@
     }
 
     .skill-card {
-            border-radius:10px;
+      border-radius: 10px;
 
       border: 3px solid var(--beeswax);
-      background: #ffffff;
+      background: #f6f5ef;
       box-shadow: 0 0 0 6px var(--green) inset;
       padding: 0;
     }
@@ -227,7 +227,8 @@
 
     .skill-badge {
       display: inline-block;
-      border: 1.5px solid var(--grenadine);
+      border: 1.5px solid var(--dark-blue);
+      border-radius: 10px;
       color: var(--charcoal);
       padding: 0.28rem 0.5rem;
       font-size: 0.98rem;
@@ -250,20 +251,20 @@
       padding: 0.35rem 0.75rem;
       font-size: 1rem;
       color: var(--charcoal);
-      
+
       text-decoration: none;
       white-space: nowrap;
       line-height: 1.4;
-      font-weight:600;
-      
+      font-weight: 600;
+
     }
 
     .pdf-link:hover {
       border-color: var(--green);
       background-color: var(--beeswax);
       color: var(--charcoal);
-      
-      
+
+
     }
 
     /* Responsive */
@@ -485,7 +486,6 @@
 
 <body>
 
-  <div class="site-name">Julia Majchrzak</div>
   <button class="hamburger" id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -496,35 +496,52 @@
       <h1>Julia Majchrzak</h1>
       <nav class="nav-buttons">
         <a href="index.html" class="nav-card burst2">
-          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
+            <polygon
+              points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
+          </svg>
           About
         </a>
         <a href="resume.html" class="nav-card burst2 active">
-          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
+            <polygon
+              points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
+          </svg>
           Resume
         </a>
         <a href="glass.html" class="nav-card burst2">
-          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
+            <polygon
+              points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
+          </svg>
           Glass
         </a>
-        <a href="textiles.html" class="nav-card burst2">
-          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
-          Textiles
-        </a>
         <a href="paint.html" class="nav-card burst2">
-          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
+            <polygon
+              points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
+          </svg>
           Paint
         </a>
-        <a href="branding.html" class="nav-card burst2">
-          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
-          Branding
-        </a>
         <a href="jewelry.html" class="nav-card burst2">
-          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
+            <polygon
+              points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
+          </svg>
           Jewelry
         </a>
+        <a href="branding.html" class="nav-card burst2">
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
+            <polygon
+              points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
+          </svg>
+          Branding
+        </a>
         <a href="contact.html" class="nav-card burst2">
-          <svg viewBox="0 0 161.57 153.1" class="burst2-icon"><polygon points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0"/></svg>
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
+            <polygon
+              points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
+          </svg>
           Contact
         </a>
       </nav>
@@ -534,11 +551,222 @@
 
     <!-- New collapsible layout under the unchanged nav -->
     <main class="page">
-      <!-- Education -->
+      <!-- Work Experience -->
       <div class="section-header-row">
-        <h3 class="section-header">Education</h3>
+        <h3 class="section-header">Work Experience</h3>
         <a href="Resume.pdf" target="_blank" class="pdf-link">view PDF version</a>
       </div>
+
+      <details class="resume-card">
+        <summary class="card-summary">
+          <span><strong>Merchandise Assistant, Men's & Accessories </strong>, Sustainable Fashion & Jewelry (May 2026 -
+            Present)</span>
+          <span class="pill">+</span>
+        </summary>
+        <div class="card-body">
+          <ul id="we-list" class="section-list">
+            <li>
+              <ul class="description">
+                <li>Support four product categories: Men's Apparel, Women's Accessories, Men's Accessories, and Jewelry;
+                  across multiple seasonal calendars, gaining exposure to end-to-end product development, assortment
+                  planning, and merchandising strategy.
+                </li>
+                <li>Collaborate with cross-functional partners in Design, Product Development, Inventory Management,
+                  Styling, and Marketing to align product execution with consumer insights, brand identity, and
+                  financial objectives.
+
+                </li>
+                <li>Analyze market trends, competitive assortments, and customer behavior to identify product
+                  opportunities, inform assortment decisions, and support strategic business growth.
+                </li>
+                <li>Drive process improvements and product innovation initiatives, leveraging AI tools, competitive
+                  research, and cross-functional collaboration to improve operational efficiency and explore new
+                  commercial opportunities.
+
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- Card 5: Independent Designer -->
+      <details class="resume-card">
+        <summary class="card-summary">
+          <span><strong>Independent Designer </strong>, Sustainable Fashion & Jewelry (2022 - Present)</span>
+          <span class="pill">+</span>
+        </summary>
+        <div class="card-body">
+          <ul id="we-list" class="section-list">
+            <li>
+              <ul class="description">
+                <li>Design and produce one-of-a-kind garments from repurposed scrap textiles, creating apparel that
+                  emphasizes sustainability and material innovation.</li>
+                <li>Handcrafted jewelry from reused beads, chains, and vintage buttons, and design glass pendants
+                  using
+                  original glassblowing techniques.
+                </li>
+                <li>Create and sell embroidered garments and beaded embroidery pieces, combining traditional
+                  craftsmanship
+                  with contemporary fashion trends.</li>
+                <li>Manage all aspects of a small creative business—design, production, sales, and
+                  marketing—building a
+                  following among college students seeking sustainable, customized products.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </details>
+     
+      <!-- Card 8: Tulane Student Organization Center -->
+      <details class="resume-card">
+        <summary class="card-summary">
+          <span><strong>Student Organization Ambassador</strong>, Tulane University (August 2023 - Present)</span>
+          <span class="pill">+</span>
+        </summary>
+        <div class="card-body">
+          <ul id="we-list" class="section-list">
+            <li>
+              <ul class="description">
+                <li>Offer support to student organizations regarding finances, event planning, transportation, and
+                  all other related logistics.
+
+                </li>
+                <li>Communicate directly with student organization leaders to solve any issues and ensure success.
+
+                </li>
+                <li>Manage social media accounts and create content for Tulane Student Organization Center.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </details>
+      <!-- Card 8: Tulane Student Organization Center -->
+      <details class="resume-card">
+        <summary class="card-summary">
+          <span><strong>Cofounder</strong>, I never see you (February 2026 - Present)</span>
+          <span class="pill">+</span>
+        </summary>
+        <div class="card-body">
+          <ul id="we-list" class="section-list">
+            <li>
+              <ul class="description">
+                <li>Cofounded an art and technology collective exploring cross-disciplinary collaboration between
+                  artists, engineers, and researchers.
+
+                </li>
+                <li>Organizing a cohort-based model of creative “cycles,” working with 8 founding members and curating
+                  contributions from 20+ artists for Cycle 0, launching May 2026.
+
+                </li>
+
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </details>
+
+
+      <!-- Card 4: TJX -->
+      <details class="resume-card" open>
+        <summary class="card-summary">
+          <span><strong>Product Development Design Intern, Women's Woven Apparel</strong>, The TJX Companies, Inc.
+            (Summer
+            2025)</span>
+          <span class="pill">+</span>
+        </summary>
+        <div class="card-body">
+          <ul id="we-list" class="section-list">
+            <li>
+              <ul class="description">
+                <li>Collaborated with cross-functional teams (dresses, sleepwear, activewear, bottoms, sweaters,
+                  juniors,
+                  luxe, etc.) to support design processes and deliverables across TJX’s women’s apparel divisions.
+                </li>
+                <li>Conducted in-depth trend research on fabrics, silhouettes, trims, and colors, synthesizing
+                  findings
+                  into Adobe Illustrator artboards and CLO3D sketches to inform seasonal design direction.</li>
+                <li> Strengthened adaptability by learning and implementing each designer’s preferred sketching and
+                  presentation workflows, improving efficiency and accuracy of design outputs.</li>
+                <li>Developed and presented a sustainability-focused intern project, proposing innovations such as
+                  fabric
+                  scrap hangers (via NUNOUS technology), biodegradable resin, gift-with-purchase items from marker
+                  scraps,
+                  and new hang tags to increase sustainability visibility.</li>
+                <li>Analyzed business feasibility of sustainable initiatives by considering cost-saving scrap usage,
+                  vendor negotiations, and packaging strategies, highlighting opportunities for product development
+                  to
+                  drive sustainable change.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </details>
+      <!-- Card 7: The SetUp Organization -->
+      <details class="resume-card">
+        <summary class="card-summary">
+          <span><strong>Brand and Visual Identity Designer</strong>, The SetUp Organization (August - November
+            2024)</span>
+          <span class="pill">+</span>
+        </summary>
+        <div class="card-body">
+          <ul id="we-list" class="section-list">
+            <li>
+              <ul class="description">
+                <li>Designed business cards and website to develop a cohesive brand identity, including logos, color
+                  palette, and visual elements that aligned with the target customer demographic.
+                </li>
+                <li>Created a user-friendly website layout that effectively showcases the business’s interior design
+                  and
+                  organization services, boosting online visibility and client engagement.
+                </li>
+                <li>Collaborated with business owner to ensure the branding and design elements resonated with the
+                  target
+                  audience, fostering a professional and appealing aesthetic for both print and digital platforms.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </details>
+
+
+
+      <!-- Card 6: Buffalo Exchange -->
+      <details class="resume-card">
+        <summary class="card-summary">
+          <span><strong>Buyer</strong>, Buffalo Exchange (Summer 2024)</span>
+          <span class="pill">+</span>
+        </summary>
+        <div class="card-body">
+          <ul id="we-list" class="section-list">
+            <li>
+              <ul class="description">
+                <li>Evaluated and selected clothing items from sellers based on customer demographics, Present
+                  trends,
+                  seasonality, brand recognition, and garment condition to establish an optimal mix of inventory for
+                  maximum profitability.
+                </li>
+                <li>Analyzed sales patterns to identify top-selling trends, guiding purchasing decisions to meet
+                  customer
+                  demand and enhance store performance.
+                </li>
+                <li>Facilitated buy meetings with the buying team to discuss intake strategies and collaborated to
+                  curate
+                  selections that aligned with revenue goals and supported Buffalo Exchange’s sustainability-focused
+                  business model.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- Education -->
+      <div class="spacer"></div>
+      <h3 class="section-header">Education</h3>
 
       <!-- Card 1: BS -->
       <details class=" resume-card" open>
@@ -625,208 +853,6 @@
         </div>
       </details>
 
-      <!-- Work Experience -->
-      <div class="spacer"></div>
-      <h3 class="section-header">Work Experience</h3>
-
-       <!-- Card 5: Independent Designer -->
-      <details class="resume-card">
-        <summary class="card-summary">
-          <span><strong>Independent Designer </strong>, Sustainable Fashion & Jewelry (2022 - Current)</span>
-          <span class="pill">+</span>
-        </summary>
-        <div class="card-body">
-          <ul id="we-list" class="section-list">
-            <li>
-              <ul class="description">
-                <li>Design and produce one-of-a-kind garments from repurposed scrap textiles, creating apparel that
-                  emphasizes sustainability and material innovation.</li>
-                <li>Handcrafted jewelry from reused beads, chains, and vintage buttons, and design glass pendants
-                  using
-                  original glassblowing techniques.
-                </li>
-                <li>Create and sell embroidered garments and beaded embroidery pieces, combining traditional
-                  craftsmanship
-                  with contemporary fashion trends.</li>
-                <li>Manage all aspects of a small creative business—design, production, sales, and
-                  marketing—building a
-                  following among college students seeking sustainable, customized products.
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </details>
-       <!-- Card 9: Tulane Student Organization Center 2 -->
-      <details class="resume-card">
-        <summary class="card-summary">
-          <span><strong>Allocation Comittee Chair</strong>, Tulane University (August 2023 - Current)</span>
-          <span class="pill">+</span>
-        </summary>
-        <div class="card-body">
-          <ul id="we-list" class="section-list">
-            <li>
-              <ul class="description">
-                <li>Delegate $2,000,000 of Tulane’s endowment to student organizations based on presented budget
-                  proposals.
-
-                </li>
-                <li>Manage and create policies regarding student organization budget requests, late budget requests,
-                  and travel budget requests.
-
-                </li>
-
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </details>
-      <!-- Card 8: Tulane Student Organization Center -->
-      <details class="resume-card">
-        <summary class="card-summary">
-          <span><strong>Student Organization Ambassador</strong>, Tulane University (August 2023 - Current)</span>
-          <span class="pill">+</span>
-        </summary>
-        <div class="card-body">
-          <ul id="we-list" class="section-list">
-            <li>
-              <ul class="description">
-                <li>Offer support to student organizations regarding finances, event planning, transportation, and
-                  all other related logistics.
-
-                </li>
-                <li>Communicate directly with student organization leaders to solve any issues and ensure success.
-
-                </li>
-                <li>Manage social media accounts and create content for Tulane Student Organization Center.
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </details>
-        <!-- Card 8: Tulane Student Organization Center -->
-      <details class="resume-card">
-        <summary class="card-summary">
-          <span><strong>Cofounder</strong>, I never see you (February 2026 - Current)</span>
-          <span class="pill">+</span>
-        </summary>
-        <div class="card-body">
-          <ul id="we-list" class="section-list">
-            <li>
-              <ul class="description">
-                <li>Cofounded an art and technology collective exploring cross-disciplinary collaboration between artists, engineers, and researchers.
-
-                </li>
-                <li>Organizing a cohort-based model of creative “cycles,” working with 8 founding members and curating contributions from 20+ artists for Cycle 0, launching May 2026.
-
-                </li>
-               
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </details>
-     
-
-      <!-- Card 4: TJX -->
-      <details class="resume-card" open>
-        <summary class="card-summary">
-          <span><strong>Product Development Design Intern, Women's Woven Apparel</strong>, The TJX Companies, Inc.
-            (Summer
-            2025)</span>
-          <span class="pill">+</span>
-        </summary>
-        <div class="card-body">
-          <ul id="we-list" class="section-list">
-            <li>
-              <ul class="description">
-                <li>Collaborated with cross-functional teams (dresses, sleepwear, activewear, bottoms, sweaters,
-                  juniors,
-                  luxe, etc.) to support design processes and deliverables across TJX’s women’s apparel divisions.
-                </li>
-                <li>Conducted in-depth trend research on fabrics, silhouettes, trims, and colors, synthesizing
-                  findings
-                  into Adobe Illustrator artboards and CLO3D sketches to inform seasonal design direction.</li>
-                <li> Strengthened adaptability by learning and implementing each designer’s preferred sketching and
-                  presentation workflows, improving efficiency and accuracy of design outputs.</li>
-                <li>Developed and presented a sustainability-focused intern project, proposing innovations such as
-                  fabric
-                  scrap hangers (via NUNOUS technology), biodegradable resin, gift-with-purchase items from marker
-                  scraps,
-                  and new hang tags to increase sustainability visibility.</li>
-                <li>Analyzed business feasibility of sustainable initiatives by considering cost-saving scrap usage,
-                  vendor negotiations, and packaging strategies, highlighting opportunities for product development
-                  to
-                  drive sustainable change.</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </details>
-       <!-- Card 7: The SetUp Organization -->
-      <details class="resume-card">
-        <summary class="card-summary">
-          <span><strong>Brand and Visual Identity Designer</strong>, The SetUp Organization (August - November
-            2024)</span>
-          <span class="pill">+</span>
-        </summary>
-        <div class="card-body">
-          <ul id="we-list" class="section-list">
-            <li>
-              <ul class="description">
-                <li>Designed business cards and website to develop a cohesive brand identity, including logos, color
-                  palette, and visual elements that aligned with the target customer demographic.
-                </li>
-                <li>Created a user-friendly website layout that effectively showcases the business’s interior design
-                  and
-                  organization services, boosting online visibility and client engagement.
-                </li>
-                <li>Collaborated with business owner to ensure the branding and design elements resonated with the
-                  target
-                  audience, fostering a professional and appealing aesthetic for both print and digital platforms.
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </details>
-
-
-     
-      <!-- Card 6: Buffalo Exchange -->
-      <details class="resume-card">
-        <summary class="card-summary">
-          <span><strong>Buyer</strong>, Buffalo Exchange (Summer 2024)</span>
-          <span class="pill">+</span>
-        </summary>
-        <div class="card-body">
-          <ul id="we-list" class="section-list">
-            <li>
-              <ul class="description">
-                <li>Evaluated and selected clothing items from sellers based on customer demographics, current
-                  trends,
-                  seasonality, brand recognition, and garment condition to establish an optimal mix of inventory for
-                  maximum profitability.
-                </li>
-                <li>Analyzed sales patterns to identify top-selling trends, guiding purchasing decisions to meet
-                  customer
-                  demand and enhance store performance.
-                </li>
-                <li>Facilitated buy meetings with the buying team to discuss intake strategies and collaborated to
-                  curate
-                  selections that aligned with revenue goals and supported Buffalo Exchange’s sustainability-focused
-                  business model.
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </details>
-
-     
-      
-     
       <!-- Leadership -->
       <div class="spacer"></div>
       <h3 class="section-header">Leadership</h3>
@@ -835,7 +861,7 @@
         <summary class="card-summary">
           <span><strong>Public Relations Coordinator: Outbound Relations and Speaker Series</strong>, Tulane University
             Fashion Club
-            (August 2024 - Current)</span>
+            (August 2024 - May 2026)</span>
           <span class="pill">+</span>
         </summary>
         <div class="card-body">
@@ -863,7 +889,7 @@
       <details class="resume-card" open>
         <summary class="card-summary">
           <span><strong>Banner Committee Chair</strong>, Kappa Alpha Theta Fraternity, Alpha Chi Chapter
-            (October 2024 - Current)</span>
+            (October 2024 - May 2026)</span>
           <span class="pill">+</span>
         </summary>
         <div class="card-body">
@@ -1002,7 +1028,7 @@
         });
       });
     </script>
-  <script src="js/nav.js"></script>
+    <script src="js/nav.js"></script>
 </body>
 <footer>
   <p style="

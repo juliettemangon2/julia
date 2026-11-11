@@ -1,10 +1,9 @@
 :root {
-  --bg: #f8f5eb;
-  --beeswax: #ae9459;
-  --grenadine: #a43e2f;
-  --dark-blue: #47537b;
-  --green: #7b734e;
-  --charcoal: #2c2d27;
+  --bg: #e3e3e3;
+  --beeswax: #d1c382;
+  --dark-blue: #122745;
+  --green: #90909e;
+  --charcoal: #122745;
 }
 
 * {
@@ -20,7 +19,7 @@ body {
 
 body {
   background: var(--bg);
-  color: var(--grenadine);
+  color: var(--dark-blue);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
   font-size: 1rem;
@@ -44,7 +43,7 @@ main {
 }
 
 h1 {
-  color: var(--grenadine);
+  color: var(--dark-blue);
   font-size: 2rem;
   font-weight: 500;
   text-align: right;
@@ -57,7 +56,7 @@ h1 {
 }
 
 h2 {
-  color: var(--grenadine);
+  color: var(--dark-blue);
   font-size: 4rem;
   font-weight: 400;
   text-align: center;
@@ -67,7 +66,7 @@ h2 {
 }
 
 h3 {
-  color: var(--grenadine);
+  color: var(--dark-blue);
   font-size: 2.5rem;
   font-weight: 600;
   text-align: left;
@@ -91,10 +90,17 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 0 1rem;
+  padding: 1rem 0;
   z-index: 100;
   overflow-y: auto;
   background: var(--bg);
+}
+
+/* Flexible spacers center the nav vertically, collapsing when it overflows */
+.name-section::before,
+.name-section::after {
+  content: "";
+  flex: 1 0 0;
 }
 
 .name-section h1 {
@@ -145,7 +151,7 @@ h3 {
   font-size: 0.9rem;
   width: var(--size);
   height: var(--size);
-  background-color: var(--grenadine);
+  background-color: var(--dark-blue);
   font-weight: 700;
   color: #fff;
   display: grid;
@@ -162,7 +168,7 @@ h3 {
   font-size: 1.2rem;
   width: var(--size);
   height: var(--size);
-  background-color: var(--grenadine);
+  background-color: var(--dark-blue);
   font-weight: 700;
   color: #fff;
   display: grid;
@@ -204,7 +210,7 @@ h3 {
   width: var(--size);
   height: var(--size);
   background: transparent;
-  color: var(--green);
+  color: var(--dark-blue);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -226,21 +232,24 @@ h3 {
 }
 
 /* Alternating icon colors */
-.nav-buttons a:nth-child(odd) .burst2-icon {
+/* Colors alternate in pairs: beeswax, beeswax, green, green, ... */
+.nav-buttons a:nth-child(4n+1) .burst2-icon,
+.nav-buttons a:nth-child(4n+2) .burst2-icon {
   fill: var(--beeswax);
 }
 
-.nav-buttons a:nth-child(even) .burst2-icon {
+.nav-buttons a:nth-child(4n+3) .burst2-icon,
+.nav-buttons a:nth-child(4n) .burst2-icon {
   fill: var(--green);
 }
 
 /* Active page */
 .nav-buttons a.active .burst2-icon {
-  fill: var(--grenadine) !important;
+  fill: var(--dark-blue) !important;
 }
 
 .nav-buttons a.active {
-  color: var(--grenadine);
+  color: var(--dark-blue);
 }
 
 .nav-card.burst2:hover .burst2-icon {
@@ -249,21 +258,6 @@ h3 {
 
 .nav-card.burst2:hover {
   transform: scale(1.03);
-}
-
-/* ------------------------------ */
-/*        SITE NAME LABEL         */
-/* ------------------------------ */
-.site-name {
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  z-index: 200;
-  font-size: 2rem;
-  font-weight: 500;
-  color: var(--charcoal);
-  letter-spacing: 0.03em;
-  pointer-events: none;
 }
 
 /* ------------------------------ */
@@ -356,7 +350,7 @@ a {
 }
 
 a:hover {
-  color: var(--grenadine);
+  color: var(--dark-blue);
   text-decoration: none;
 }
 
@@ -384,14 +378,14 @@ a:hover {
 
 #glass-subnav a:hover,
 #textiles-subnav a:hover {
-    color: var(--bg);
+    color: var(--dark-blue);
 
   background-color: var(--beeswax);
 }
 
 #glass-subnav a.active,
 #textiles-subnav a.active {
-    color: var(--bg);
+    color: var(--dark-blue);
 
   background-color: var(--beeswax);
 }
@@ -406,6 +400,11 @@ a:hover {
 
 .about-info::before {
   display: none;
+}
+
+.about-info h1 {
+  font-size: 10rem;
+  line-height: 1.05;
 }
 
 .contact-grid {
@@ -434,7 +433,7 @@ a:hover {
   gap: 0.75rem;
   padding: 5rem 1rem 1rem 0.9rem;
   text-decoration: none;
-  border-bottom: 12px solid var(--grenadine);
+  border-bottom: 12px solid var(--dark-blue);
   transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
   color: inherit;
   outline: none;
@@ -443,7 +442,7 @@ a:hover {
 .contact-card:hover,
 .contact-card:focus-visible {
   transform: translateY(-30px);
-  box-shadow: 0 40px 0 0 var(--grenadine);
+  box-shadow: 0 40px 0 0 var(--dark-blue);
   text-decoration: none;
 }
 
@@ -585,10 +584,6 @@ p {
 }
 
 @media (max-width: 767px) {
-  .site-name {
-    display: none;
-  }
-
   .name-section {
     left: -140px;
     width: 140px;
