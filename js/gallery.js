@@ -114,7 +114,13 @@ function showGallery(folder) {
   mount.style.gap = '12px';
   mount.style.justifyContent = 'center';
 
-  items.forEach(x => {
+  // optional full-width text block inserted after N items:
+  // <div id="gallery" data-interlude="#tpl-id" data-interlude-after="6">
+  const interludeSel = mount.getAttribute('data-interlude');
+  const interludeTpl = interludeSel ? document.querySelector(interludeSel) : null;
+  const interludeAfter = parseInt(mount.getAttribute('data-interlude-after'), 10);
+
+  items.forEach((x, i) => {
     const fig = document.createElement('figure');
     fig.style.margin = '0';
     fig.style.cursor = 'zoom-in';
@@ -171,5 +177,13 @@ function showGallery(folder) {
     }
 
     mount.appendChild(fig);
+
+    if (interludeTpl && i + 1 === interludeAfter) {
+      const block = document.createElement('div');
+      block.className = 'gallery-interlude';
+      block.style.gridColumn = '1 / -1';
+      block.appendChild(interludeTpl.content.cloneNode(true));
+      mount.appendChild(block);
+    }
   });
 }

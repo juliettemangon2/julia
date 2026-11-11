@@ -55,6 +55,13 @@
       padding: 2rem 5rem;
     }
 
+    /* text block placed inside the gallery grid (already padded to match intro) */
+    .gallery-interlude p {
+      text-align: left;
+      margin: 2rem 0 !important;
+      padding-top: 0 !important;
+    }
+
     .cad-row {
       display: flex;
       flex-wrap: wrap;
@@ -215,7 +222,14 @@
       </p>
     </section>
     <section style="padding: 1rem 0 3rem;">
-      <div id="gallery" data-folder="jewelry"></div>
+      <div id="gallery" data-folder="jewelry" data-interlude="#juma-principles" data-interlude-after="6"></div>
+      <template id="juma-principles">
+        <p>Two principles guide our work. The first is that jewelry should be for everyone. Our pieces are unisex by
+          design, conceived from the outset to be worn by anyone. The second is a commitment to sustainability and
+          versatility. We work with found objects, secondhand leather and suede, and remnant glass wherever possible,
+          and we design each necklace to be worn in more than one way: cords can be tied differently, beads can be
+          added or removed, and individual pieces can be combined with one another to create new looks.</p>
+      </template>
     </section>
 
 
@@ -257,8 +271,8 @@
         text-align: center;
         font-size: 0.9rem;
         color: var(--text);
-        margin-bottom: 2.7rem;
-        padding-bottom: 2rem;
+        margin-bottom: 0;
+        padding-bottom: 3rem;
         margin-top: 1rem;
       ">
     © 2025 Juliette Mangon |
