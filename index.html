@@ -44,6 +44,12 @@
       color: var(--charcoal);
     }
 
+    @media (orientation: portrait) {
+      .about-info h1 {
+        font-size: clamp(2.5rem, 11vw, 5rem) !important;
+      }
+    }
+
     @media (min-width: 1024px) {
       .about-columns {
         display: grid;
