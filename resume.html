@@ -134,6 +134,145 @@
 
     }
 
+    /* Independent Exploration in Glass */
+    .glass-list {
+      display: grid;
+      gap: 0;
+      padding: 0 0.25rem;
+    }
+
+    .glass-item {
+      display: grid;
+      gap: 0.3rem;
+      padding: 0.9rem 0;
+      border-bottom: 2px dashed rgba(137, 136, 38, 0.45);
+      min-width: 0;
+    }
+
+    .glass-item:first-child {
+      padding-top: 0.35rem;
+    }
+
+    .glass-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0.2rem;
+    }
+
+    .glass-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.15rem 1rem;
+    }
+
+    .glass-org {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--charcoal);
+    }
+
+    .glass-date {
+      font-size: 0.95rem;
+      color: var(--charcoal);
+      opacity: 0.75;
+      white-space: nowrap;
+    }
+
+    .glass-title,
+    .glass-meta a {
+      color: var(--charcoal);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      overflow-wrap: anywhere;
+    }
+
+    .glass-title {
+      font-size: 1.05rem;
+      font-style: italic;
+      justify-self: start;
+    }
+
+    .glass-text {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.5;
+      color: var(--charcoal);
+    }
+
+    .glass-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem 1.5rem;
+      margin: 0.1rem 0 0;
+      font-size: 1.05rem;
+      color: var(--charcoal);
+    }
+
+    .glass-meta>div {
+      display: flex;
+      gap: 0.35rem;
+    }
+
+    .glass-meta dt {
+      font-weight: 700;
+    }
+
+    .glass-meta dt::after {
+      content: ":";
+    }
+
+    .glass-meta dd {
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+
+      .glass-text,
+      .glass-meta,
+      .glass-title {
+        font-size: 1rem;
+      }
+
+      .glass-org {
+        font-size: 1.05rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .glass-list {
+        padding: 0;
+      }
+
+      .glass-item {
+        padding: 0.75rem 0;
+      }
+
+      .glass-head {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .glass-text,
+      .glass-meta,
+      .glass-title {
+        font-size: 0.95rem;
+      }
+
+      .glass-org {
+        font-size: 1rem;
+      }
+
+      .glass-date {
+        font-size: 0.875rem;
+      }
+
+      .glass-meta {
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+    }
+
     /* Work Experience special list style preserved but harmonized */
     #we-list.section-list>li {
       padding: 0.75rem 0.85rem;
@@ -516,19 +655,19 @@
           </svg>
           Glass
         </a>
+        <a href="jewelry.html" class="nav-card burst2">
+          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
+            <polygon
+              points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
+          </svg>
+          Juma
+        </a>
         <a href="paint.html" class="nav-card burst2">
           <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
             <polygon
               points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
           </svg>
           Paint
-        </a>
-        <a href="jewelry.html" class="nav-card burst2">
-          <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
-            <polygon
-              points="80.78,30.62 66.76,0 64.46,33.39 40.39,9.23 50.1,41.37 18.9,26.58 39.44,53.58 4.87,49.96 33.77,68.57 0,76.55 33.77,84.52 4.87,103.14 39.44,99.51 18.9,126.51 50.1,111.73 40.39,143.86 64.46,119.71 66.76,153.1 80.78,122.48 94.81,153.1 97.11,119.71 121.17,143.86 111.47,111.73 142.67,126.51 122.12,99.51 156.69,103.14 127.79,84.52 161.57,76.55 127.79,68.57 156.69,49.96 122.12,53.58 142.67,26.58 111.47,41.37 121.17,9.23 97.11,33.39 94.81,0" />
-          </svg>
-          Jewelry
         </a>
         <a href="branding.html" class="nav-card burst2">
           <svg viewBox="0 0 161.57 153.1" class="burst2-icon">
@@ -559,7 +698,8 @@
 
       <details class="resume-card">
         <summary class="card-summary">
-          <span><strong>Merchandise Assistant, Men's & Accessories </strong>, Sustainable Fashion & Jewelry (May 2026 -
+          <span><strong>Merchandising Assistant, Men's & Accessories </strong>, Gap Inc. - Banana Republic Factory (May
+            2026 -
             Present)</span>
           <span class="pill">+</span>
         </summary>
@@ -584,6 +724,32 @@
                   commercial opportunities.
 
                 </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="resume-card">
+        <summary class="card-summary">
+          <span><strong>Co-founder & Jewelry Designer </strong>, Juma (January 2026 -
+            Present)</span>
+          <span class="pill">+</span>
+        </summary>
+        <div class="card-body">
+          <ul id="we-list" class="section-list">
+            <li>
+              <ul class="description">
+                <li>Co-founded a sustainable jewelry brand specializing in handcrafted glass beads, reclaimed materials,
+                  and versatile, contemporary designs.
+                </li>
+                <li>Lead end-to-end product development, from concept ideation and material sourcing to prototyping,
+                  production, and quality control.
+                </li>
+                <li>Develop brand identity, pricing strategies, and marketing initiatives, combining creative direction
+                  with entrepreneurial strategy and commercial viability.
+                </li>
+
               </ul>
             </li>
           </ul>
@@ -618,8 +784,32 @@
           </ul>
         </div>
       </details>
-     
-      
+
+      <details class="resume-card">
+        <summary class="card-summary">
+          <span><strong>Student Organization Ambassador</strong>, Tulane University (August 2023 - May 2026)</span>
+          <span class="pill">+</span>
+        </summary>
+        <div class="card-body">
+          <ul id="we-list" class="section-list">
+            <li>
+              <ul class="description">
+                <li>Offer support to student organizations regarding finances, event planning, transportation, and
+                  all other related logistics.
+
+                </li>
+                <li>Communicate directly with student organization leaders to solve any issues and ensure success.
+
+                </li>
+                <li>Manage social media accounts and create content for Tulane Student Organization Center.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </details>
+
+
       <!-- Card 8: Tulane Student Organization Center -->
       <details class="resume-card">
         <summary class="card-summary">
@@ -798,35 +988,65 @@
           <span class="pill">+</span>
         </summary>
         <div class="card-body">
-          <ul class="section-list">
-            <li>
-              <p class="description">
-                <span class="desc-title">Tulane coursework:</span>
-                Advanced Glass (3 semesters), Glass II: Hot Casting, Found of Art: Glass, occasional TA
-                experience for beginners.
-              </p>
-              <p class="description"><span class="desc-title">NOCA coursework:</span> Vessel Making (Summer 2025)
-              <p class="description" style="font-weight:700;">Juror Award: <a
-                  href="https://liberalarts.tulane.edu/carroll-gallery/exhibitions/undergraduate-juried-exhibition-2025"
-                  target="_blank"><span class="award-title">Tulane Undergraduate Juried Exhibition 2025</span> </a>
-              <ul class="description">
-                <li style="margin-left:2rem;">Piece: Cactus</li>
-                <li style="margin-left:2rem;">Juror: <a href="https://www.emilyalesandrini.com/curatorial"
-                    target="_blank"><span class="award-title">Emily Alesandrini</span></a></li>
-              </ul>
-              </p>
-              <p class="description" style="font-weight:700;">Pilchuck Glass School: <a
-                  href="https://www.pilchuck.org/programs/workshops/object-hardware-and-the-space-between"
-                  target="_blank"><span class="award-title">Object, Hardware and The Space Between (Incoming Summer
-                    2026) </span> </a>
-              <ul class="description">
-                <li style="margin-left:2rem;">Plan to study under guest artists <a href="https://www.jaymacdonell.com/"
-                    target="_blank"><span class="award-title">Jay Macdonell </span></a> and <a
-                    href="https://pollag.net/" target="_blank"><span class="award-title">Jakub Pollág </span></a></li>
-              </ul>
-              </p>
-            </li>
-          </ul>
+          <div class="glass-list">
+
+            <div class="glass-item">
+              <div class="glass-head">
+                <span class="glass-org">Pilchuck Glass School</span>
+                <span class="glass-date">Summer 2026</span>
+              </div>
+              <a class="glass-title"
+                href="https://www.pilchuck.org/programs/workshops/object-hardware-and-the-space-between"
+                target="_blank" rel="noopener">Object, Hardware and The Space Between</a>
+              <div class="glass-text">
+                Studied under Jay Macdonell and Jakub Pollág, with guidance from Zac Weinberg and Hannah Bowlus, in an
+                interdisciplinary sculptural lighting course integrating glassblowing, industrial design, and
+                engineering. Explored electrical circuitry, material experimentation, and fabrication techniques to
+                develop innovative, functional lighting objects.
+              </div>
+            </div>
+
+            <div class="glass-item">
+              <div class="glass-head">
+                <span class="glass-org">Tulane University</span>
+                <span class="glass-date">Coursework</span>
+              </div>
+              <div class="glass-text">
+                Advanced Glass (3 semesters), Glass II: Hot Casting, Found of Art: Glass. Occasional TA experience
+                for beginners.
+              </div>
+            </div>
+
+            <div class="glass-item">
+              <div class="glass-head">
+                <span class="glass-org">NOCA</span>
+                <span class="glass-date">Summer 2025</span>
+              </div>
+              <div class="glass-text">Vessel Making</div>
+            </div>
+
+            <div class="glass-item">
+              <div class="glass-head">
+                <span class="glass-org">Juror Award</span>
+                <span class="glass-date">2025</span>
+              </div>
+              <a class="glass-title"
+                href="https://liberalarts.tulane.edu/carroll-gallery/exhibitions/undergraduate-juried-exhibition-2025"
+                target="_blank" rel="noopener">Tulane Undergraduate Juried Exhibition 2025</a>
+              <dl class="glass-meta">
+                <div>
+                  <dt>Piece</dt>
+                  <dd>Cactus</dd>
+                </div>
+                <div>
+                  <dt>Juror</dt>
+                  <dd><a href="https://www.emilyalesandrini.com/curatorial" target="_blank"
+                      rel="noopener">Emily Alesandrini</a></dd>
+                </div>
+              </dl>
+            </div>
+
+          </div>
         </div>
       </details>
 
@@ -834,30 +1054,7 @@
       <div class="spacer"></div>
       <h3 class="section-header">Leadership</h3>
 
-      <!-- Card 8: Tulane Student Organization Center -->
-      <details class="resume-card">
-        <summary class="card-summary">
-          <span><strong>Student Organization Ambassador</strong>, Tulane University (August 2023 - May 2026)</span>
-          <span class="pill">+</span>
-        </summary>
-        <div class="card-body">
-          <ul id="we-list" class="section-list">
-            <li>
-              <ul class="description">
-                <li>Offer support to student organizations regarding finances, event planning, transportation, and
-                  all other related logistics.
-
-                </li>
-                <li>Communicate directly with student organization leaders to solve any issues and ensure success.
-
-                </li>
-                <li>Manage social media accounts and create content for Tulane Student Organization Center.
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </details>
+      
       <!-- TU fashion PR -->
       <details class="resume-card" open>
         <summary class="card-summary">
